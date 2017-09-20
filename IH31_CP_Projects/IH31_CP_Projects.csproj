@@ -87,6 +87,9 @@
     <EmbeddedResource Include="AdviceInput.resx">
       <DependentUpon>AdviceInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientSearch.resx">
+      <DependentUpon>ClientSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DocumentInput.resx">
       <DependentUpon>DocumentInput.cs</DependentUpon>
     </EmbeddedResource>
