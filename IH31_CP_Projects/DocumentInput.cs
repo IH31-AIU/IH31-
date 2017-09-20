@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace IH31_CP_Projects
 {
-    public partial class TopMenu : Form
+    public partial class DocumentInput : Form
     {
-        public TopMenu()
+        public DocumentInput()
         {
             InitializeComponent();
         }
-
     }
 }
