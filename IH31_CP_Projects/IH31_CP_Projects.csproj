@@ -76,6 +76,12 @@
     <Compile Include="MemoOrders.Designer.cs">
       <DependentUpon>MemoOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceiveOrderSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiveOrderSearch.Designer.cs">
+      <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemoOrders.resx">
       <DependentUpon>MemoOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiveOrderSearch.resx">
+      <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopMenu.resx">
       <DependentUpon>TopMenu.cs</DependentUpon>
