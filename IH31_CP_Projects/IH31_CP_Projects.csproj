@@ -52,6 +52,12 @@
     <Compile Include="AdviceInput.Designer.cs">
       <DependentUpon>AdviceInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientSearch.Designer.cs">
+      <DependentUpon>ClientSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="DocumentInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdviceInput.resx">
+      <DependentUpon>AdviceInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DocumentInput.resx">
       <DependentUpon>DocumentInput.cs</DependentUpon>
     </EmbeddedResource>
