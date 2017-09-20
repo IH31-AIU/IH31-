@@ -52,6 +52,18 @@
     <Compile Include="DocumentInput.Designer.cs">
       <DependentUpon>DocumentInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoInput.Designer.cs">
+      <DependentUpon>MemoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoOrders.Designer.cs">
+      <DependentUpon>MemoOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DocumentInput.resx">
       <DependentUpon>DocumentInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoInput.resx">
+      <DependentUpon>MemoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoOrders.resx">
+      <DependentUpon>MemoOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopMenu.resx">
       <DependentUpon>TopMenu.cs</DependentUpon>
