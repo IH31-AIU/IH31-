@@ -111,6 +111,9 @@
     <EmbeddedResource Include="DocumentInput.resx">
       <DependentUpon>DocumentInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EstimateInput.resx">
+      <DependentUpon>EstimateInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemoChange.resx">
       <DependentUpon>MemoChange.cs</DependentUpon>
     </EmbeddedResource>
