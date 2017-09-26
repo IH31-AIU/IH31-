@@ -64,17 +64,29 @@
     <Compile Include="DocumentInput.Designer.cs">
       <DependentUpon>DocumentInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstimateInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstimateInput.Designer.cs">
+      <DependentUpon>EstimateInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoChange.Designer.cs">
+      <DependentUpon>MemoChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemoInput.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MemoInput.Designer.cs">
       <DependentUpon>MemoInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemoOrders.cs">
+    <Compile Include="MemoRecieveOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MemoOrders.Designer.cs">
-      <DependentUpon>MemoOrders.cs</DependentUpon>
+    <Compile Include="MemoRecieveOrder.Designer.cs">
+      <DependentUpon>MemoRecieveOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="ReceiveOrderSearch.cs">
       <SubType>Form</SubType>
@@ -99,11 +111,11 @@
     <EmbeddedResource Include="DocumentInput.resx">
       <DependentUpon>DocumentInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemoChange.resx">
+      <DependentUpon>MemoChange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemoInput.resx">
       <DependentUpon>MemoInput.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MemoOrders.resx">
-      <DependentUpon>MemoOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiveOrderSearch.resx">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
