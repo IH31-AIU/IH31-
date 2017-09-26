@@ -94,6 +94,12 @@
     <Compile Include="ReceiveOrderSearch.Designer.cs">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecieveOrderManagementMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecieveOrderManagementMenu.Designer.cs">
+      <DependentUpon>RecieveOrderManagementMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopMenu.cs">
       <SubType>Form</SubType>
     </Compile>
