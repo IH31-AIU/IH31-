@@ -37,6 +37,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -114,11 +119,56 @@
             this.textBox3.Size = new System.Drawing.Size(100, 25);
             this.textBox3.TabIndex = 56;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(59, 342);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 18);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "見積明細";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(171, 336);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(116, 30);
+            this.button2.TabIndex = 58;
+            this.button2.Text = "追加画面へ";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listView1.Location = new System.Drawing.Point(62, 437);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(842, 171);
+            this.listView1.TabIndex = 59;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(962, 617);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 61);
+            this.button3.TabIndex = 60;
+            this.button3.Text = "登録";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // EstimateInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 690);
+            this.ClientSize = new System.Drawing.Size(1189, 690);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
@@ -146,5 +196,10 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.Button button3;
     }
 }
