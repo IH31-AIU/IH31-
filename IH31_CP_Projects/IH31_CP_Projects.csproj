@@ -117,6 +117,9 @@
     <EmbeddedResource Include="MemoInput.resx">
       <DependentUpon>MemoInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemoRecieveOrder.resx">
+      <DependentUpon>MemoRecieveOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReceiveOrderSearch.resx">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
     </EmbeddedResource>
