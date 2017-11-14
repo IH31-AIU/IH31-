@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,17 +53,53 @@
     <Compile Include="AdviceInput.Designer.cs">
       <DependentUpon>AdviceInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuctionSeep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionSeep.Designer.cs">
+      <DependentUpon>AuctionSeep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionSelect.Designer.cs">
+      <DependentUpon>AuctionSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionSelectSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionSelectSell.Designer.cs">
+      <DependentUpon>AuctionSelectSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionStatement.Designer.cs">
+      <DependentUpon>AuctionStatement.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientSearch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClientSearch.Designer.cs">
       <DependentUpon>ClientSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="DelivaryNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelivaryNote.Designer.cs">
+      <DependentUpon>DelivaryNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="DocumentInput.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DocumentInput.Designer.cs">
       <DependentUpon>DocumentInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstimateDetail.Designer.cs">
+      <DependentUpon>EstimateDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="EstimateInput.cs">
       <SubType>Form</SubType>
@@ -82,6 +119,12 @@
     <Compile Include="InvoiceCrete.Designer.cs">
       <DependentUpon>InvoiceCrete.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstimateInput2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstimateInput2.Designer.cs">
+      <DependentUpon>EstimateInput2.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemoChange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +143,18 @@
     <Compile Include="MemoRecieveOrder.Designer.cs">
       <DependentUpon>MemoRecieveOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReceiveOrderSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,11 +172,29 @@
     <EmbeddedResource Include="AdviceInput.resx">
       <DependentUpon>AdviceInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AuctionSeep.resx">
+      <DependentUpon>AuctionSeep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionSelect.resx">
+      <DependentUpon>AuctionSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionSelectSell.resx">
+      <DependentUpon>AuctionSelectSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionStatement.resx">
+      <DependentUpon>AuctionStatement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientSearch.resx">
       <DependentUpon>ClientSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DelivaryNote.resx">
+      <DependentUpon>DelivaryNote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DocumentInput.resx">
       <DependentUpon>DocumentInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstimateDetail.resx">
+      <DependentUpon>EstimateDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstimateInput.resx">
       <DependentUpon>EstimateInput.cs</DependentUpon>
@@ -132,6 +205,9 @@
     <EmbeddedResource Include="InvoiceCrete.resx">
       <DependentUpon>InvoiceCrete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EstimateInput2.resx">
+      <DependentUpon>EstimateInput2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemoChange.resx">
       <DependentUpon>MemoChange.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +216,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemoRecieveOrder.resx">
       <DependentUpon>MemoRecieveOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiveOrderSearch.resx">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
@@ -170,7 +252,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
