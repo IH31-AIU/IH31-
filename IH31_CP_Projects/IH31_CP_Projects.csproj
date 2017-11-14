@@ -70,6 +70,18 @@
     <Compile Include="EstimateInput.Designer.cs">
       <DependentUpon>EstimateInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceClearingCSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceClearingCSV.Designer.cs">
+      <DependentUpon>InvoiceClearingCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceCrete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceCrete.Designer.cs">
+      <DependentUpon>InvoiceCrete.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemoChange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +106,6 @@
     <Compile Include="ReceiveOrderSearch.Designer.cs">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecieveOrderManagementMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RecieveOrderManagementMenu.Designer.cs">
-      <DependentUpon>RecieveOrderManagementMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="TopMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EstimateInput.resx">
       <DependentUpon>EstimateInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceClearingCSV.resx">
+      <DependentUpon>InvoiceClearingCSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceCrete.resx">
+      <DependentUpon>InvoiceCrete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemoChange.resx">
       <DependentUpon>MemoChange.cs</DependentUpon>

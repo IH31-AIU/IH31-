@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace IH31_CP_Projects
 {
-    public partial class RecieveOrderManagementMenu : Form
+    public partial class InvoiceCrete : Form
     {
-        public RecieveOrderManagementMenu()
+        public InvoiceCrete()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
