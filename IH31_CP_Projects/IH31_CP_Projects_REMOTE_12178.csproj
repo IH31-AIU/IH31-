@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D20E4D6A-D493-4612-9F49-BF3410096841}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IH31_CP_Projects</RootNamespace>
+    <AssemblyName>IH31_CP_Projects</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdviceInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdviceInput.Designer.cs">
+      <DependentUpon>AdviceInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionSeep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionSeep.Designer.cs">
+      <DependentUpon>AuctionSeep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionSelect.Designer.cs">
+      <DependentUpon>AuctionSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionSelectSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionSelectSell.Designer.cs">
+      <DependentUpon>AuctionSelectSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuctionStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuctionStatement.Designer.cs">
+      <DependentUpon>AuctionStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientSearch.Designer.cs">
+      <DependentUpon>ClientSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelivaryNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelivaryNote.Designer.cs">
+      <DependentUpon>DelivaryNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentInput.Designer.cs">
+      <DependentUpon>DocumentInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstimateDetail.Designer.cs">
+      <DependentUpon>EstimateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstimateInput.Designer.cs">
+      <DependentUpon>EstimateInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateInput2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstimateInput2.Designer.cs">
+      <DependentUpon>EstimateInput2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoChange.Designer.cs">
+      <DependentUpon>MemoChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoInput.Designer.cs">
+      <DependentUpon>MemoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoRecieveOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoRecieveOrder.Designer.cs">
+      <DependentUpon>MemoRecieveOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseOrder.Designer.cs">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiveOrderSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiveOrderSearch.Designer.cs">
+      <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecieveOrderManagementMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecieveOrderManagementMenu.Designer.cs">
+      <DependentUpon>RecieveOrderManagementMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopMenu.Designer.cs">
+      <DependentUpon>TopMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdviceInput.resx">
+      <DependentUpon>AdviceInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionSeep.resx">
+      <DependentUpon>AuctionSeep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionSelect.resx">
+      <DependentUpon>AuctionSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionSelectSell.resx">
+      <DependentUpon>AuctionSelectSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuctionStatement.resx">
+      <DependentUpon>AuctionStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientSearch.resx">
+      <DependentUpon>ClientSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelivaryNote.resx">
+      <DependentUpon>DelivaryNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentInput.resx">
+      <DependentUpon>DocumentInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstimateDetail.resx">
+      <DependentUpon>EstimateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstimateInput.resx">
+      <DependentUpon>EstimateInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstimateInput2.resx">
+      <DependentUpon>EstimateInput2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoChange.resx">
+      <DependentUpon>MemoChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoInput.resx">
+      <DependentUpon>MemoInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoRecieveOrder.resx">
+      <DependentUpon>MemoRecieveOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseOrder.resx">
+      <DependentUpon>PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiveOrderSearch.resx">
+      <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopMenu.resx">
+      <DependentUpon>TopMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
