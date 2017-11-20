@@ -84,7 +84,6 @@
     <Compile Include="ClientSearch.Designer.cs">
       <DependentUpon>ClientSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBManager.cs" />
     <Compile Include="DelivaryNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +150,12 @@
     <Compile Include="OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="pdfsample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pdfsample.Designer.cs">
+      <DependentUpon>pdfsample.cs</DependentUpon>
+    </Compile>
     <Compile Include="PurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +168,7 @@
     <Compile Include="ReceiveOrderSearch.Designer.cs">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="testEM.cs" />
     <Compile Include="TopMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pdfsample.resx">
+      <DependentUpon>pdfsample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PurchaseOrder.resx">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +261,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
