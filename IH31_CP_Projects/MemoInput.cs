@@ -16,5 +16,13 @@ namespace IH31_CP_Projects
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ClientSearch csearch = new ClientSearch();
+            csearch.ShowDialog();
+            csearch.Dispose();
+            this.Show();
+        }
     }
 }
