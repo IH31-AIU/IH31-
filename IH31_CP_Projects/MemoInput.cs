@@ -15,14 +15,18 @@ namespace IH31_CP_Projects
         public MemoInput()
         {
             InitializeComponent();
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtCustomerSeach_Click(object sender, EventArgs e)
         {
-            ClientSearch csearch = new ClientSearch();
+            CustomerSearch csearch = new CustomerSearch(this);
             csearch.ShowDialog();
             csearch.Dispose();
             this.Show();
+           
         }
+
+
     }
 }

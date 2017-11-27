@@ -31,18 +31,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DtMemo = new System.Windows.Forms.DateTimePicker();
+            this.TbCustomerCode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TbCustomerName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtCustomerSeach = new System.Windows.Forms.Button();
+            this.TbMemoDetail = new System.Windows.Forms.RichTextBox();
+            this.BtSubmit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.GbTradeFlg = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,19 +73,19 @@
             this.label3.Size = new System.Drawing.Size(0, 18);
             this.label3.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // DtMemo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(201, 25);
-            this.dateTimePicker1.TabIndex = 3;
+            this.DtMemo.Location = new System.Drawing.Point(122, 30);
+            this.DtMemo.Name = "DtMemo";
+            this.DtMemo.Size = new System.Drawing.Size(201, 25);
+            this.DtMemo.TabIndex = 3;
             // 
-            // textBox1
+            // TbCustomerCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 25);
-            this.textBox1.TabIndex = 4;
+            this.TbCustomerCode.Location = new System.Drawing.Point(122, 68);
+            this.TbCustomerCode.Name = "TbCustomerCode";
+            this.TbCustomerCode.Size = new System.Drawing.Size(101, 25);
+            this.TbCustomerCode.TabIndex = 4;
             // 
             // label4
             // 
@@ -95,12 +96,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "顧客名";
             // 
-            // textBox2
+            // TbCustomerName
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(101, 25);
-            this.textBox2.TabIndex = 6;
+            this.TbCustomerName.Location = new System.Drawing.Point(122, 108);
+            this.TbCustomerName.Name = "TbCustomerName";
+            this.TbCustomerName.Size = new System.Drawing.Size(101, 25);
+            this.TbCustomerName.TabIndex = 6;
             // 
             // label5
             // 
@@ -112,32 +113,32 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "メモ登録";
             // 
-            // button1
+            // BtCustomerSeach
             // 
-            this.button1.Location = new System.Drawing.Point(245, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "検索";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtCustomerSeach.Location = new System.Drawing.Point(245, 64);
+            this.BtCustomerSeach.Name = "BtCustomerSeach";
+            this.BtCustomerSeach.Size = new System.Drawing.Size(77, 30);
+            this.BtCustomerSeach.TabIndex = 8;
+            this.BtCustomerSeach.Text = "検索";
+            this.BtCustomerSeach.UseVisualStyleBackColor = true;
+            this.BtCustomerSeach.Click += new System.EventHandler(this.BtCustomerSeach_Click);
             // 
-            // richTextBox1
+            // TbMemoDetail
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(38, 268);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(882, 274);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.TbMemoDetail.Location = new System.Drawing.Point(38, 268);
+            this.TbMemoDetail.Name = "TbMemoDetail";
+            this.TbMemoDetail.Size = new System.Drawing.Size(882, 274);
+            this.TbMemoDetail.TabIndex = 9;
+            this.TbMemoDetail.Text = "";
             // 
-            // button2
+            // BtSubmit
             // 
-            this.button2.Location = new System.Drawing.Point(808, 549);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 58);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "登録";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtSubmit.Location = new System.Drawing.Point(808, 549);
+            this.BtSubmit.Name = "BtSubmit";
+            this.BtSubmit.Size = new System.Drawing.Size(112, 58);
+            this.BtSubmit.TabIndex = 10;
+            this.BtSubmit.Text = "登録";
+            this.BtSubmit.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -155,11 +156,12 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.DtMemo);
+            this.groupBox1.Controls.Add(this.BtCustomerSeach);
+            this.groupBox1.Controls.Add(this.TbCustomerCode);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.TbCustomerName);
+            this.groupBox1.Controls.Add(this.GbTradeFlg);
             this.groupBox1.Location = new System.Drawing.Point(33, 74);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
@@ -192,6 +194,15 @@
             this.radioButton1.Text = "買注文";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // GbTradeFlg
+            // 
+            this.GbTradeFlg.Location = new System.Drawing.Point(352, 68);
+            this.GbTradeFlg.Name = "GbTradeFlg";
+            this.GbTradeFlg.Size = new System.Drawing.Size(195, 75);
+            this.GbTradeFlg.TabIndex = 11;
+            this.GbTradeFlg.TabStop = false;
+            this.GbTradeFlg.Text = "売買選択";
+            // 
             // MemoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -199,8 +210,8 @@
             this.ClientSize = new System.Drawing.Size(1007, 618);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.BtSubmit);
+            this.Controls.Add(this.TbMemoDetail);
             this.Controls.Add(this.label5);
             this.Name = "MemoInput";
             this.Text = "MemoInput";
@@ -216,17 +227,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker DtMemo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TbCustomerName;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtCustomerSeach;
+        private System.Windows.Forms.RichTextBox TbMemoDetail;
+        private System.Windows.Forms.Button BtSubmit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox GbTradeFlg;
+        public System.Windows.Forms.TextBox TbCustomerCode;
     }
 }

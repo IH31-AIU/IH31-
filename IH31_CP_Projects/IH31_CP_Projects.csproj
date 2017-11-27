@@ -78,12 +78,13 @@
     <Compile Include="AuctionStatement.Designer.cs">
       <DependentUpon>AuctionStatement.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientSearch.cs">
+    <Compile Include="CustomerSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientSearch.Designer.cs">
-      <DependentUpon>ClientSearch.cs</DependentUpon>
+    <Compile Include="CustomerSearch.Designer.cs">
+      <DependentUpon>CustomerSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBManager.cs" />
     <Compile Include="DelivaryNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +145,7 @@
     <Compile Include="MemoRecieveOrder.Designer.cs">
       <DependentUpon>MemoRecieveOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Method.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,8 +194,8 @@
     <EmbeddedResource Include="AuctionStatement.resx">
       <DependentUpon>AuctionStatement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientSearch.resx">
-      <DependentUpon>ClientSearch.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerSearch.resx">
+      <DependentUpon>CustomerSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DelivaryNote.resx">
       <DependentUpon>DelivaryNote.cs</DependentUpon>
