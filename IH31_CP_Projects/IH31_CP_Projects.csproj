@@ -109,6 +109,12 @@
     <Compile Include="EstimateInput.Designer.cs">
       <DependentUpon>EstimateInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="EstimateSharch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstimateSharch.Designer.cs">
+      <DependentUpon>EstimateSharch.cs</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceClearingCSV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EstimateInput.resx">
       <DependentUpon>EstimateInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstimateSharch.resx">
+      <DependentUpon>EstimateSharch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InvoiceClearingCSV.resx">
       <DependentUpon>InvoiceClearingCSV.cs</DependentUpon>
