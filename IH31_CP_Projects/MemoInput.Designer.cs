@@ -41,8 +41,8 @@
             this.BtSubmit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.sflg = new System.Windows.Forms.RadioButton();
+            this.pflg = new System.Windows.Forms.RadioButton();
             this.GbTradeFlg = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,7 @@
             // 
             this.TbCustomerCode.Location = new System.Drawing.Point(122, 68);
             this.TbCustomerCode.Name = "TbCustomerCode";
+            this.TbCustomerCode.ReadOnly = true;
             this.TbCustomerCode.Size = new System.Drawing.Size(101, 25);
             this.TbCustomerCode.TabIndex = 4;
             // 
@@ -100,6 +101,7 @@
             // 
             this.TbCustomerName.Location = new System.Drawing.Point(122, 108);
             this.TbCustomerName.Name = "TbCustomerName";
+            this.TbCustomerName.ReadOnly = true;
             this.TbCustomerName.Size = new System.Drawing.Size(101, 25);
             this.TbCustomerName.TabIndex = 6;
             // 
@@ -151,8 +153,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.sflg);
+            this.groupBox1.Controls.Add(this.pflg);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -170,29 +172,29 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton2
+            // sflg
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(460, 108);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(87, 22);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "売注文";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.sflg.AutoSize = true;
+            this.sflg.Location = new System.Drawing.Point(460, 108);
+            this.sflg.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.sflg.Name = "sflg";
+            this.sflg.Size = new System.Drawing.Size(87, 22);
+            this.sflg.TabIndex = 10;
+            this.sflg.TabStop = true;
+            this.sflg.Text = "売注文";
+            this.sflg.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // pflg
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(352, 108);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(87, 22);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "買注文";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.pflg.AutoSize = true;
+            this.pflg.Location = new System.Drawing.Point(352, 108);
+            this.pflg.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pflg.Name = "pflg";
+            this.pflg.Size = new System.Drawing.Size(87, 22);
+            this.pflg.TabIndex = 9;
+            this.pflg.TabStop = true;
+            this.pflg.Text = "買注文";
+            this.pflg.UseVisualStyleBackColor = true;
             // 
             // GbTradeFlg
             // 
@@ -236,8 +238,8 @@
         private System.Windows.Forms.Button BtSubmit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton sflg;
+        private System.Windows.Forms.RadioButton pflg;
         private System.Windows.Forms.GroupBox GbTradeFlg;
         private System.Windows.Forms.TextBox TbCustomerCode;
     }

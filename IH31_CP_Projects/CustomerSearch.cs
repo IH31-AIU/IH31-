@@ -15,6 +15,7 @@ namespace IH31_CP_Projects
     public partial class CustomerSearch : Form
     {
        Customer customer;
+       Method method = new Method();
         
 
         
@@ -30,7 +31,7 @@ namespace IH31_CP_Projects
         {
             
             String customername = TbCustomerName.Text;
-            MySqlDataAdapter da = customer.CustomertSearch(customername);
+            MySqlDataAdapter da = method.CustomertSearch(customername);
             DataTable dt = new DataTable();
             da.Fill(dt);
             DvCustomer.DataSource = dt;
@@ -47,7 +48,9 @@ namespace IH31_CP_Projects
         private void DvCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             String customerid = DvCustomer.CurrentRow.Cells["customer_id"].Value.ToString();
+            String customername= DvCustomer.CurrentRow.Cells["abb_name"].Value.ToString();
             customer.CustomerCodeSet(customerid);
+            customer.CustomerNameSet(customername);
             this.Close();
         }
 

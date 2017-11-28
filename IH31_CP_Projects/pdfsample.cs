@@ -31,11 +31,12 @@ namespace IH31_CP_Projects
             areacutKeywordDic.Add("USE_SPARC", false);
 
             EditWord editWord = new EditWord();
-            editWord.DocFile = @"C:\Users\yuuya\Desktop\見積書.doc";
+            editWord.DocFile = @"C:\Users\yuuya\Desktop\新しいフォルダー (2)\見積もり.doc";
+            String pdfPath = @"C:\Users\yuuya\Desktop\見積書.pdf";
             editWord.TmpFile = @"C:\Users\yuuya\Desktop\tmpl.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
-            editWord.pdf(editWord.DocFile);
+            editWord.pdf(editWord.DocFile,pdfPath);
             
 
             MessageBox.Show("見積書が作成されました", "確認", MessageBoxButtons.OK);

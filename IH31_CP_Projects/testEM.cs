@@ -355,7 +355,7 @@ namespace testEW
         }
 
 
-        public void pdf(String wordpath)
+        public void pdf(String wordpath,String pdf)
         {
             // Wordを取り扱うための変数を定義する
             // ※ExcelやPowerPointも同じようなクラス名なので明示的に名前空間を書くことにする
@@ -364,14 +364,14 @@ namespace testEW
             Microsoft.Office.Interop.Word.Document objDocument = null;
             // ファイル名を定義する
             string strWordFilePath = string.Empty;
-            string strPdfFilePath ="";
+            string strPdfFilePath =pdf;
 
             try
             {
                 // ファイルパスを初期化する
                 // ※今回PDFはWord文章と同じ場所に拡張子だけ変えて保存するようにした
                 strWordFilePath =wordpath;
-                strPdfFilePath = System.IO.Path.GetDirectoryName(strWordFilePath) + @"\" + System.IO.Path.GetFileNameWithoutExtension(strWordFilePath) + @".pdf";
+               // strPdfFilePath = System.IO.Path.GetDirectoryName(strWordFilePath) + @"\" + System.IO.Path.GetFileNameWithoutExtension(strWordFilePath) + @".pdf";
                 // Wordオブジェクトを実体化する
                 objWord = new Microsoft.Office.Interop.Word.Application();
                 // 文章を管理しているオブジェクトを取得する

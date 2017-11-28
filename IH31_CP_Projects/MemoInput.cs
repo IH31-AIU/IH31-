@@ -31,7 +31,9 @@ namespace IH31_CP_Projects
             csearch.Dispose();
             this.Show();
             String customercode = customer.CustomerCodeGet();
+            String customername=customer.CustomerNameGet();
             TbCustomerCode.Text = customercode;
+            TbCustomerName.Text = customername;
        
         }
 
