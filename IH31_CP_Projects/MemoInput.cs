@@ -12,20 +12,30 @@ namespace IH31_CP_Projects
 {
     public partial class MemoInput : Form
     {
+        
         public MemoInput()
         {
             InitializeComponent();
             
         }
 
+
+
         private void BtCustomerSeach_Click(object sender, EventArgs e)
         {
-            CustomerSearch csearch = new CustomerSearch(this);
+
+            Customer customer = new Customer();
+            CustomerSearch csearch = new CustomerSearch(customer);
+            
             csearch.ShowDialog();
             csearch.Dispose();
             this.Show();
-           
+            String customercode = customer.CustomerCodeGet();
+            TbCustomerCode.Text = customercode;
+       
         }
+
+
 
 
     }

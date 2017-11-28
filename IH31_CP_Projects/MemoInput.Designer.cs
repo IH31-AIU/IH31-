@@ -239,6 +239,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.GroupBox GbTradeFlg;
-        public System.Windows.Forms.TextBox TbCustomerCode;
+        private System.Windows.Forms.TextBox TbCustomerCode;
     }
 }

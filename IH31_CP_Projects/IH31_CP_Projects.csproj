@@ -170,6 +170,7 @@
     <Compile Include="ReceiveOrderSearch.Designer.cs">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReciveClass.cs" />
     <Compile Include="testEM.cs" />
     <Compile Include="TopMenu.cs">
       <SubType>Form</SubType>

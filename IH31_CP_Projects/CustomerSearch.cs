@@ -14,15 +14,15 @@ namespace IH31_CP_Projects
 {
     public partial class CustomerSearch : Form
     {
-        Method method = new Method();
-        MemoInput cserach;
+       Customer customer;
+        
 
         
 
-        public CustomerSearch(MemoInput memoinput)
+        public CustomerSearch(Customer customer)
         {
             InitializeComponent();
-            cserach = memoinput;
+            this.customer = customer;
 
         }
 
@@ -30,7 +30,7 @@ namespace IH31_CP_Projects
         {
             
             String customername = TbCustomerName.Text;
-            MySqlDataAdapter da = method.CustomertSearch(customername);
+            MySqlDataAdapter da = customer.CustomertSearch(customername);
             DataTable dt = new DataTable();
             da.Fill(dt);
             DvCustomer.DataSource = dt;
@@ -47,8 +47,7 @@ namespace IH31_CP_Projects
         private void DvCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             String customerid = DvCustomer.CurrentRow.Cells["customer_id"].Value.ToString();
-            cserach.TbCustomerCode.Text = customerid;
-           
+            customer.CustomerCodeSet(customerid);
             this.Close();
         }
 

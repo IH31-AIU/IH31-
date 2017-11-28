@@ -9,8 +9,9 @@ using MySql.Data.MySqlClient;
 
 namespace IH31_CP_Projects
 {
-    class Method
+    public class Customer
     {
+        private String customercode;
 
         //顧客探す奴
         public MySqlDataAdapter CustomertSearch(String customername) {
@@ -23,6 +24,21 @@ namespace IH31_CP_Projects
 
         }
 
+        //CustomerCodeセット
+        public void CustomerCodeSet(String ccode)
+        {
+            customercode = ccode;
+           
+        }
+        //CustomerCodeゲット
+        public String CustomerCodeGet()
+        {
+            return customercode;
+        }
 
     }
+
+
+
+
 }
