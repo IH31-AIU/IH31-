@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.DtMemo = new System.Windows.Forms.DateTimePicker();
             this.TbCustomerCode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TbCustomerName = new System.Windows.Forms.TextBox();
@@ -47,19 +45,10 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "日付";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 75);
+            this.label2.Location = new System.Drawing.Point(17, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 18);
             this.label2.TabIndex = 1;
@@ -73,16 +62,9 @@
             this.label3.Size = new System.Drawing.Size(0, 18);
             this.label3.TabIndex = 2;
             // 
-            // DtMemo
-            // 
-            this.DtMemo.Location = new System.Drawing.Point(122, 30);
-            this.DtMemo.Name = "DtMemo";
-            this.DtMemo.Size = new System.Drawing.Size(201, 25);
-            this.DtMemo.TabIndex = 3;
-            // 
             // TbCustomerCode
             // 
-            this.TbCustomerCode.Location = new System.Drawing.Point(122, 68);
+            this.TbCustomerCode.Location = new System.Drawing.Point(129, 25);
             this.TbCustomerCode.Name = "TbCustomerCode";
             this.TbCustomerCode.ReadOnly = true;
             this.TbCustomerCode.Size = new System.Drawing.Size(101, 25);
@@ -91,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 111);
+            this.label4.Location = new System.Drawing.Point(15, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 5;
@@ -99,7 +81,7 @@
             // 
             // TbCustomerName
             // 
-            this.TbCustomerName.Location = new System.Drawing.Point(122, 108);
+            this.TbCustomerName.Location = new System.Drawing.Point(129, 65);
             this.TbCustomerName.Name = "TbCustomerName";
             this.TbCustomerName.ReadOnly = true;
             this.TbCustomerName.Size = new System.Drawing.Size(101, 25);
@@ -117,7 +99,7 @@
             // 
             // BtCustomerSeach
             // 
-            this.BtCustomerSeach.Location = new System.Drawing.Point(245, 64);
+            this.BtCustomerSeach.Location = new System.Drawing.Point(252, 21);
             this.BtCustomerSeach.Name = "BtCustomerSeach";
             this.BtCustomerSeach.Size = new System.Drawing.Size(77, 30);
             this.BtCustomerSeach.TabIndex = 8;
@@ -141,11 +123,12 @@
             this.BtSubmit.TabIndex = 10;
             this.BtSubmit.Text = "登録";
             this.BtSubmit.UseVisualStyleBackColor = true;
+            this.BtSubmit.Click += new System.EventHandler(this.BtSubmit_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 228);
+            this.label6.Location = new System.Drawing.Point(40, 238);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 18);
             this.label6.TabIndex = 11;
@@ -155,27 +138,25 @@
             // 
             this.groupBox1.Controls.Add(this.sflg);
             this.groupBox1.Controls.Add(this.pflg);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.DtMemo);
             this.groupBox1.Controls.Add(this.BtCustomerSeach);
             this.groupBox1.Controls.Add(this.TbCustomerCode);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.TbCustomerName);
             this.groupBox1.Controls.Add(this.GbTradeFlg);
-            this.groupBox1.Location = new System.Drawing.Point(33, 74);
+            this.groupBox1.Location = new System.Drawing.Point(38, 72);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox1.Size = new System.Drawing.Size(795, 150);
+            this.groupBox1.Size = new System.Drawing.Size(780, 126);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
             // sflg
             // 
             this.sflg.AutoSize = true;
-            this.sflg.Location = new System.Drawing.Point(460, 108);
+            this.sflg.Location = new System.Drawing.Point(467, 65);
             this.sflg.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sflg.Name = "sflg";
             this.sflg.Size = new System.Drawing.Size(87, 22);
@@ -187,7 +168,7 @@
             // pflg
             // 
             this.pflg.AutoSize = true;
-            this.pflg.Location = new System.Drawing.Point(352, 108);
+            this.pflg.Location = new System.Drawing.Point(359, 65);
             this.pflg.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pflg.Name = "pflg";
             this.pflg.Size = new System.Drawing.Size(87, 22);
@@ -198,7 +179,7 @@
             // 
             // GbTradeFlg
             // 
-            this.GbTradeFlg.Location = new System.Drawing.Point(352, 68);
+            this.GbTradeFlg.Location = new System.Drawing.Point(359, 25);
             this.GbTradeFlg.Name = "GbTradeFlg";
             this.GbTradeFlg.Size = new System.Drawing.Size(195, 75);
             this.GbTradeFlg.TabIndex = 11;
@@ -226,10 +207,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker DtMemo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TbCustomerName;
         private System.Windows.Forms.Label label5;

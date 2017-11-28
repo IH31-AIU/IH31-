@@ -34,7 +34,23 @@ namespace IH31_CP_Projects
             String customername=customer.CustomerNameGet();
             TbCustomerCode.Text = customercode;
             TbCustomerName.Text = customername;
-       
+
+        }
+
+        private void BtSubmit_Click(object sender, EventArgs e)
+        {
+            String customercode = TbCustomerCode.Text;
+            String memoinfo = TbMemoDetail.Text;
+            String flg = "";
+            if (pflg.Checked)
+            {
+                flg="U";
+            }
+            else{
+                flg = "K";
+            }
+
+
         }
 
 
