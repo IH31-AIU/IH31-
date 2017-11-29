@@ -9,7 +9,7 @@ namespace IH31_CP_Projects
 {
     class DBManager
     {
-        private static String Constr = "SERVER=127.0.0.1;DATABASE=ih;UiD=root; PASSWORD=;CHARSET=utf8";
+        private static String Constr = "SERVER=bashio777.f5.si;DATABASE=ih;UiD=root; PASSWORD=Yuuya6618;CHARSET=utf8";
 
 
         public static MySqlConnection getConection()
