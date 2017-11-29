@@ -11,18 +11,32 @@ namespace IH31_CP_Projects
 {
     public class Method
     {
-       
+
 
         //顧客探す奴
         public MySqlDataAdapter CustomertSearch(String customername) {
-            MySqlConnection conn=DBManager.getConection();
+            MySqlConnection conn = DBManager.getConection();
             conn.Open();
-            String sql = "select customer_id,customer_verid,mail_address,formal_company_name,abb_name,phone_number,address from customer where abb_name like '%"+ customername + "%'";
+            String sql = "select customer_id,customer_verid,mail_address,formal_company_name,abb_name,phone_number,address from customer where abb_name like '%" + customername + "%'";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
             conn.Close();
             return da;
 
         }
+
+        public MySqlDataAdapter purchaseSearch(String customername)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "select customer_id,customer_verid,mail_address,formal_company_name,abb_name,phone_number,address from customer where abb_name like '%" + customername + "%'";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+
+        }
+
+
+
     }
 
     public class Customer
@@ -34,7 +48,7 @@ namespace IH31_CP_Projects
         public void CustomerCodeSet(String value)
         {
             customercode = value;
-           
+
         }
         //CustomerCodeゲット
         public String CustomerCodeGet()
@@ -56,6 +70,18 @@ namespace IH31_CP_Projects
 
 
 
+    }
+
+    public class Auction{
+        private string[] auctionName = {
+                                            "オークション会場A",
+                                            "オークション会場B",
+                                            "オークション会社C"
+                                        };
+        public string[] auctionNameGet()
+        {
+            return auctionName;
+        }
     }
 
 

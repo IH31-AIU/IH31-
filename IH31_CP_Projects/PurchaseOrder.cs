@@ -12,9 +12,16 @@ namespace IH31_CP_Projects
 {
     public partial class PurchaseOrder : Form
     {
+        Method method = new Method();
         public PurchaseOrder()
         {
             InitializeComponent();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
