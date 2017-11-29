@@ -24,11 +24,14 @@ namespace IH31_CP_Projects
 
         }
 
-        public MySqlDataAdapter purchaseSearch(String customername)
+        public MySqlDataAdapter purchaseSearch()
         {
             MySqlConnection conn = DBManager.getConection();
             conn.Open();
-            String sql = "select customer_id,customer_verid,mail_address,formal_company_name,abb_name,phone_number,address from customer where abb_name like '%" + customername + "%'";
+            String sql = "SELECT rod.auction as name ,count(rod.auction) as number FROM `rce_order_detail` rod " +
+                         "join memo on(memo.memo_id = rod.rce_order_id) " +
+                         "where memo.trade_flg = 'K' and rod.auction_date >= CURRENT_DATE() " +
+                         "group by rod.auction";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
             conn.Close();
             return da;

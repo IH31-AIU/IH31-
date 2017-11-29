@@ -30,11 +30,11 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auctionList = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionList)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -58,19 +58,31 @@
             this.label5.TabIndex = 68;
             this.label5.Text = "発注書作成";
             // 
-            // dataGridView
+            // auctionList
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.auctionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.auctionList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Column1,
             this.Column2});
-            this.dataGridView.Location = new System.Drawing.Point(15, 46);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowTemplate.Height = 21;
-            this.dataGridView.Size = new System.Drawing.Size(681, 372);
-            this.dataGridView.TabIndex = 69;
+            this.auctionList.Location = new System.Drawing.Point(15, 46);
+            this.auctionList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.auctionList.Name = "auctionList";
+            this.auctionList.RowTemplate.Height = 21;
+            this.auctionList.Size = new System.Drawing.Size(681, 372);
+            this.auctionList.TabIndex = 69;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "件数";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "オークション会場";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
             // 
             // Column3
             // 
@@ -80,30 +92,18 @@
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 80;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "オークション会場";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "件数";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 471);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.auctionList);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PurchaseOrder";
             this.Text = "PurchaseOrder";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +113,7 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView auctionList;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
