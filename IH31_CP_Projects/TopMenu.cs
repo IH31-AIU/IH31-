@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace IH31_CP_Projects
 {
-    public partial class TopMenu : Form
+    public partial class TopMenu :Form
     {
-        public TopMenu()
+
+        public TopMenu(Loginstr login)
         {
             InitializeComponent();
+            
         }
+       
 
     }
 }
