@@ -76,6 +76,45 @@ namespace IH31_CP_Projects
 
         }
 
+        //担当未決定メモ取得
+        public MySqlDataAdapter memoSlect()
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "select memo.memo_id,customer.abb_name,memo.date from memo,customer where memo.responsible_employee_id is null && substr(memo_id,1,3)=customer.customer_id";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+
+
+        }
+
+        //指定メモ取得
+        public MySqlDataAdapter memoSlectOne(String memoid)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "select memo.memo_id,customer.abb_name,memo.date,memo.trade_flg,memo.memo_info from memo,customer where substr(memo_id,1,3)=customer.customer_id && memo.memo_id='"+memoid+"'";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+
+
+        }
+
+        //メモ担当決定
+        public void memoChange(String employeeid,String memoid)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "update memo set responsible_employee_id='"+employeeid+"'where memo_id='"+memoid+"'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+
+        }
+
 
 
 
