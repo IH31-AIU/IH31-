@@ -86,6 +86,7 @@
             this.BtEstimateInput.TabIndex = 2;
             this.BtEstimateInput.Text = "見積書作成";
             this.BtEstimateInput.UseVisualStyleBackColor = true;
+            this.BtEstimateInput.Click += new System.EventHandler(this.BtEstimateInput_Click);
             // 
             // BtMemoReceive
             // 
@@ -96,6 +97,7 @@
             this.BtMemoReceive.TabIndex = 1;
             this.BtMemoReceive.Text = "メモ担当決定";
             this.BtMemoReceive.UseVisualStyleBackColor = true;
+            this.BtMemoReceive.Click += new System.EventHandler(this.BtMemoReceive_Click);
             // 
             // BtMemoInput
             // 

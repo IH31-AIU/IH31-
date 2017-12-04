@@ -33,5 +33,17 @@ namespace IH31_CP_Projects
             PurchaseOrder po = new PurchaseOrder();
             po.ShowDialog();
         }
+
+        private void BtMemoReceive_Click(object sender, EventArgs e)
+        {
+            MemoRecieveOrder memorecieve = new MemoRecieveOrder();
+            memorecieve.ShowDialog();
+        }
+
+        private void BtEstimateInput_Click(object sender, EventArgs e)
+        {
+            EstimateInput estinput = new EstimateInput();
+            estinput.ShowDialog();
+        }
     }
 }
