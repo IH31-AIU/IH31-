@@ -26,6 +26,10 @@ namespace IH31_CP_Projects
 
         }
 
-
+        private void PurchaseCreateBt_Click(object sender, EventArgs e)
+        {
+            PurchaseOrder po = new PurchaseOrder();
+            po.ShowDialog();
+        }
     }
 }

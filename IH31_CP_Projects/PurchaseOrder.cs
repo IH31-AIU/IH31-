@@ -107,5 +107,16 @@ namespace IH31_CP_Projects
 
             editWord.pdf(editWord.DocFile, pdfPath);
         }
+
+        private void closeBt_Click(object sender, EventArgs e)
+        {
+            DialogResult Res;
+            Res = MessageBox.Show("発注書作成を終了してもよろしいですか", "確認", MessageBoxButtons.OKCancel);
+            if (Res == DialogResult.OK)
+            {
+                this.Close();
+            }
+
+        }
     }
 }

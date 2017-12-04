@@ -31,9 +31,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.auctionList = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.closeBt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.auctionList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,23 +67,11 @@
             this.Column1,
             this.Column2});
             this.auctionList.Location = new System.Drawing.Point(15, 46);
-            this.auctionList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.auctionList.Margin = new System.Windows.Forms.Padding(4);
             this.auctionList.Name = "auctionList";
             this.auctionList.RowTemplate.Height = 21;
             this.auctionList.Size = new System.Drawing.Size(681, 372);
             this.auctionList.TabIndex = 69;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "件数";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "オークション会場";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
             // 
             // Column3
             // 
@@ -92,15 +81,39 @@
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 80;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "オークション会場";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "件数";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
+            // 
+            // closeBt
+            // 
+            this.closeBt.Location = new System.Drawing.Point(15, 424);
+            this.closeBt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeBt.Name = "closeBt";
+            this.closeBt.Size = new System.Drawing.Size(100, 32);
+            this.closeBt.TabIndex = 70;
+            this.closeBt.Text = "閉じる";
+            this.closeBt.UseVisualStyleBackColor = true;
+            this.closeBt.Click += new System.EventHandler(this.closeBt_Click);
+            // 
             // PurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 471);
+            this.Controls.Add(this.closeBt);
             this.Controls.Add(this.auctionList);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PurchaseOrder";
             this.Text = "PurchaseOrder";
             ((System.ComponentModel.ISupportInitialize)(this.auctionList)).EndInit();
@@ -117,5 +130,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button closeBt;
     }
 }
