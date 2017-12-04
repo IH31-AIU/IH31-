@@ -54,7 +54,7 @@ namespace IH31_CP_Projects
             }
 
            
-            MySqlDataAdapter da = method.memoIDMax(customercode);
+            MySqlDataAdapter da = quote.memoIDMax(customercode);
              DataTable dt = new DataTable();
 
             try
@@ -68,7 +68,7 @@ namespace IH31_CP_Projects
                 id = customercode + "0000001";
             }
 
-            method.memoInsert(id, memoinfo, flg);
+            quote.memoInsert(id, memoinfo, flg);
             DialogResult Res;
             Res = MessageBox.Show("処理が完了しました", "確認", MessageBoxButtons.OK);
             if (Res == DialogResult.OK)

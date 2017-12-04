@@ -28,7 +28,7 @@ namespace IH31_CP_Projects
            
             String mailaddress = Tbid.Text;
             String pass = Tbpass.Text;
-            MySqlDataAdapter da = method.login(mailaddress,pass);
+            MySqlDataAdapter da = quote.login(mailaddress,pass);
             DataTable dt = new DataTable();
             da.Fill(dt);
             if (dt.Rows.Count>=1)

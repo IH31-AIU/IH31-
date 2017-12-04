@@ -19,7 +19,7 @@ namespace IH31_CP_Projects
         public MemoRecieveOrder()
         {
             InitializeComponent();
-            MySqlDataAdapter da = method.memoSlect();
+            MySqlDataAdapter da = quote.memoSlect();
             DataTable dt = new DataTable();
             da.Fill(dt);
             DvMemo.DataSource = dt;
@@ -35,7 +35,7 @@ namespace IH31_CP_Projects
             MemoDetail memodetail = new MemoDetail(memoid);
            
             memodetail.ShowDialog();
-            MySqlDataAdapter da = method.memoSlect();
+            MySqlDataAdapter da = quote.memoSlect();
             DataTable dt = new DataTable();
             da.Fill(dt);
             DvMemo.DataSource = dt;

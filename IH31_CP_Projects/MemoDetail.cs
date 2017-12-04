@@ -17,7 +17,7 @@ namespace IH31_CP_Projects
         public MemoDetail(String memoid)
         {
             InitializeComponent();
-            MySqlDataAdapter da = method.memoSlectOne(memoid);
+            MySqlDataAdapter da = quote.memoSlectOne(memoid);
             DataTable dt = new DataTable();
             da.Fill(dt);
             String memo_id=dt.Rows[0][0].ToString();
@@ -49,7 +49,7 @@ namespace IH31_CP_Projects
         private void BtSubmit_Click(object sender, EventArgs e)
         {
             String employeeid = "1";
-            method.memoChange(employeeid, Tbmemo.Text);
+            quote.memoChange(employeeid, Tbmemo.Text);
             DialogResult Res;
             Res = MessageBox.Show("処理が完了しました", "確認", MessageBoxButtons.OK);
             if (Res == DialogResult.OK)

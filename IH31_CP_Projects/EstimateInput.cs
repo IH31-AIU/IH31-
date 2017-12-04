@@ -70,8 +70,10 @@ namespace IH31_CP_Projects
         private void BtSubmit_Click(object sender, EventArgs e)
         {
             int cnt = 0;
+            int sum=0;
             Dictionary<string, string> replaceKeywordDic = new Dictionary<string, string>();
             Dictionary<string, bool> areacutKeywordDic = new Dictionary<string, bool>();
+
             DateTime dtToday = DateTime.Today;
             String formal_name = quote.customerNameSelect(TbCusName.Text);
 
@@ -80,9 +82,29 @@ namespace IH31_CP_Projects
             replaceKeywordDic.Add("customername", formal_name);
             replaceKeywordDic.Add("id", TbMemo.Text);
 
-            for (int i = 0; i < dt.Rows.Count; i++)
+            for (int i = 1; i <= dt.Rows.Count; i++)
             {
+                replaceKeywordDic.Add("carname"+i, dt.Rows[i-1][3].ToString());
+                replaceKeywordDic.Add("year" + i, dt.Rows[i - 1][2].ToString());
+                replaceKeywordDic.Add("model" + i, dt.Rows[i - 1][4].ToString());
+                replaceKeywordDic.Add("grade" + i, dt.Rows[i - 1][5].ToString());
+                replaceKeywordDic.Add("price" + i, String.Format("{0:#,0}", Convert.ToInt32(dt.Rows[i - 1][6]))+ "円");
+                                                   
+                
+                cnt = i;
+                sum=sum+Convert.ToInt32(dt.Rows[i - 1][6]);
+                
 
+            }
+            replaceKeywordDic.Add("sum",sum.ToString()+"円");
+
+            for (int i = cnt+1; i <= 18; i++)
+            {
+                replaceKeywordDic.Add("carname"+i," ");
+                replaceKeywordDic.Add("year"+i," ");
+                replaceKeywordDic.Add("model"+i," ");
+                replaceKeywordDic.Add("grade"+i," ");
+                replaceKeywordDic.Add("price"+i," ");
             }
                 
 

@@ -31,7 +31,7 @@ namespace IH31_CP_Projects
         {
             
             String customername = TbCustomerName.Text;
-            MySqlDataAdapter da = method.CustomertSearch(customername);
+            MySqlDataAdapter da =quote.CustomertSearch(customername);
             DataTable dt = new DataTable();
             da.Fill(dt);
             DvCustomer.DataSource = dt;
