@@ -38,7 +38,7 @@ namespace IH31_CP_Projects
                 
                 login.employeeIdSet(dt.Rows[0][0].ToString());
                 login.employeeNameSet(dt.Rows[0][1].ToString());
-                TopMenu top = new TopMenu(login);
+                Top top = new Top(login);
      
                 this.Hide();
                 top.ShowDialog();
