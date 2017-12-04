@@ -15,7 +15,7 @@ namespace IH31_CP_Projects
     public partial class CustomerSearch : Form
     {
        Customer customer;
-       Method method = new Method();
+       Quote quote = new Quote();
         
 
         

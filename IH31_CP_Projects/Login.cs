@@ -14,10 +14,10 @@ namespace IH31_CP_Projects
 {
      public partial class Login : Form
     {
-        
-        
 
-        Method method = new Method();
+
+
+         Quote quote = new Quote();
         public Login()
         {
             InitializeComponent();

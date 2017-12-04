@@ -127,23 +127,29 @@
     <Compile Include="InvoiceCrete.Designer.cs">
       <DependentUpon>InvoiceCrete.cs</DependentUpon>
     </Compile>
-    <Compile Include="EstimateInput2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EstimateInput2.Designer.cs">
-      <DependentUpon>EstimateInput2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemoAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoAll.Designer.cs">
+      <DependentUpon>MemoAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="MemoChange.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MemoChange.Designer.cs">
       <DependentUpon>MemoChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoDetail.Designer.cs">
+      <DependentUpon>MemoDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="MemoInput.cs">
       <SubType>Form</SubType>
@@ -157,7 +163,7 @@
     <Compile Include="MemoRecieveOrder.Designer.cs">
       <DependentUpon>MemoRecieveOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Method.cs" />
+    <Compile Include="Constant.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,14 +182,20 @@
     <Compile Include="PurchaseOrder.Designer.cs">
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="quote.cs" />
     <Compile Include="ReceiveOrderSearch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReceiveOrderSearch.Designer.cs">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReciveClass.cs" />
     <Compile Include="testEM.cs" />
+    <Compile Include="Top.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top.Designer.cs">
+      <DependentUpon>Top.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,14 +243,17 @@
     <EmbeddedResource Include="InvoiceCrete.resx">
       <DependentUpon>InvoiceCrete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EstimateInput2.resx">
-      <DependentUpon>EstimateInput2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MemoAll.resx">
+      <DependentUpon>MemoAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MemoChange.resx">
       <DependentUpon>MemoChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoDetail.resx">
+      <DependentUpon>MemoDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemoInput.resx">
       <DependentUpon>MemoInput.cs</DependentUpon>
@@ -257,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReceiveOrderSearch.resx">
       <DependentUpon>ReceiveOrderSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top.resx">
+      <DependentUpon>Top.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopMenu.resx">
       <DependentUpon>TopMenu.cs</DependentUpon>

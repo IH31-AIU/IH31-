@@ -13,7 +13,7 @@ namespace IH31_CP_Projects
 {
     public partial class MemoInput : Form
     {
-        Method method = new Method();
+        Quote quote = new Quote();
         
         public MemoInput()
         {
@@ -56,15 +56,16 @@ namespace IH31_CP_Projects
            
             MySqlDataAdapter da = method.memoIDMax(customercode);
              DataTable dt = new DataTable();
-            if (da==null)
-            {
-               id = customercode + "0000001";
-            }
-            else
+
+            try
             {
                 da.Fill(dt);
                 int mid=Convert.ToInt32(dt.Rows[0][0]);
                 id=customercode+mid.ToString("0000000");
+            }
+            catch
+            {
+                id = customercode + "0000001";
             }
 
             method.memoInsert(id, memoinfo, flg);
@@ -82,6 +83,8 @@ namespace IH31_CP_Projects
 
 
         }
+
+
 
 
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IH31_CP_Projects
 {
-    public partial class EstimateInput2 : Form
+    public partial class Top : Form
     {
-        public EstimateInput2()
+        public Top()
         {
             InitializeComponent();
         }

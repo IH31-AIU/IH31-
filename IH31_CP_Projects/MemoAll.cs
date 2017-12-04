@@ -11,35 +11,42 @@ using MySql.Data.MySqlClient;
 
 namespace IH31_CP_Projects
 {
-    public partial class MemoRecieveOrder : Form
+    public partial class MemoAll : Form
     {
+        Memo memo;
         Quote quote = new Quote();
-       
 
-        public MemoRecieveOrder()
+        public MemoAll(Memo memo)
         {
             InitializeComponent();
-            MySqlDataAdapter da = method.memoSlect();
+            this.memo = memo;
+            MySqlDataAdapter da = quote.memoSelectNoQuote();
             DataTable dt = new DataTable();
             da.Fill(dt);
             DvMemo.DataSource = dt;
             DvMemo.Columns[0].HeaderText = "メモID";
             DvMemo.Columns[1].HeaderText = "会社名";
             DvMemo.Columns[2].HeaderText = "日付";
+            DvMemo.Columns[3].HeaderText = "担当者";
+            
 
+            
         }
 
-        private void cell_click(object sender, DataGridViewCellMouseEventArgs e)
+        private void cell_doubleclick(object sender, DataGridViewCellEventArgs e)
         {
             String memoid = DvMemo.CurrentRow.Cells["memo_id"].Value.ToString();
-            MemoDetail memodetail = new MemoDetail(memoid);
-           
-            memodetail.ShowDialog();
-            MySqlDataAdapter da = method.memoSlect();
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DvMemo.DataSource = dt;
+            String customername = DvMemo.CurrentRow.Cells["abb_name"].Value.ToString();
+            String employeename = DvMemo.CurrentRow.Cells["name"].Value.ToString();
+
+            memo.memoIdSet(memoid);
+            memo.customerNameSet(customername);
+            memo.employeeNameSet(employeename);
+            this.Close();
         }
+
+
+
 
 
 

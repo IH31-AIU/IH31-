@@ -13,7 +13,7 @@ namespace IH31_CP_Projects
 {
     public partial class MemoDetail : Form
     {
-        Method method = new Method();
+        Quote quote = new Quote();
         public MemoDetail(String memoid)
         {
             InitializeComponent();
