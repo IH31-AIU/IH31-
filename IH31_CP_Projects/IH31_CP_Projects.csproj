@@ -54,11 +54,11 @@
     <Compile Include="AdviceInput.Designer.cs">
       <DependentUpon>AdviceInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuctionSeep.cs">
+    <Compile Include="Listing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuctionSeep.Designer.cs">
-      <DependentUpon>AuctionSeep.cs</DependentUpon>
+    <Compile Include="Listing.Designer.cs">
+      <DependentUpon>Listing.cs</DependentUpon>
     </Compile>
     <Compile Include="AuctionSelect.cs">
       <SubType>Form</SubType>
@@ -203,8 +203,8 @@
     <EmbeddedResource Include="AdviceInput.resx">
       <DependentUpon>AdviceInput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuctionSeep.resx">
-      <DependentUpon>AuctionSeep.cs</DependentUpon>
+    <EmbeddedResource Include="Listing.resx">
+      <DependentUpon>Listing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AuctionSelect.resx">
       <DependentUpon>AuctionSelect.cs</DependentUpon>
