@@ -17,6 +17,8 @@ namespace IH31_CP_Projects
         {
             InitializeComponent();
             this.login = login;
+            String empname = login.employeeNameGet();
+            LName.Text = "ようこそ"+empname+"さん";
         }
 
         private void BtMemoInput_Click(object sender, EventArgs e)
