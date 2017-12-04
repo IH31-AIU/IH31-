@@ -52,6 +52,7 @@ namespace IH31_CP_Projects
            
             da.Fill(dt);
             DvEst.DataSource = dt;
+            DvEst.AllowUserToAddRows = false;
             DvEst.Columns[0].HeaderText = "見積ID";
             DvEst.Columns[1].HeaderText = "見積明細ID";
             DvEst.Columns[2].HeaderText = "年式";
@@ -121,7 +122,7 @@ namespace IH31_CP_Projects
             editWord.pdf(editWord.DocFile, pdfPath);
 
 
-            //quote.quoteInsert(TbMemo.Text);
+            quote.quoteInsert(TbMemo.Text);
             DialogResult Res;
             Res = MessageBox.Show("処理が完了しました", "確認", MessageBoxButtons.OK);
             if (Res == DialogResult.OK)

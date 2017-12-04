@@ -35,6 +35,7 @@ namespace IH31_CP_Projects
             DataTable dt = new DataTable();
             da.Fill(dt);
             DvCustomer.DataSource = dt;
+            DvCustomer.AllowUserToAddRows = false;
             DvCustomer.Columns[0].HeaderText = "顧客ID";
             DvCustomer.Columns[1].HeaderText = "顧客verID";
             DvCustomer.Columns[2].HeaderText = "メールアドレス";
