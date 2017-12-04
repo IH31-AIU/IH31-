@@ -45,5 +45,11 @@ namespace IH31_CP_Projects
             EstimateInput estinput = new EstimateInput();
             estinput.ShowDialog();
         }
+
+        private void ListingCreateBt_Click(object sender, EventArgs e)
+        {
+            Listing ls = new Listing();
+            ls.ShowDialog();
+        }
     }
 }

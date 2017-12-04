@@ -30,98 +30,80 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auctionList = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionList)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(7, 10);
+            this.label2.Location = new System.Drawing.Point(9, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 27);
+            this.label2.Size = new System.Drawing.Size(185, 34);
             this.label2.TabIndex = 6;
-            this.label2.Text = "オークション決定画面";
+            this.label2.Text = "出品票作成";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(541, 390);
+            this.button2.Location = new System.Drawing.Point(721, 488);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 29);
             this.button2.TabIndex = 7;
-            this.button2.Text = "登録";
+            this.button2.Text = "作成";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // auctionList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column1,
-            this.Column5,
-            this.Column4,
+            this.auctionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.auctionList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
+            this.Column1,
             this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 344);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "オークション会場";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 120;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "車名";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "型式";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "グレード";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
+            this.auctionList.Location = new System.Drawing.Point(13, 50);
+            this.auctionList.Margin = new System.Windows.Forms.Padding(4);
+            this.auctionList.Name = "auctionList";
+            this.auctionList.RowTemplate.Height = 21;
+            this.auctionList.Size = new System.Drawing.Size(807, 420);
+            this.auctionList.TabIndex = 70;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "年式";
+            this.Column3.HeaderText = "選択";
             this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column3.Width = 80;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "オークション会場";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 200;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "詳細";
+            this.Column2.HeaderText = "件数";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 80;
+            this.Column2.Width = 200;
             // 
-            // AuctionSeep
+            // Listing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 423);
+            this.ClientSize = new System.Drawing.Size(833, 529);
+            this.Controls.Add(this.auctionList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "AuctionSeep";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Listing";
             this.Text = "AuctionSeep";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.auctionList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,12 +113,9 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridView auctionList;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

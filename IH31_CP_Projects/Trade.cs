@@ -72,4 +72,23 @@ namespace IH31_CP_Projects
 
     }
 
+
+    public class ListingKanri
+    {
+        public MySqlDataAdapter listingSearch()
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "SELECT rod.auction as name ,count(rod.auction) as number FROM `rce_order_detail` rod " +
+                         "join memo on(memo.memo_id = rod.rce_order_id) " +
+                         "where memo.trade_flg = 'U' and rod.auction_date >= CURRENT_DATE() and rod.listing_slip_id is null " +
+                         "group by rod.auction";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+
+        }
+    }
+
+
 }
