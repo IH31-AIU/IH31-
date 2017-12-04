@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IH31_CP_Projects
 {
-    public partial class AuctionSeep : Form
+    public partial class Listing : Form
     {
-        public AuctionSeep()
+        public Listing()
         {
             InitializeComponent();
         }

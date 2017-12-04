@@ -1,6 +1,6 @@
 ﻿namespace IH31_CP_Projects
 {
-    partial class AuctionSeep
+    partial class Listing
     {
         /// <summary>
         /// Required designer variable.
