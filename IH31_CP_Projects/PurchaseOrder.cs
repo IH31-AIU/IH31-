@@ -34,6 +34,8 @@ namespace IH31_CP_Projects
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MySqlDataAdapter da;
+            DataTable dt;
             int id = 0;
             if (auctionList.Rows.Count == 0)
             {
@@ -44,8 +46,8 @@ namespace IH31_CP_Projects
             {
                 if (Convert.ToBoolean(auctionList.Rows[i].Cells[0].Value))
                 {
-                    MySqlDataAdapter da = pk.purchaseOrderInfoGet(auctionList.Rows[i].Cells[1].Value.ToString());
-                    DataTable dt = new DataTable();
+                    da = pk.purchaseOrderInfoGet(auctionList.Rows[i].Cells[1].Value.ToString());
+                    dt = new DataTable();
                     da.Fill(dt);
                     if (i == 0)
                     {
@@ -55,6 +57,19 @@ namespace IH31_CP_Projects
                     this.pdfCreate(dt , id);
                     MessageBox.Show("発注書が作成されました", "確認", MessageBoxButtons.OK);
                 }
+            }
+            da = pk.purchaseSearch();
+            dt = new DataTable();
+            da.Fill(dt);
+            auctionList.Rows.Clear();
+            auctionList.AllowUserToAddRows = false;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                auctionList.Rows.Add();
+                auctionList.Rows[i].Cells[0].Value = false;
+                auctionList.Rows[i].Cells[1].Value = dt.Rows[i]["name"];
+                auctionList.Rows[i].Cells[2].Value = dt.Rows[i]["number"];
+
             }
         }
 
