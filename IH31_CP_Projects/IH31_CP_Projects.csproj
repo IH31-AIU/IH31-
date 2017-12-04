@@ -183,6 +183,7 @@
       <DependentUpon>PurchaseOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="quote.cs" />
+    <Compile Include="Received.cs" />
     <Compile Include="ReceiveOrderSearch.cs">
       <SubType>Form</SubType>
     </Compile>
