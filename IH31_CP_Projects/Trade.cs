@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace IH31_CP_Projects
 {
-    class PurchaseKanri
+    public class PurchaseKanri
     {
         public MySqlDataAdapter purchaseSearch()
         {
