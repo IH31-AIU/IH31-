@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Data;
+
 
 
 namespace IH31_CP_Projects
@@ -70,6 +72,42 @@ namespace IH31_CP_Projects
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
             conn.Close();
             return da;
+        }
+
+        public MySqlDataAdapter componyName(string id)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            id = id.Substring(0, 3);
+            string sql = "select formal_company_name from customer"
+                        +" where customer_id ='"+id+"'";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+        }
+
+        public bool rceInsert(string id,string pdf,List<string[]> rceDetail)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            string sql = "insert into rce_order (rce_order_id,rce_order_date,rce_order_pdf_path)"
+                        + " values('" + id + "','" + DateTime.Now.Year+"-"+DateTime.Now.Month+"-"+DateTime.Now.Date + "','" + pdf + "')";
+            string datailSql = "INSERT INTO `rce_order_detail`(`rce_order_id`, `rce_order_detail_id`, `model_year`, `car_name`, `model`, `grade`, `remarks`, `quote_price`) value";
+            for(int i = 0; i < rceDetail.Count; i++)
+            {
+                if(i != 0)
+                {
+                    datailSql += ",";
+                }
+                datailSql += " ('" + id + "','" + rceDetail[i][0] + "','" + rceDetail[i][1] + "','" + rceDetail[i][2] + "','" + rceDetail[i][3] + "','" + rceDetail[i][4] + "','" + rceDetail[i][5] + "','" + rceDetail[i][6] + "')";
+            }
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            da = new MySqlDataAdapter(datailSql, conn);
+            da.Fill(dt);
+
+            return false;
         }
     }
 }
