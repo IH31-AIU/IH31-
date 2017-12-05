@@ -51,5 +51,11 @@ namespace IH31_CP_Projects
             Listing ls = new Listing();
             ls.ShowDialog();
         }
+
+        private void BtAuctionInsert_Click(object sender, EventArgs e)
+        {
+            AuctionStatement auction = new AuctionStatement();
+            auction.ShowDialog();
+        }
     }
 }
