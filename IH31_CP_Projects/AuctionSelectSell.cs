@@ -61,10 +61,12 @@ namespace IH31_CP_Projects
                     string auction = dvAuction["auction", row].Value.ToString();
                     string no = dvAuction["auction_no", row].Value.ToString();
                     string date = dvAuction["auction_date",row].Value.ToString();
+                    string id = dvAuction["rce_order_id", row].Value.ToString();
+                    string detail = dvAuction["rce_order_detail_id", row].Value.ToString();
                     if (auction != "" && date != "")
                     {
                         Received receive = new Received();
-                        receive.updateOrder(no,date,auction);   
+                        receive.updateOrder(no,date,auction,id,detail);   
                     }
                 }
             }

@@ -121,12 +121,13 @@ namespace IH31_CP_Projects
             return da;
         }
 
-        public void updateOrder(string no, string date, string name)
+        public void updateOrder(string no, string date, string name,string id,string detail)
         {
             MySqlConnection conn = DBManager.getConection();
             conn.Open();
             DateTime time = DateTime.Parse(date);
-            string sql = "update rce_order_detail set auction='" + name + "' ,auction_date='" + time.Year+"-"+time.Month+"-"+time.Day + "' ,auction_no=" + no;
+            string sql = "update rce_order_detail set auction='" + name + "' ,auction_date='" + time.Year+"-"+time.Month+"-"+time.Day + "' ,auction_no=" + no
+                        +" where rce_order_id ='"+id+"' and"+" rce_order_detail_id='"+detail+"'";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
             conn.Close();
             DataTable dt = new DataTable();
