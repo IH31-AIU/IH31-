@@ -86,12 +86,12 @@ namespace IH31_CP_Projects
             return da;
         }
 
-        public bool rceInsert(string id,string pdf,List<string[]> rceDetail)
+        public void rceInsert(string id,string pdf,List<string[]> rceDetail)
         {
             MySqlConnection conn = DBManager.getConection();
             conn.Open();
             string sql = "insert into rce_order (rce_order_id,rce_order_date,rce_order_pdf_path)"
-                        + " values('" + id + "','" + DateTime.Now.Year+"-"+DateTime.Now.Month+"-"+DateTime.Now.Date + "','" + pdf + "')";
+                        + " values('" + id + "','" + DateTime.Now.Year+"-"+DateTime.Now.Month+"-"+DateTime.Now.Day + "','" + pdf + "')";
             string datailSql = "INSERT INTO `rce_order_detail`(`rce_order_id`, `rce_order_detail_id`, `model_year`, `car_name`, `model`, `grade`, `remarks`, `quote_price`) value";
             for(int i = 0; i < rceDetail.Count; i++)
             {
