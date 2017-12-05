@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ListingCreateBt = new System.Windows.Forms.Button();
             this.auctionList = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,15 +48,16 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "出品票作成";
             // 
-            // button2
+            // ListingCreateBt
             // 
-            this.button2.Location = new System.Drawing.Point(721, 488);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 29);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "作成";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ListingCreateBt.Location = new System.Drawing.Point(721, 488);
+            this.ListingCreateBt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ListingCreateBt.Name = "ListingCreateBt";
+            this.ListingCreateBt.Size = new System.Drawing.Size(100, 29);
+            this.ListingCreateBt.TabIndex = 7;
+            this.ListingCreateBt.Text = "作成";
+            this.ListingCreateBt.UseVisualStyleBackColor = true;
+            this.ListingCreateBt.Click += new System.EventHandler(this.ListingCreateBt_Click);
             // 
             // auctionList
             // 
@@ -99,7 +100,7 @@
             this.ClientSize = new System.Drawing.Size(833, 529);
             this.Controls.Add(this.auctionList);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ListingCreateBt);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Listing";
             this.Text = "AuctionSeep";
@@ -112,7 +113,7 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ListingCreateBt;
         private System.Windows.Forms.DataGridView auctionList;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

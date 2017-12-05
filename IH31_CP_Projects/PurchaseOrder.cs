@@ -55,9 +55,9 @@ namespace IH31_CP_Projects
                         id = pk.maxPurchaseIdGet();
                     }
                     this.pdfCreate(dt , id);
-                    MessageBox.Show("発注書が作成されました", "確認", MessageBoxButtons.OK);
                 }
             }
+            MessageBox.Show("発注書が作成されました", "確認", MessageBoxButtons.OK);
             da = pk.purchaseSearch();
             dt = new DataTable();
             da.Fill(dt);

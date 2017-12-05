@@ -88,6 +88,51 @@ namespace IH31_CP_Projects
             return da;
 
         }
+
+        public MySqlDataAdapter listingInfoGet(string auctionName)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "SELECT rod.auction ,rod.auction_date,rod.auction_no,rod.car_name,rod.model_year,rod.model,rod.grade,rod.quote_price,rod.rce_order_id,rod.rce_order_detail_id FROM `rce_order_detail` rod " +
+                         "join memo on (memo.memo_id = rod.rce_order_id) " +
+                         "where memo.trade_flg = 'U' and rod.auction_date >= CURRENT_DATE() and rod.auction ='" + auctionName + "' and rod.listing_slip_id is null";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+        }
+
+        public void insertListing()
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "INSERT INTO listing values()";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+        }
+
+        public int maxListingIdGet()
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "SELECT max(listing_slip_id) as id from listing";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0]["id"]);
+        }
+        public void updatePurchaseIdRceOrderDetail(String orderId, int detailId, int listingId)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "update rce_order_detail set listing_slip_id = " + listingId + " where rce_order_id = '" + orderId + "' and rce_order_detail_id = " + detailId + "";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+        }
     }
 
 
