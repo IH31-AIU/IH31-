@@ -107,7 +107,30 @@ namespace IH31_CP_Projects
             da = new MySqlDataAdapter(datailSql, conn);
             da.Fill(dt);
 
-            return false;
+        }
+
+        public MySqlDataAdapter orderDetail(string id)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            string sql = "select * from rce_order_detail"
+                        + " inner join memo on memo_id = rce_order_id"
+                        + " where responsible_employee_id ='" + id + "'";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+        }
+
+        public void updateOrder(string no, string date, string name)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            DateTime time = DateTime.Parse(date);
+            string sql = "update rce_order_detail set auction='" + name + "' ,auction_date='" + time.Year+"-"+time.Month+"-"+time.Day + "' ,auction_no=" + no;
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            DataTable dt = new DataTable();
+            da.Fill(dt);
         }
     }
 }
