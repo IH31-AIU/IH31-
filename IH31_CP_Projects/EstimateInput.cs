@@ -16,11 +16,13 @@ namespace IH31_CP_Projects
     {
         Memo memo = new Memo();
         Quote quote = new Quote();
-        DataTable dt = new DataTable();
+        DataTable dt2= new DataTable();
+        
 
         public EstimateInput()
         {
             InitializeComponent();
+
         }
 
         private void BtMemoSearch_Click(object sender, EventArgs e)
@@ -37,6 +39,7 @@ namespace IH31_CP_Projects
 
         private void BtAddEst_Click(object sender, EventArgs e)
         {
+           
             if (TbMemo.Text.Equals(""))
             {
                 return;
@@ -48,11 +51,18 @@ namespace IH31_CP_Projects
             estdetail.ShowDialog();
             memodetail.Close();
             this.Show();
+
             MySqlDataAdapter da = quote.quoteDetailSeleceOne(TbMemo.Text);
+            DataTable dt = new DataTable();
+            dt2 = dt;
+            
            
             da.Fill(dt);
+           
+
             DvEst.DataSource = dt;
-            DvEst.AllowUserToAddRows = false;
+            
+           
             DvEst.Columns[0].HeaderText = "見積ID";
             DvEst.Columns[1].HeaderText = "見積明細ID";
             DvEst.Columns[2].HeaderText = "年式";
@@ -60,6 +70,9 @@ namespace IH31_CP_Projects
             DvEst.Columns[4].HeaderText = "モデル";
             DvEst.Columns[5].HeaderText = "グレード";
             DvEst.Columns[6].HeaderText = "見積金額";
+            
+          
+
 
 
 
@@ -83,17 +96,17 @@ namespace IH31_CP_Projects
             replaceKeywordDic.Add("customername", formal_name);
             replaceKeywordDic.Add("id", TbMemo.Text);
 
-            for (int i = 1; i <= dt.Rows.Count; i++)
+            for (int i = 1; i <= dt2.Rows.Count; i++)
             {
-                replaceKeywordDic.Add("carname"+i, dt.Rows[i-1][3].ToString());
-                replaceKeywordDic.Add("year" + i, dt.Rows[i - 1][2].ToString());
-                replaceKeywordDic.Add("model" + i, dt.Rows[i - 1][4].ToString());
-                replaceKeywordDic.Add("grade" + i, dt.Rows[i - 1][5].ToString());
-                replaceKeywordDic.Add("price" + i, String.Format("{0:#,0}", Convert.ToInt32(dt.Rows[i - 1][6]))+ "円");
+                replaceKeywordDic.Add("carname"+i, dt2.Rows[i-1][3].ToString());
+                replaceKeywordDic.Add("year" + i, dt2.Rows[i - 1][2].ToString());
+                replaceKeywordDic.Add("model" + i, dt2.Rows[i - 1][4].ToString());
+                replaceKeywordDic.Add("grade" + i, dt2.Rows[i - 1][5].ToString());
+                replaceKeywordDic.Add("price" + i, String.Format("{0:#,0}", Convert.ToInt32(dt2.Rows[i - 1][6]))+ "円");
                                                    
                 
                 cnt = i;
-                sum=sum+Convert.ToInt32(dt.Rows[i - 1][6]);
+                sum=sum+Convert.ToInt32(dt2.Rows[i - 1][6]);
                 
 
             }
@@ -114,8 +127,8 @@ namespace IH31_CP_Projects
 
 
             EditWord editWord = new EditWord();
-            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\見積書.doc";
-            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\見積書.pdf";
+            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\見積書"+TbMemo.Text+TbCusName.Text+".doc";
+            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\見積書"+TbMemo.Text+TbCusName.Text+".pdf";
             editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\見積書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 

@@ -18,6 +18,8 @@ namespace IH31_CP_Projects
         public AuctionStatement()
         {
             InitializeComponent();
+            Datetime.CustomFormat = "yyyy-MM-dd";
+
         }
 
         private void BtSearch_Click(object sender, EventArgs e)
@@ -25,7 +27,7 @@ namespace IH31_CP_Projects
             
             AuctionKanri auction = new AuctionKanri();
             DvAuction.Rows.Clear();
-            Datetime.CustomFormat="yyyy-MM-dd";
+           
             dt = auction.auctionSelect(CbAuctionName.Text,Datetime.Text);
             DvAuction.AllowUserToAddRows = false;
 

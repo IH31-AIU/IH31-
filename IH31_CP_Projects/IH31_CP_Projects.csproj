@@ -54,6 +54,7 @@
     <Compile Include="AdviceInput.Designer.cs">
       <DependentUpon>AdviceInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoice.cs" />
     <Compile Include="Listing.cs">
       <SubType>Form</SubType>
     </Compile>
