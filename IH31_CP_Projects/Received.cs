@@ -133,5 +133,18 @@ namespace IH31_CP_Projects
             DataTable dt = new DataTable();
             da.Fill(dt);
         }
+
+        public MySqlDataAdapter orderDetailWhere(string id,string flg)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            string sql = "select * from rce_order_detail"
+                        + " inner join memo on memo_id = rce_order_id"
+                        + " where responsible_employee_id ='" + id + "'"
+                        + " and trade_flg='"+flg+"'";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+        }
     }
 }

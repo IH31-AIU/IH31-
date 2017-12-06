@@ -71,5 +71,37 @@ namespace IH31_CP_Projects
                 }
             }
         }
+
+        private void all_CheckedChanged(object sender, EventArgs e)
+        {
+            string id = "1";
+            Received received = new Received();
+            MySqlDataAdapter da = received.orderDetail(id);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dvAuction.DataSource = dt;
+        }
+
+        private void K_CheckedChanged(object sender, EventArgs e)
+        {
+            string id = "1";
+            string flg = "K";
+            Received received = new Received();
+            MySqlDataAdapter da = received.orderDetailWhere(id,flg);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dvAuction.DataSource = dt;
+        }
+
+        private void U_CheckedChanged(object sender, EventArgs e)
+        {
+            string flg = "U";
+            string id = "1";
+            Received received = new Received();
+            MySqlDataAdapter da = received.orderDetailWhere(id,flg);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dvAuction.DataSource = dt;
+        }
     }
 }

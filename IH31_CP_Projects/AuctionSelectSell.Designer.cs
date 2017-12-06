@@ -36,13 +36,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.U = new System.Windows.Forms.RadioButton();
+            this.K = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.all = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dvAuction)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,8 +121,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.all);
+            this.groupBox2.Controls.Add(this.U);
+            this.groupBox2.Controls.Add(this.K);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
@@ -133,27 +135,29 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             // 
-            // radioButton2
+            // U
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(276, 50);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 16);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "売注文";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.U.AutoSize = true;
+            this.U.Location = new System.Drawing.Point(276, 50);
+            this.U.Name = "U";
+            this.U.Size = new System.Drawing.Size(59, 16);
+            this.U.TabIndex = 10;
+            this.U.TabStop = true;
+            this.U.Text = "売注文";
+            this.U.UseVisualStyleBackColor = true;
+            this.U.CheckedChanged += new System.EventHandler(this.U_CheckedChanged);
             // 
-            // radioButton1
+            // K
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(211, 50);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 16);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "買注文";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.K.AutoSize = true;
+            this.K.Location = new System.Drawing.Point(211, 50);
+            this.K.Name = "K";
+            this.K.Size = new System.Drawing.Size(59, 16);
+            this.K.TabIndex = 9;
+            this.K.TabStop = true;
+            this.K.Text = "買注文";
+            this.K.UseVisualStyleBackColor = true;
+            this.K.CheckedChanged += new System.EventHandler(this.K_CheckedChanged);
             // 
             // label3
             // 
@@ -200,6 +204,18 @@
             this.textBox3.Size = new System.Drawing.Size(62, 19);
             this.textBox3.TabIndex = 6;
             // 
+            // all
+            // 
+            this.all.AutoSize = true;
+            this.all.Location = new System.Drawing.Point(161, 50);
+            this.all.Name = "all";
+            this.all.Size = new System.Drawing.Size(44, 16);
+            this.all.TabIndex = 11;
+            this.all.TabStop = true;
+            this.all.Text = "全て";
+            this.all.UseVisualStyleBackColor = true;
+            this.all.CheckedChanged += new System.EventHandler(this.all_CheckedChanged);
+            // 
             // AuctionSelectSell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -232,12 +248,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton U;
+        private System.Windows.Forms.RadioButton K;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.RadioButton all;
     }
 }
