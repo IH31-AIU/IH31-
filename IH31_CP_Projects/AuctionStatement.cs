@@ -12,9 +12,65 @@ namespace IH31_CP_Projects
 {
     public partial class AuctionStatement : Form
     {
+        AuctionKanri auction = new AuctionKanri();
+        DataTable dt = new DataTable();
+
         public AuctionStatement()
         {
             InitializeComponent();
         }
+
+        private void BtSearch_Click(object sender, EventArgs e)
+        {
+            
+            AuctionKanri auction = new AuctionKanri();
+            DvAuction.Rows.Clear();
+            Datetime.CustomFormat="yyyy-MM-dd";
+            dt = auction.auctionSelect(CbAuctionName.Text,Datetime.Text);
+            DvAuction.AllowUserToAddRows = false;
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+
+                 DvAuction.Rows.Add();
+                 DvAuction.Rows[i].Cells[0].Value = dt.Rows[i][0];
+                 DvAuction.Rows[i].Cells[1].Value = dt.Rows[i][1];
+                 DvAuction.Rows[i].Cells[2].Value = dt.Rows[i][2];
+                 DvAuction.Rows[i].Cells[3].Value = dt.Rows[i][3];
+                 DvAuction.Rows[i].Cells[4].Value = dt.Rows[i][4];
+                 DvAuction.Rows[i].Cells[5].Value = dt.Rows[i][5];
+                 DvAuction.Rows[i].Cells[6].Value = dt.Rows[i][6];
+                 DvAuction.Rows[i].Cells[7].Value = dt.Rows[i][7];
+                 DvAuction.Rows[i].Cells[8].Value = " ";
+                 DvAuction.Rows[i].Cells[9].Value = " ";
+                 DvAuction.Rows[i].Cells[10].Value = " ";
+                
+
+            }
+        }
+
+        private void BtSubmit_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+
+                if (!DvAuction.Rows[i].Cells[8].Value.Equals(" "))
+                {
+                    auction.saleInsert(CbAuctionName.Text, Convert.ToInt32(DvAuction.Rows[i].Cells[8].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[9].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[10].Value));
+                    auction.rcedetailSaleIdUpdate(dt.Rows[i][0].ToString(),  Convert.ToInt32(dt.Rows[i][1]));
+                }
+
+
+            }
+            DialogResult Res;
+            Res = MessageBox.Show("処理が完了しました", "確認", MessageBoxButtons.OK);
+            if (Res == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+        
+
+
     }
 }

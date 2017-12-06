@@ -135,5 +135,51 @@ namespace IH31_CP_Projects
         }
     }
 
+    public class AuctionKanri
+    {
+        //オークション計算書Select
+        public DataTable auctionSelect(String auction_name, String auction_date)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "select rce_order_detail.rce_order_id,rce_order_detail.rce_order_detail_id,rce_order_detail.auction_no,rce_order_detail.car_name,rce_order_detail.model_year,rce_order_detail.model,rce_order_detail.grade, case memo.trade_flg when 'U' then '売' when 'K' then '買' end from rce_order_detail join memo on memo.memo_id=rce_order_detail.rce_order_id left join sales on rce_order_detail.sales_id=sales.sales_id where auction='" + auction_name + "' and auction_date='" + auction_date + "' and rce_order_detail.sales_id is null";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+
+        }
+
+        //売上Insert
+        public void saleInsert(String auctionname,int price,int fee,int charge)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "insert into sales (supplier_sales_target_info,sales_stocking_price,fee,expenses_charge,sales_stocking_days) values ('"+auctionname+"',"+price+","+fee+","+charge+",CURRENT_DATE())";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+
+        }
+
+        //受注明細の売上ID更新
+        public void rcedetailSaleIdUpdate(String id,int detailid)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "update rce_order_detail set sales_id=(select max(sales_id) from sales) where rce_order_id='"+id+"' and rce_order_detail_id="+detailid;
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+
+        }
+
+
+    }
+
+
 
 }

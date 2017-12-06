@@ -29,21 +29,26 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DvAuction = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Datetime = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CbAuctionName = new System.Windows.Forms.ComboBox();
+            this.BtSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BtSubmit = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DvAuction)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,140 +56,181 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(7, 16);
+            this.label2.Location = new System.Drawing.Point(12, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 27);
+            this.label2.Size = new System.Drawing.Size(472, 40);
             this.label2.TabIndex = 6;
             this.label2.Text = "オークション計算書入力画面";
             // 
-            // dataGridView1
+            // DvAuction
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DvAuction.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
+            this.DvAuction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DvAuction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column5,
-            this.Column3,
-            this.Column7,
             this.Column2,
+            this.Column3,
             this.Column4,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 153);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(663, 279);
-            this.dataGridView1.TabIndex = 5;
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11});
+            this.DvAuction.Location = new System.Drawing.Point(20, 230);
+            this.DvAuction.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.DvAuction.Name = "DvAuction";
+            this.DvAuction.RowTemplate.Height = 21;
+            this.DvAuction.Size = new System.Drawing.Size(1482, 418);
+            this.DvAuction.TabIndex = 5;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Datetime);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.CbAuctionName);
+            this.groupBox1.Controls.Add(this.BtSearch);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 63);
+            this.groupBox1.Location = new System.Drawing.Point(20, 94);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(333, 76);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Size = new System.Drawing.Size(672, 114);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // button1
+            // Datetime
             // 
-            this.button1.Location = new System.Drawing.Point(252, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "検索";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Datetime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Datetime.Location = new System.Drawing.Point(190, 80);
+            this.Datetime.Name = "Datetime";
+            this.Datetime.Size = new System.Drawing.Size(200, 25);
+            this.Datetime.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(114, 80);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "日付";
+            // 
+            // CbAuctionName
+            // 
+            this.CbAuctionName.FormattingEnabled = true;
+            this.CbAuctionName.Items.AddRange(new object[] {
+            "オークション会場A",
+            "オークション会場B",
+            "オークション会場C"});
+            this.CbAuctionName.Location = new System.Drawing.Point(190, 32);
+            this.CbAuctionName.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.CbAuctionName.Name = "CbAuctionName";
+            this.CbAuctionName.Size = new System.Drawing.Size(199, 26);
+            this.CbAuctionName.TabIndex = 3;
+            // 
+            // BtSearch
+            // 
+            this.BtSearch.Location = new System.Drawing.Point(446, 72);
+            this.BtSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.BtSearch.Name = "BtSearch";
+            this.BtSearch.Size = new System.Drawing.Size(125, 34);
+            this.BtSearch.TabIndex = 2;
+            this.BtSearch.Text = "検索";
+            this.BtSearch.UseVisualStyleBackColor = true;
+            this.BtSearch.Click += new System.EventHandler(this.BtSearch_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 24);
+            this.label1.Location = new System.Drawing.Point(45, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 12);
+            this.label1.Size = new System.Drawing.Size(122, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "オークション会場";
             // 
-            // comboBox1
+            // BtSubmit
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(114, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 3;
+            this.BtSubmit.Location = new System.Drawing.Point(1338, 664);
+            this.BtSubmit.Name = "BtSubmit";
+            this.BtSubmit.Size = new System.Drawing.Size(164, 58);
+            this.BtSubmit.TabIndex = 7;
+            this.BtSubmit.Text = "登録";
+            this.BtSubmit.UseVisualStyleBackColor = true;
+            this.BtSubmit.Click += new System.EventHandler(this.BtSubmit_Click);
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "車名";
+            this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "型式";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "年式";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 80;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "出品番号";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 80;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "諸費用";
+            this.Column2.HeaderText = "明細ID";
             this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "オークションNO";
+            this.Column3.Name = "Column3";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "車両代";
+            this.Column4.HeaderText = "車名";
             this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "年式";
+            this.Column5.Name = "Column5";
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "消費税";
+            this.Column6.HeaderText = "モデル";
             this.Column6.Name = "Column6";
             // 
-            // radioButton1
+            // Column7
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(29, 47);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 16);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "売注文";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Column7.HeaderText = "グレード";
+            this.Column7.Name = "Column7";
             // 
-            // radioButton2
+            // Column8
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(123, 47);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 16);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "買注文";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Column8.HeaderText = "売買";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "金額";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "手数料";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "諸費用";
+            this.Column11.Name = "Column11";
             // 
             // AuctionStatement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 444);
+            this.ClientSize = new System.Drawing.Size(1538, 734);
+            this.Controls.Add(this.BtSubmit);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DvAuction);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AuctionStatement";
             this.Text = "AuctionStatement";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DvAuction)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -195,19 +241,24 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DvAuction;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CbAuctionName;
+        private System.Windows.Forms.DateTimePicker Datetime;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtSubmit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }
