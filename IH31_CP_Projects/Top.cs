@@ -57,5 +57,11 @@ namespace IH31_CP_Projects
             AuctionStatement auction = new AuctionStatement();
             auction.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DelivaryNote dn = new DelivaryNote();
+            dn.ShowDialog();
+        }
     }
 }
