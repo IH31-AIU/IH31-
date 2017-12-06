@@ -146,5 +146,64 @@ namespace IH31_CP_Projects
             conn.Close();
             return da;
         }
+
+        public MySqlDataAdapter customer(string sql)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+        }
+
+        public List<string> updateSales(string id, int price)
+        {
+
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            string select = "SELECT sales.`sales_id`, `supplier_sales_target_info`, `sales_stocking_price`, `fee`, `expenses_charge`, `clearing_price`, `sales_stocking_days` ,`sales_stocking_price`+`fee`+`expenses_charge` as total,`sales_stocking_price`+`fee`+`expenses_charge`-`clearing_price` as nokori"
+                            +" FROM `sales`"
+                            +" inner join rce_order_detail on rce_order_detail.`sales_id`= sales.`sales_id`"
+                            +" WHERE substr(`rce_order_id`, 1, 3)= '"+id+"'  and `sales_stocking_price`+`fee`+`expenses_charge`-`clearing_price`<> 0"
+                            + " order by nokori";
+            MySqlDataAdapter da = new MySqlDataAdapter(select, conn);
+            DataTable selectDt = new DataTable();
+            conn.Close();
+            da.Fill(selectDt);
+
+            List<string> update = new List<string>();
+            string salesId = "";
+            int crearing_price = 0;
+            if (selectDt.Rows.Count != 0)
+            {
+                for (int i = 0; i < selectDt.Rows.Count; i++)
+                {
+                    int nokori = Convert.ToInt32(selectDt.Rows[i]["nokori"]);
+                    if (price > nokori)
+                    {
+                        crearing_price = Convert.ToInt32(selectDt.Rows[i]["total"]);
+                        salesId = selectDt.Rows[i]["sales_id"].ToString();
+                        update.Add("update sales set clearing_price=" + crearing_price + " where sales_id=" + salesId);
+                        price -= crearing_price;
+                    }
+                    else if (price <= nokori)
+                    {
+                        crearing_price = Convert.ToInt32(selectDt.Rows[i]["clearing_price"]);
+                        salesId = selectDt.Rows[i]["sales_id"].ToString();
+                        update.Add("update sales set clearing_price=" + price + crearing_price + "' where sales_id=" + salesId);
+                        price -= nokori;
+                        break;
+                    }
+
+                }
+                if (0 < price)
+                {
+                    update.Add("update sales set clearing_price=" + price + crearing_price + " where sales_id=" + salesId);
+                }
+            }
+            return update;
+
+        }
     }
 }
