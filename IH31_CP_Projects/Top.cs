@@ -63,5 +63,11 @@ namespace IH31_CP_Projects
             DelivaryNote dn = new DelivaryNote();
             dn.ShowDialog();
         }
+
+        private void BtInvoice_Click(object sender, EventArgs e)
+        {
+            InvoiceCrete invoice = new InvoiceCrete();
+            invoice.ShowDialog();
+        }
     }
 }
