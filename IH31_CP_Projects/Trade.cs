@@ -180,6 +180,36 @@ namespace IH31_CP_Projects
 
     }
 
+    public class DeliveryKanri
+    {
+        public MySqlDataAdapter deloveryInfoGet(string CustomerCode)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "SELECT rod.*,sales.*,customer.* FROM `rce_order_detail` rod "+
+                         "join memo on (memo.memo_id = rod.rce_order_id) "+
+                         "join sales using (sales_id) "+
+                         "join customer on(left(rce_order_id, 3) = customer_id) "+
+                         "where memo.trade_flg = 'K' and buy_progress_flag=2 and left(rce_order_id,3) = '" + CustomerCode + "'";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            conn.Close();
+            return da;
+        }
+
+        public void buyFlagUpdate(string CustomerCode)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "update rce_order_detail as rod join memo on(memo.memo_id = rod.rce_order_id) " +
+                         "set buy_progress_flag = 3 where memo.trade_flg = 'K' and buy_progress_flag = 2 and left(rce_order_id,3) = '" + CustomerCode + "'";
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+        }
+
+    }
+
 
 
 }
