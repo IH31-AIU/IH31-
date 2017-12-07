@@ -64,12 +64,13 @@ namespace IH31_CP_Projects
         {
             MySqlConnection conn = DBManager.getConection();
             conn.Open();
-            string sql = "SELECT credit_limit_price-sum(`sales_stocking_price`+`expenses_charge`+`fee`+`supplier_sales_target_info`-`clearing_price`) FROM `sales`"
-                        + " inner join rce_order_detail on rce_order_detail.sales_id = sales.sales_id"
-                        + " inner join customer on customer_id = substr(rce_order_id, 1, 3)"
-                        + " where customer_id = '"+id+"'" 
-                        + " Group by customer_id;";
+            string sql = "SELECT credit_limit_price-ifnull(sum(`sales_stocking_price`+`expenses_charge`+`fee`+`supplier_sales_target_info`-`clearing_price`),0) FROM customer"
+                            +" left join rce_order_detail on customer_id = substr(rce_order_id,1,3)"
+                            +" left join sales on customer_id =substr(rce_order_id,1,3)"
+                            +" where customer_id='"+id+"'"
+                            +" Group by customer_id;";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            Console.WriteLine(sql);
             conn.Close();
             return da;
         }

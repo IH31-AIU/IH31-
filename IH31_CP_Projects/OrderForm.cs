@@ -112,7 +112,7 @@ namespace IH31_CP_Projects
                         EditWord editWord = new EditWord();
                         editWord.DocFile =@"C:\Users\yuuya\Desktop\IH\word\受注書\"+(DvItem.Rows[0].Cells[0]).Value.ToString()+"oder.doc";
                         String pdfPath =@"C:\Users\yuuya\Desktop\IH\pdf\受注書\"+(DvItem.Rows[0].Cells[0]).Value.ToString()+ "oder.pdf";
-                        editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\tmp\order.doc";//テンプレファイル
+                        editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\tmp\oder.doc";//テンプレファイル
                         editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
                         editWord.pdf(editWord.DocFile, pdfPath);
@@ -128,7 +128,7 @@ namespace IH31_CP_Projects
             }
             catch(Exception ex)
             {
-
+                Console.WriteLine(ex);
             }
         }
     }
