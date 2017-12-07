@@ -33,7 +33,6 @@ namespace IH31_CP_Projects
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-
                  DvAuction.Rows.Add();
                  DvAuction.Rows[i].Cells[0].Value = dt.Rows[i][0];
                  DvAuction.Rows[i].Cells[1].Value = dt.Rows[i][1];
@@ -46,8 +45,6 @@ namespace IH31_CP_Projects
                  DvAuction.Rows[i].Cells[8].Value = " ";
                  DvAuction.Rows[i].Cells[9].Value = " ";
                  DvAuction.Rows[i].Cells[10].Value = " ";
-                
-
             }
         }
 
@@ -55,14 +52,11 @@ namespace IH31_CP_Projects
         {
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-
                 if (!DvAuction.Rows[i].Cells[8].Value.Equals(" "))
                 {
                     auction.saleInsert(CbAuctionName.Text, Convert.ToInt32(DvAuction.Rows[i].Cells[8].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[9].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[10].Value));
-                    auction.rcedetailSaleIdUpdate(dt.Rows[i][0].ToString(),  Convert.ToInt32(dt.Rows[i][1]));
+                    auction.rcedetailSaleIdUpdate(dt.Rows[i][0].ToString(),  Convert.ToInt32(dt.Rows[i][1]), dt.Rows[i][7].ToString());
                 }
-
-
             }
             DialogResult Res;
             Res = MessageBox.Show("処理が完了しました", "確認", MessageBoxButtons.OK);
