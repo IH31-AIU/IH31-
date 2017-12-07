@@ -14,12 +14,14 @@ namespace IH31_CP_Projects
     public partial class EstimateDetail : Form
     {
         String memoid;
+        String tradeFlag;
         Quote quote = new Quote();
 
-        public EstimateDetail(String memoid)
+        public EstimateDetail(String memoid,String tradeFlag)
         {
             InitializeComponent();
             this.memoid = memoid;
+            this.tradeFlag = tradeFlag;
         }
 
         private void BtSubmit_Click(object sender, EventArgs e)
@@ -51,8 +53,13 @@ namespace IH31_CP_Projects
                    
                 
             }
+            int newPrice = Convert.ToInt32(price);
+            if (tradeFlag =="U")
+            {
+                newPrice = newPrice * -1;
+            }
 
-            quote.quote_ItemInsert(memoid, detailid, year, carname, model, grade, other, Convert.ToInt32(price));
+            quote.quote_ItemInsert(memoid, detailid, year, carname, model, grade, other, newPrice);
             this.Close();
 
         }

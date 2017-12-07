@@ -165,11 +165,21 @@ namespace IH31_CP_Projects
         }
 
         //受注明細の売上ID更新
-        public void rcedetailSaleIdUpdate(String id,int detailid)
+        public void rcedetailSaleIdUpdate(String id,int detailid,String trade)
         {
             MySqlConnection conn = DBManager.getConection();
             conn.Open();
-            String sql = "update rce_order_detail set sales_id=(select max(sales_id) from sales) where rce_order_id='"+id+"' and rce_order_detail_id="+detailid;
+            string sql;
+            if (trade == "買")
+            {
+                sql = "update rce_order_detail set sales_id=(select max(sales_id) from sales),buy_progress_flag = 2 where rce_order_id='" + id + "' and rce_order_detail_id=" + detailid;
+
+            }
+            else
+            {
+                sql = "update rce_order_detail set sales_id=(select max(sales_id) from sales) where rce_order_id='" + id + "' and rce_order_detail_id=" + detailid;
+
+            }
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             conn.Close();

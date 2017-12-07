@@ -118,7 +118,7 @@ namespace IH31_CP_Projects
         {
             MySqlConnection conn = DBManager.getConection();
             conn.Open();
-            String sql = "select  a.memo_id,a.abb_name,a.date,a.name from (select memo.memo_id,customer.abb_name,memo.date,memo.trade_flg,memo.memo_info ,employee.name from memo,customer,employee where substr(memo_id,1,3)=customer.customer_id && memo.responsible_employee_id=employee.employee_id) as a left join quote on quote.quote_id=a.memo_id where quote.quote_id is null";
+            String sql = "select  a.memo_id,a.abb_name,a.date,a.name,a.trade_flg from (select memo.memo_id,customer.abb_name,memo.date,memo.trade_flg,memo.memo_info ,employee.name from memo,customer,employee where substr(memo_id,1,3)=customer.customer_id && memo.responsible_employee_id=employee.employee_id) as a left join quote on quote.quote_id=a.memo_id where quote.quote_id is null";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
             conn.Close();
             return da;
@@ -206,6 +206,7 @@ namespace IH31_CP_Projects
         private String memoid;
         private String customername;
         private String employeename;
+        private String tradeFlag;
         
 
         //memoidセット
@@ -242,6 +243,15 @@ namespace IH31_CP_Projects
         public String employeeNameGet()
         {
             return employeename;
+        }
+
+        public void tradeFlagSet(String value)
+        {
+            tradeFlag = value;
+        }
+        public String tradeFlagGet()
+        {
+            return tradeFlag;
         }
 
 

@@ -36,6 +36,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.all = new System.Windows.Forms.RadioButton();
             this.U = new System.Windows.Forms.RadioButton();
             this.K = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.all = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dvAuction)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -53,21 +53,24 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(7, 8);
+            this.label2.Location = new System.Drawing.Point(9, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 27);
+            this.label2.Size = new System.Drawing.Size(299, 34);
             this.label2.TabIndex = 6;
             this.label2.Text = "オークション決定画面";
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(541, 405);
+            this.button2.Location = new System.Drawing.Point(721, 506);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 29);
             this.button2.TabIndex = 7;
-            this.button2.Text = "登録";
+            this.button2.Text = "完了";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dvAuction
             // 
@@ -76,10 +79,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dvAuction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dvAuction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvAuction.Location = new System.Drawing.Point(12, 120);
+            this.dvAuction.Location = new System.Drawing.Point(16, 150);
+            this.dvAuction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dvAuction.Name = "dvAuction";
             this.dvAuction.RowTemplate.Height = 21;
-            this.dvAuction.Size = new System.Drawing.Size(604, 279);
+            this.dvAuction.Size = new System.Drawing.Size(805, 349);
             this.dvAuction.TabIndex = 5;
             this.dvAuction.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvAuction_CellValueChanged);
             // 
@@ -88,34 +92,39 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 30);
+            this.groupBox1.Location = new System.Drawing.Point(16, 38);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(245, 84);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(327, 105);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(171, 35);
+            this.button1.Location = new System.Drawing.Point(228, 44);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 19);
+            this.button1.Size = new System.Drawing.Size(83, 24);
             this.button1.TabIndex = 2;
             this.button1.Text = "検索";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 35);
+            this.textBox1.Location = new System.Drawing.Point(87, 44);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 19);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 42);
+            this.label1.Location = new System.Drawing.Point(8, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "受注番号";
             // 
@@ -129,18 +138,34 @@
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Location = new System.Drawing.Point(260, 30);
+            this.groupBox2.Location = new System.Drawing.Point(347, 38);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(356, 84);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(475, 105);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
+            // 
+            // all
+            // 
+            this.all.AutoSize = true;
+            this.all.Location = new System.Drawing.Point(215, 62);
+            this.all.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.all.Name = "all";
+            this.all.Size = new System.Drawing.Size(55, 19);
+            this.all.TabIndex = 11;
+            this.all.TabStop = true;
+            this.all.Text = "全て";
+            this.all.UseVisualStyleBackColor = true;
+            this.all.CheckedChanged += new System.EventHandler(this.all_CheckedChanged);
             // 
             // U
             // 
             this.U.AutoSize = true;
-            this.U.Location = new System.Drawing.Point(276, 50);
+            this.U.Location = new System.Drawing.Point(368, 62);
+            this.U.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.U.Name = "U";
-            this.U.Size = new System.Drawing.Size(59, 16);
+            this.U.Size = new System.Drawing.Size(73, 19);
             this.U.TabIndex = 10;
             this.U.TabStop = true;
             this.U.Text = "売注文";
@@ -150,9 +175,10 @@
             // K
             // 
             this.K.AutoSize = true;
-            this.K.Location = new System.Drawing.Point(211, 50);
+            this.K.Location = new System.Drawing.Point(281, 62);
+            this.K.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.K.Name = "K";
-            this.K.Size = new System.Drawing.Size(59, 16);
+            this.K.Size = new System.Drawing.Size(73, 19);
             this.K.TabIndex = 9;
             this.K.TabStop = true;
             this.K.Text = "買注文";
@@ -162,70 +188,56 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 24);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(7, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "日付";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 54);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 12);
+            this.label5.Size = new System.Drawing.Size(0, 15);
             this.label5.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(73, 20);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(97, 25);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(122, 19);
+            this.dateTimePicker1.Size = new System.Drawing.Size(161, 22);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(5, 52);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(7, 65);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.Size = new System.Drawing.Size(52, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "顧客名";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(73, 50);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Location = new System.Drawing.Point(97, 62);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(62, 19);
+            this.textBox3.Size = new System.Drawing.Size(81, 22);
             this.textBox3.TabIndex = 6;
-            // 
-            // all
-            // 
-            this.all.AutoSize = true;
-            this.all.Location = new System.Drawing.Point(161, 50);
-            this.all.Name = "all";
-            this.all.Size = new System.Drawing.Size(44, 16);
-            this.all.TabIndex = 11;
-            this.all.TabStop = true;
-            this.all.Text = "全て";
-            this.all.UseVisualStyleBackColor = true;
-            this.all.CheckedChanged += new System.EventHandler(this.all_CheckedChanged);
             // 
             // AuctionSelectSell
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 443);
+            this.ClientSize = new System.Drawing.Size(849, 554);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dvAuction);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AuctionSelectSell";
             this.Text = "AuctionSelectSell";
             ((System.ComponentModel.ISupportInitialize)(this.dvAuction)).EndInit();

@@ -60,8 +60,12 @@ namespace IH31_CP_Projects
                     String companyName = companydt.Rows[0][0].ToString();
                     da.Fill(dt);
                     string lbprice = LbPrice.Text.ToString();
-                    Regex re = new Regex(@"[^0-9]");
+                    Regex re = new Regex(@"[^\-*0-9]");
                     string price = re.Replace(lbprice, "");
+                    Console.WriteLine(price);
+                    Console.WriteLine(int.Parse(price));
+                    Console.WriteLine(int.Parse(dt.Rows[0][0].ToString()));
+
                     if (int.Parse(price) < int.Parse(dt.Rows[0][0].ToString()))
                     {
                         Dictionary<string, string> replaceKeywordDic = new Dictionary<string, string>();
@@ -107,15 +111,16 @@ namespace IH31_CP_Projects
                         areacutKeywordDic.Add("USE_SPARC", false);
 
                         EditWord editWord = new EditWord();
-                        editWord.DocFile =@"C:\Users\yuuya\Desktop\IH\word\受注書\"+(DvItem.Rows[0].Cells[0]).Value.ToString()+"oder.doc";
-                        String pdfPath =@"C:\Users\yuuya\Desktop\IH\pdf\受注書\"+(DvItem.Rows[0].Cells[0]).Value.ToString()+ "oder.pdf";
-                        editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\tmp\oder.doc";//テンプレファイル
+                        editWord.DocFile =Path.araki+"\\word\\受注書\\"+(DvItem.Rows[0].Cells[0]).Value.ToString()+"oder.doc";
+                        String pdfPath = Path.araki + "\\pdf\\受注書\\"+(DvItem.Rows[0].Cells[0]).Value.ToString()+ "oder.pdf";
+                        editWord.TmpFile = Path.araki + "\\tmp\\oder.doc";//テンプレファイル
                         editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
                         editWord.pdf(editWord.DocFile, pdfPath);
 
-                        received.rceInsert((DvItem.Rows[0].Cells[1]).Value.ToString(), pdfPath, rceDetail);
-                        MessageBox.Show("見積書が作成されました", "確認", MessageBoxButtons.OK);
+
+                        received.rceInsert((DvItem.Rows[0].Cells[0]).Value.ToString(), pdfPath, rceDetail);
+                        MessageBox.Show("受注書が作成されました", "確認", MessageBoxButtons.OK);
                     }
                     else
                     {
