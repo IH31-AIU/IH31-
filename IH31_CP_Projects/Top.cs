@@ -69,5 +69,23 @@ namespace IH31_CP_Projects
             InvoiceCrete invoice = new InvoiceCrete();
             invoice.ShowDialog();
         }
+
+        private void btOder_Click(object sender, EventArgs e)
+        {
+            OrderForm oder = new OrderForm();
+            oder.ShowDialog();
+        }
+
+        private void auctionSelect_Click(object sender, EventArgs e)
+        {
+            AuctionSelectSell auction = new AuctionSelectSell();
+            auction.ShowDialog();
+        }
+
+        private void csvClearing_Click(object sender, EventArgs e)
+        {
+            InvoiceClearingCSV invoice = new InvoiceClearingCSV();
+            invoice.ShowDialog();
+        }
     }
 }
