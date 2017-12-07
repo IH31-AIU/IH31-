@@ -44,9 +44,9 @@ namespace IH31_CP_Projects
             areacutKeywordDic.Add("USE_X86", true);
             areacutKeywordDic.Add("USE_SPARC", false);
             EditWord editWord = new EditWord();
-            editWord.DocFile = Path.araki + "\\出品\\word\\出品ID" + id + "出品票.doc";
-            String pdfPath = Path.araki + "\\出品\\pdf\\出品ID" + id + "出品票.pdf";
-            editWord.TmpFile = Path.araki + "\\出品\\出品票.doc";//テンプレファイル
+            editWord.DocFile = Path.araki + "\\word\\出品票\\出品ID" + id + "出品票.doc";
+            String pdfPath = Path.araki + "\\pdf\\出品票\\出品ID" + id + "出品票.pdf";
+            editWord.TmpFile = Path.araki + "\\tmp\\出品票.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
             editWord.pdf(editWord.DocFile, pdfPath);
         }

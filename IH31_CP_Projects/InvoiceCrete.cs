@@ -132,9 +132,9 @@ namespace IH31_CP_Projects
                 replaceKeywordDic.Add("total", num.ToString() + "円");
 
             EditWord editWord = new EditWord();
-            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\請求書" + Datetime.Text + customername + ".doc";
-            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\請求書" + Datetime.Text + customername + ".pdf";
-            editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\請求書.doc";//テンプレファイル
+            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\請求書\請求書" + Datetime.Text + customername + ".doc";
+            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\請求書\請求書" + Datetime.Text + customername + ".pdf";
+            editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\tmp\請求書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
             editWord.pdf(editWord.DocFile, pdfPath);
@@ -178,9 +178,9 @@ namespace IH31_CP_Projects
             replaceKeywordDic.Add("total", Convert.ToString(Convert.ToInt32(num) * -1) + "円");
 
             EditWord editWord = new EditWord();
-            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\支払書" + Datetime.Text + customername + ".doc";
-            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\支払書" + Datetime.Text + customername + ".pdf";
-            editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\支払書.doc";//テンプレファイル
+            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\支払書\支払書" + Datetime.Text + customername + ".doc";
+            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\支払書\支払書" + Datetime.Text + customername + ".pdf";
+            editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\tmp\支払書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
             editWord.pdf(editWord.DocFile, pdfPath);

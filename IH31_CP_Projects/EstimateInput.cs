@@ -127,9 +127,9 @@ namespace IH31_CP_Projects
 
 
             EditWord editWord = new EditWord();
-            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\見積書"+TbMemo.Text+TbCusName.Text+".doc";
-            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\見積書"+TbMemo.Text+TbCusName.Text+".pdf";
-            editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\見積書.doc";//テンプレファイル
+            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\見積書\見積書"+TbMemo.Text+TbCusName.Text+".doc";
+            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\見積書\見積書"+TbMemo.Text+TbCusName.Text+".pdf";
+            editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\tmp\見積書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
             editWord.pdf(editWord.DocFile, pdfPath);

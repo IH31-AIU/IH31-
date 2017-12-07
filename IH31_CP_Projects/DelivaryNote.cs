@@ -91,9 +91,9 @@ namespace IH31_CP_Projects
             EditWord editWord = new EditWord();
             String time = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
             Console.WriteLine(time);
-            editWord.DocFile = Path.araki + "\\納品\\word\\"+ time + "納品書.doc";
-            String pdfPath = Path.araki + "\\納品\\pdf\\"+ time + "納品書.pdf";
-            editWord.TmpFile = Path.araki + "\\納品\\納品書.doc";//テンプレファイル
+            editWord.DocFile = Path.araki + "\\word\\納品書\\"+ time + "納品書.doc";
+            String pdfPath = Path.araki + "\\pdf\\納品書\\"+ time + "納品書.pdf";
+            editWord.TmpFile = Path.araki + "\\tmp\\納品書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
             editWord.pdf(editWord.DocFile, pdfPath);

@@ -25,7 +25,7 @@ namespace IH31_CP_Projects
 
     public class Path
     {
-        public const string araki = "C:\\Users\\yuki\\Desktop\\IH";
+        public const string araki = "C:\\Users\\yuuya\\Desktop\\IH";
         public const string ueda = "";
         public const string ishibashi = "C:\\Users\\yuuya\\Desktop";
     }
