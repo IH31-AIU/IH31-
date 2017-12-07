@@ -107,5 +107,15 @@ namespace IH31_CP_Projects
             da.Fill(dt);
             dvAuction.DataSource = dt;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult Res;
+            Res = MessageBox.Show("オークションの決定を完了してもよろしいですか？", "確認", MessageBoxButtons.OKCancel);
+            if (Res == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }
