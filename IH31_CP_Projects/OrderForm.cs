@@ -49,7 +49,7 @@ namespace IH31_CP_Projects
                 if (DvItem.Rows[0].Cells[0].Value != null)
                 {
                     List<string[]> rceDetail = new List<string[]>();
-                    string id = DvItem.Rows[0].Cells[0].Value.ToString();
+                    string id = DvItem.Rows[0].Cells[1].Value.ToString();
                     id = id.Substring(0, 3);
                     Received received = new Received();
                     DataTable dt = new DataTable();
@@ -85,20 +85,23 @@ namespace IH31_CP_Projects
                         {
                             for (; i < DvItem.Rows.Count; i++)
                             {
-                                string[] rce = new string[7];
-                                rce[0] = DvItem.Rows[i].Cells[2].Value.ToString();
-                                rce[1] = DvItem.Rows[i].Cells[3].Value.ToString();
-                                rce[2] = DvItem.Rows[i].Cells[4].Value.ToString();
-                                rce[3] = DvItem.Rows[i].Cells[5].Value.ToString();
-                                rce[4] = DvItem.Rows[i].Cells[6].Value.ToString();
-                                rce[5] = DvItem.Rows[i].Cells[7].Value.ToString();
-                                rce[6] = DvItem.Rows[i].Cells[8].Value.ToString();
-                                rceDetail.Add(rce);
-                                replaceKeywordDic.Add("CAR" + i, DvItem.Rows[i].Cells[4].Value.ToString());
-                                replaceKeywordDic.Add("year" + i, DvItem.Rows[i].Cells[3].Value.ToString());
-                                replaceKeywordDic.Add("medel" + i, DvItem.Rows[i].Cells[5].Value.ToString());
-                                replaceKeywordDic.Add("grade" + i, DvItem.Rows[i].Cells[6].Value.ToString());
-                                replaceKeywordDic.Add("price" + i, DvItem.Rows[i].Cells[8].Value.ToString());
+                                if ((bool)DvItem.Rows[i].Cells[0].Value)
+                                {
+                                    string[] rce = new string[7];
+                                    rce[0] = DvItem.Rows[i].Cells[2].Value.ToString();
+                                    rce[1] = DvItem.Rows[i].Cells[3].Value.ToString();
+                                    rce[2] = DvItem.Rows[i].Cells[4].Value.ToString();
+                                    rce[3] = DvItem.Rows[i].Cells[5].Value.ToString();
+                                    rce[4] = DvItem.Rows[i].Cells[6].Value.ToString();
+                                    rce[5] = DvItem.Rows[i].Cells[7].Value.ToString();
+                                    rce[6] = DvItem.Rows[i].Cells[8].Value.ToString();
+                                    rceDetail.Add(rce);
+                                    replaceKeywordDic.Add("CAR" + i, DvItem.Rows[i].Cells[4].Value.ToString());
+                                    replaceKeywordDic.Add("year" + i, DvItem.Rows[i].Cells[3].Value.ToString());
+                                    replaceKeywordDic.Add("medel" + i, DvItem.Rows[i].Cells[5].Value.ToString());
+                                    replaceKeywordDic.Add("grade" + i, DvItem.Rows[i].Cells[6].Value.ToString());
+                                    replaceKeywordDic.Add("price" + i, DvItem.Rows[i].Cells[8].Value.ToString());
+                                }
                             }
                             replaceKeywordDic.Add("CAR" + i,"");
                             replaceKeywordDic.Add("year" + i, "");
@@ -119,8 +122,11 @@ namespace IH31_CP_Projects
                         editWord.pdf(editWord.DocFile, pdfPath);
 
 
-                        received.rceInsert((DvItem.Rows[0].Cells[0]).Value.ToString(), pdfPath, rceDetail);
+                        received.rceInsert((DvItem.Rows[0].Cells[1]).Value.ToString(), pdfPath, rceDetail);
                         MessageBox.Show("受注書が作成されました", "確認", MessageBoxButtons.OK);
+                        DataTable tb = new DataTable();
+                        DvItem.DataSource = tb;
+                        DvItem.Columns.Clear();
                     }
                     else
                     {
