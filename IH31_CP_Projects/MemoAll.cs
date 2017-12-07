@@ -29,9 +29,10 @@ namespace IH31_CP_Projects
             DvMemo.Columns[1].HeaderText = "会社名";
             DvMemo.Columns[2].HeaderText = "日付";
             DvMemo.Columns[3].HeaderText = "担当者";
-            
+            DvMemo.Columns[4].HeaderText = "売買";
 
-            
+
+
         }
 
         private void cell_doubleclick(object sender, DataGridViewCellEventArgs e)
@@ -39,10 +40,13 @@ namespace IH31_CP_Projects
             String memoid = DvMemo.CurrentRow.Cells["memo_id"].Value.ToString();
             String customername = DvMemo.CurrentRow.Cells["abb_name"].Value.ToString();
             String employeename = DvMemo.CurrentRow.Cells["name"].Value.ToString();
+            String tradeFlag = DvMemo.CurrentRow.Cells["trade_flg"].Value.ToString();
+
 
             memo.memoIdSet(memoid);
             memo.customerNameSet(customername);
             memo.employeeNameSet(employeename);
+            memo.tradeFlagSet(tradeFlag);
             this.Close();
         }
 

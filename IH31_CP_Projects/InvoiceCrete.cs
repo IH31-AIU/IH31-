@@ -91,15 +91,11 @@ namespace IH31_CP_Projects
             Dictionary<string, string> replaceKeywordDic = new Dictionary<string, string>();
             Dictionary<string, bool> areacutKeywordDic = new Dictionary<string, bool>();
             int cnt = 0;
-
-
             replaceKeywordDic.Add("companyName", customername);
             replaceKeywordDic.Add("date", Datetime.Text+"請求分");
 
             for (int l = 1; l <= dt2.Rows.Count; l++)
             {
-
-
                 replaceKeywordDic.Add("carName" + l, dt2.Rows[l - 1][0].ToString());
                 replaceKeywordDic.Add("ss_price" + l, dt2.Rows[l - 1][1].ToString() + "円");
                 replaceKeywordDic.Add("fee" + l, dt2.Rows[l - 1][2].ToString() + "円");
@@ -116,8 +112,6 @@ namespace IH31_CP_Projects
                 }
                
                 cnt = l;
-
-
 
             }
             for (int j = cnt + 1; j < 12; j++)
@@ -136,7 +130,6 @@ namespace IH31_CP_Projects
             String pdfPath = Path.araki + "\\pdf\\" + Datetime.Text + customername + ".pdf";
             editWord.TmpFile = Path.araki+"\\tmp\\請求書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
-
             editWord.pdf(editWord.DocFile, pdfPath);
 
         }
@@ -146,25 +139,17 @@ namespace IH31_CP_Projects
             Dictionary<string, string> replaceKeywordDic = new Dictionary<string, string>();
             Dictionary<string, bool> areacutKeywordDic = new Dictionary<string, bool>();
             int cnt = 0;
-
-
             replaceKeywordDic.Add("companyName", customername);
             replaceKeywordDic.Add("date", Datetime.Text + "支払分");
 
             for (int l = 1; l <= dt2.Rows.Count; l++)
             {
-
-
                 replaceKeywordDic.Add("carName" + l, dt2.Rows[l - 1][0].ToString());
                 replaceKeywordDic.Add("ss_price" + l, Convert.ToString(Convert.ToInt32(dt2.Rows[l - 1][1])*-1)+ "円");
                 replaceKeywordDic.Add("fee" + l, dt2.Rows[l - 1][2].ToString() + "円");
                 replaceKeywordDic.Add("ec" + l, dt2.Rows[l - 1][3].ToString() + "円");
                 replaceKeywordDic.Add("subtotal" + l, Convert.ToString(Convert.ToInt32(dt2.Rows[l - 1][4]) * -1) + "円");
-
                 cnt = l;
-
-
-
             }
             for (int j = cnt + 1; j < 12; j++)
             {
@@ -173,22 +158,14 @@ namespace IH31_CP_Projects
                 replaceKeywordDic.Add("fee" + j, " ");
                 replaceKeywordDic.Add("ec" + j, " ");
                 replaceKeywordDic.Add("subtotal" + j, " ");
-                
             }
             replaceKeywordDic.Add("total", Convert.ToString(Convert.ToInt32(num) * -1) + "円");
-
             EditWord editWord = new EditWord();
             editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\支払書\支払書" + Datetime.Text + customername + ".doc";
             String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\支払書\支払書" + Datetime.Text + customername + ".pdf";
             editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\tmp\支払書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
-
             editWord.pdf(editWord.DocFile, pdfPath);
-
         }
-
-
-
-
     }
 }

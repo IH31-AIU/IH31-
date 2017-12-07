@@ -45,7 +45,7 @@ namespace IH31_CP_Projects
                 return;
             }
 
-            EstimateDetail estdetail = new EstimateDetail(TbMemo.Text);
+            EstimateDetail estdetail = new EstimateDetail(TbMemo.Text,memo.tradeFlagGet());
             MemoDetail memodetail = new MemoDetail(TbMemo.Text);
             memodetail.Show();
             estdetail.ShowDialog();
@@ -127,9 +127,9 @@ namespace IH31_CP_Projects
 
 
             EditWord editWord = new EditWord();
-            editWord.DocFile = @"C:\Users\yuuya\Desktop\IH\word\見積書\見積書"+TbMemo.Text+TbCusName.Text+".doc";
-            String pdfPath = @"C:\Users\yuuya\Desktop\IH\pdf\見積書\見積書"+TbMemo.Text+TbCusName.Text+".pdf";
-            editWord.TmpFile = @"C:\Users\yuuya\Desktop\IH\tmp\見積書.doc";//テンプレファイル
+            editWord.DocFile =Path.araki+ "\\word\\見積書\\見積書"+TbMemo.Text+TbCusName.Text+".doc";
+            String pdfPath = Path.araki + "\\pdf\\見積書\\見積書" + TbMemo.Text+TbCusName.Text+".pdf";
+            editWord.TmpFile = Path.araki + "\\tmp\\見積書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
             editWord.pdf(editWord.DocFile, pdfPath);
