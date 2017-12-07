@@ -19,7 +19,7 @@ namespace IH31_CP_Projects
             DataGridViewComboBoxColumn auctionCom = new DataGridViewComboBoxColumn();
             DataGridViewTextBoxColumn dateCom = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn numCom = new DataGridViewTextBoxColumn();
-
+            
             Auction auction = new Auction();
             string[] auctionName = auction.auctionNameGet();
             for (int i = 0; i < auctionName.Length; i++)

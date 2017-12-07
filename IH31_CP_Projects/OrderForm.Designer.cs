@@ -119,12 +119,17 @@
             this.DvItem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.DvItem.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DvItem.Location = new System.Drawing.Point(11, 104);
             this.DvItem.Name = "DvItem";
             this.DvItem.RowTemplate.Height = 21;
             this.DvItem.Size = new System.Drawing.Size(507, 224);
             this.DvItem.TabIndex = 65;
+            this.DvItem.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.DvItem_CellStateChanged);
+            this.DvItem.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DvItem_CellValueChanged);
+            this.DvItem.CurrentCellDirtyStateChanged += new System.EventHandler(this.DvItem_CurrentCellDirtyStateChanged);
             // 
             // LbPrice
             // 

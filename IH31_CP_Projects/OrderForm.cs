@@ -24,25 +24,22 @@ namespace IH31_CP_Projects
         {
             EstimateSharch estimate = new EstimateSharch();
             estimate.ShowDialog();
-            List<string[]> ids = estimate.Ids;
+            string ids = estimate.Ids;
             Received receive = new Received();
             MySqlDataAdapter item = receive.QuiteItem(ids);
             if (item != null)
             {
+                DvItem.Columns.Clear();
+                DataGridViewCheckBoxColumn check = new DataGridViewCheckBoxColumn();
+                check.DataPropertyName = "select";
+                check.HeaderText = "選択";
+                DvItem.Columns.Insert(0, check);
                 DataTable dt = new DataTable();
                 item.Fill(dt);
                 DvItem.DataSource = dt;
+
             }
             DvItem.AllowUserToAddRows = false;
-
-            int price = 0;
-
-            for (int i = 0; i < DvItem.RowCount; i++)
-            {
-                if (DvItem[7, i].Value == null){continue;}
-                price += int.Parse(DvItem[7, i].Value.ToString()); 
-            }
-            LbPrice.Text = "合計"+price +"円";
         }
 
         private void btCreate_Click(object sender, EventArgs e)
@@ -58,7 +55,7 @@ namespace IH31_CP_Projects
                     DataTable dt = new DataTable();
                     DataTable companydt = new DataTable();
                     MySqlDataAdapter da = received.limitPrice(id);
-                    MySqlDataAdapter company = received.componyName((DvItem.Rows[0].Cells[0]).Value.ToString());
+                    MySqlDataAdapter company = received.componyName((DvItem.Rows[0].Cells[1]).Value.ToString());
                     company.Fill(companydt);
                     String companyName = companydt.Rows[0][0].ToString();
                     da.Fill(dt);
@@ -85,19 +82,19 @@ namespace IH31_CP_Projects
                             for (; i < DvItem.Rows.Count; i++)
                             {
                                 string[] rce = new string[7];
-                                rce[0] = DvItem.Rows[i].Cells[1].Value.ToString();
-                                rce[1] = DvItem.Rows[i].Cells[2].Value.ToString();
-                                rce[2] = DvItem.Rows[i].Cells[3].Value.ToString();
-                                rce[3] = DvItem.Rows[i].Cells[4].Value.ToString();
-                                rce[4] = DvItem.Rows[i].Cells[5].Value.ToString();
-                                rce[5] = DvItem.Rows[i].Cells[6].Value.ToString();
-                                rce[6] = DvItem.Rows[i].Cells[7].Value.ToString();
+                                rce[0] = DvItem.Rows[i].Cells[2].Value.ToString();
+                                rce[1] = DvItem.Rows[i].Cells[3].Value.ToString();
+                                rce[2] = DvItem.Rows[i].Cells[4].Value.ToString();
+                                rce[3] = DvItem.Rows[i].Cells[5].Value.ToString();
+                                rce[4] = DvItem.Rows[i].Cells[6].Value.ToString();
+                                rce[5] = DvItem.Rows[i].Cells[7].Value.ToString();
+                                rce[6] = DvItem.Rows[i].Cells[8].Value.ToString();
                                 rceDetail.Add(rce);
-                                replaceKeywordDic.Add("CAR" + i, DvItem.Rows[i].Cells[3].Value.ToString());
-                                replaceKeywordDic.Add("year" + i, DvItem.Rows[i].Cells[2].Value.ToString());
-                                replaceKeywordDic.Add("medel" + i, DvItem.Rows[i].Cells[4].Value.ToString());
-                                replaceKeywordDic.Add("grade" + i, DvItem.Rows[i].Cells[5].Value.ToString());
-                                replaceKeywordDic.Add("price" + i, DvItem.Rows[i].Cells[7].Value.ToString());
+                                replaceKeywordDic.Add("CAR" + i, DvItem.Rows[i].Cells[4].Value.ToString());
+                                replaceKeywordDic.Add("year" + i, DvItem.Rows[i].Cells[3].Value.ToString());
+                                replaceKeywordDic.Add("medel" + i, DvItem.Rows[i].Cells[5].Value.ToString());
+                                replaceKeywordDic.Add("grade" + i, DvItem.Rows[i].Cells[6].Value.ToString());
+                                replaceKeywordDic.Add("price" + i, DvItem.Rows[i].Cells[8].Value.ToString());
                             }
                             replaceKeywordDic.Add("CAR" + i,"");
                             replaceKeywordDic.Add("year" + i, "");
@@ -117,7 +114,7 @@ namespace IH31_CP_Projects
 
                         editWord.pdf(editWord.DocFile, pdfPath);
 
-                        received.rceInsert((DvItem.Rows[0].Cells[0]).Value.ToString(), pdfPath, rceDetail);
+                        received.rceInsert((DvItem.Rows[0].Cells[1]).Value.ToString(), pdfPath, rceDetail);
                         MessageBox.Show("見積書が作成されました", "確認", MessageBoxButtons.OK);
                     }
                     else
@@ -129,6 +126,64 @@ namespace IH31_CP_Projects
             catch(Exception ex)
             {
                 Console.WriteLine(ex);
+            }
+        }
+
+
+        private void DvItem_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
+        {
+
+        }
+
+        private void DvItem_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (DvItem[0, 0] != null)
+            {
+                int price = 0;
+                for (int i = 0; i < DvItem.RowCount; i++)
+                {
+                    if (DvItem[0, i].Value == null)
+                    {
+                        continue;
+                    }
+                    bool select = (bool)DvItem[0, i].EditedFormattedValue;
+
+                    if (select)
+                    {
+                        price += (int)DvItem["quote_price", i].Value;
+                    }
+                }
+                LbPrice.Text = price.ToString();
+                Application.DoEvents();
+            }
+
+        }
+
+        private void DvItem_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            DvItem.CommitEdit(DataGridViewDataErrorContexts.Commit);
+        }
+
+        private void DvItem_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                int price = 0;
+                for (int i = 0; i < DvItem.RowCount; i++)
+                {
+                    if (DvItem[0, i].Value == null)
+                    {
+                        continue;
+                    }
+                    bool select = (bool)DvItem[0, i].EditedFormattedValue;
+
+                    if (select)
+                    {
+                        price += (int)DvItem["quote_price", i].Value;
+                    }
+                }
+                LbPrice.Text = "合計"+price.ToString()+"円";
+                Application.DoEvents();
             }
         }
     }

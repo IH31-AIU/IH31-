@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.DvEstimate = new System.Windows.Forms.DataGridView();
-            this.checkBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DvEstimate)).BeginInit();
             this.SuspendLayout();
@@ -52,19 +51,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DvEstimate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DvEstimate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DvEstimate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.checkBox});
             this.DvEstimate.Location = new System.Drawing.Point(0, 36);
             this.DvEstimate.Name = "DvEstimate";
             this.DvEstimate.RowTemplate.Height = 21;
             this.DvEstimate.Size = new System.Drawing.Size(570, 285);
             this.DvEstimate.TabIndex = 2;
-            // 
-            // checkBox
-            // 
-            this.checkBox.HeaderText = "選択";
-            this.checkBox.Name = "checkBox";
-            this.checkBox.Width = 35;
+            this.DvEstimate.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DvEstimate_CellDoubleClick);
             // 
             // btSelect
             // 
@@ -98,7 +90,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DvEstimate;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn checkBox;
         private System.Windows.Forms.Button btSelect;
     }
 }
