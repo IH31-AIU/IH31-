@@ -54,7 +54,7 @@ namespace IH31_CP_Projects
         {
             int column = e.ColumnIndex;
             int row = e.RowIndex;
-            if(1 < dvAuction.RowCount)
+            try
             {
                 if (dvAuction[0, row] != null && dvAuction[3, row] != null)
                 {
@@ -69,6 +69,10 @@ namespace IH31_CP_Projects
                         receive.updateOrder(no,date,auction,id,detail);   
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                Console.Write(ex);
             }
         }
 
