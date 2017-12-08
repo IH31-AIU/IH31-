@@ -80,7 +80,7 @@ namespace IH31_CP_Projects
                         replaceKeywordDic.Add("MONTH", month.ToString());
                         replaceKeywordDic.Add("YEAR", year.ToString());
                         replaceKeywordDic.Add("DAY", day.ToString());
-                        replaceKeywordDic.Add("ODERID", (DvItem.Rows[0].Cells[0]).Value.ToString());
+                        replaceKeywordDic.Add("ODERID", (DvItem.Rows[0].Cells[1]).Value.ToString());
                         for (int i = 0; i < 10; i++)
                         {
                             for (; i < DvItem.Rows.Count; i++)
@@ -114,8 +114,8 @@ namespace IH31_CP_Projects
                         areacutKeywordDic.Add("USE_SPARC", false);
 
                         EditWord editWord = new EditWord();
-                        editWord.DocFile =Path.path+"\\word\\受注書\\"+(DvItem.Rows[0].Cells[0]).Value.ToString()+"oder.doc";
-                        String pdfPath = Path.path + "\\pdf\\受注書\\"+(DvItem.Rows[0].Cells[0]).Value.ToString()+ "oder.pdf";
+                        editWord.DocFile =Path.path+"\\word\\受注書\\"+(DvItem.Rows[0].Cells[1]).Value.ToString()+"oder.doc";
+                        String pdfPath = Path.path + "\\pdf\\受注書\\"+(DvItem.Rows[0].Cells[1]).Value.ToString()+ "oder.pdf";
                         editWord.TmpFile = Path.path + "\\tmp\\oder.doc";//テンプレファイル
                         editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
