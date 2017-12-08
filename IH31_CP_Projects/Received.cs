@@ -94,7 +94,7 @@ namespace IH31_CP_Projects
         {
             MySqlConnection conn = DBManager.getConection();
             conn.Open();
-            string sql = "select * from rce_order_detail"
+            string sql = "select rce_order_detail.* from rce_order_detail"
                         + " inner join memo on memo_id = rce_order_id"
                         + " where responsible_employee_id ='" + id + "'";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);

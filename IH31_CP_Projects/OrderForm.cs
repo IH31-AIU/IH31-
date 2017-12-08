@@ -33,9 +33,44 @@ namespace IH31_CP_Projects
                 LbPrice.Text = "合計0円";
 
                 DataGridViewCheckBoxColumn check = new DataGridViewCheckBoxColumn();
+                DataGridViewTextBoxColumn quote_id = new DataGridViewTextBoxColumn();
+                DataGridViewTextBoxColumn quote_detail_id = new DataGridViewTextBoxColumn();
+                DataGridViewTextBoxColumn model_year = new DataGridViewTextBoxColumn();
+                DataGridViewTextBoxColumn car_name = new DataGridViewTextBoxColumn();
+                DataGridViewTextBoxColumn model = new DataGridViewTextBoxColumn();
+                DataGridViewTextBoxColumn grade = new DataGridViewTextBoxColumn();
+                DataGridViewTextBoxColumn remarks = new DataGridViewTextBoxColumn();
+                DataGridViewTextBoxColumn quote_price = new DataGridViewTextBoxColumn();
+                quote_id.DataPropertyName = "quote_id";
+                quote_detail_id.DataPropertyName = "quote_detail_id";
+                model_year.DataPropertyName = "model_year";
+                car_name.DataPropertyName = "car_name";
+                model.DataPropertyName = "model";
+                grade.DataPropertyName = "grade";
+                remarks.DataPropertyName = "remarks";
+                quote_price.DataPropertyName = "quote_price";
+
+                quote_price.HeaderText = "見積もり金額";
+                remarks.HeaderText = "メモ";
+                grade.HeaderText = "グレード";
+                model.HeaderText = "モデル";
+                car_name.HeaderText = "車名";
+                model_year.HeaderText = "型年";
+                quote_detail_id.HeaderText = "見積詳細ID";
+                quote_id.HeaderText = "見積ID";
+
                 check.DataPropertyName = "select";
                 check.HeaderText = "選択";
                 DvItem.Columns.Insert(0, check);
+                DvItem.Columns.Insert(1, quote_id);
+                DvItem.Columns.Insert(2, quote_detail_id);
+                DvItem.Columns.Insert(3, quote_price);
+                DvItem.Columns.Insert(4, car_name);
+                DvItem.Columns.Insert(5, grade);
+                DvItem.Columns.Insert(6, model);
+                DvItem.Columns.Insert(7, model_year);
+                DvItem.Columns.Insert(8, remarks);
+
                 DataTable dt = new DataTable();
                 item.Fill(dt);
                 DvItem.DataSource = dt;

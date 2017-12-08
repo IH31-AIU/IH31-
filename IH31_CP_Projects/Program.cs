@@ -17,7 +17,7 @@ namespace IH31_CP_Projects
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new TopMenu());
-            Application.Run(new MemoInput());
+            Application.Run(new InvoiceClearingCSV());
             //Application.Run(new pdfsample());
         }
     }

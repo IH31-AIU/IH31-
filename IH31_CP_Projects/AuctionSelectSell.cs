@@ -19,7 +19,45 @@ namespace IH31_CP_Projects
             DataGridViewComboBoxColumn auctionCom = new DataGridViewComboBoxColumn();
             DataGridViewTextBoxColumn dateCom = new DataGridViewTextBoxColumn();
             DataGridViewTextBoxColumn numCom = new DataGridViewTextBoxColumn();
-            
+            DataGridViewTextBoxColumn quote_id = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn quote_detail_id = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn model_year = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn car_name = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn model = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn grade = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn remarks = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn quote_price = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn sales_id = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn purchase_order_id = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn listing_slip_id = new DataGridViewTextBoxColumn();
+            DataGridViewTextBoxColumn buy_progress_flg = new DataGridViewTextBoxColumn();
+
+            quote_id.DataPropertyName = "rce_order_id";
+            quote_detail_id.DataPropertyName = "rce_order_detail_id";
+            model_year.DataPropertyName = "model_year";
+            car_name.DataPropertyName = "car_name";
+            model.DataPropertyName = "model";
+            grade.DataPropertyName = "grade";
+            remarks.DataPropertyName = "remarks";
+            quote_price.DataPropertyName = "quote_price";
+            sales_id.DataPropertyName = "sales_id";
+            purchase_order_id.DataPropertyName = "purchase_order_id";
+            listing_slip_id.DataPropertyName = "listing_slip_id";
+            buy_progress_flg.DataPropertyName = "buy_progress_flag";
+
+            quote_price.HeaderText = "見積もり金額";
+            remarks.HeaderText = "メモ";
+            grade.HeaderText = "グレード";
+            model.HeaderText = "モデル";
+            car_name.HeaderText = "車名";
+            model_year.HeaderText = "型年";
+            quote_detail_id.HeaderText = "見積詳細ID";
+            quote_id.HeaderText = "見積ID";
+            sales_id.HeaderText = "売上ID";
+            purchase_order_id.HeaderText = "発注書ID";
+            listing_slip_id.HeaderText = "出品ID";
+            buy_progress_flg.HeaderText = "購入状態";
+
             Auction auction = new Auction();
             string[] auctionName = auction.auctionNameGet();
             for (int i = 0; i < auctionName.Length; i++)
@@ -29,7 +67,18 @@ namespace IH31_CP_Projects
             dvAuction.Columns.Insert(0, auctionCom);
             dvAuction.Columns.Insert(1, numCom);
             dvAuction.Columns.Insert(2, dateCom);
-
+            dvAuction.Columns.Insert(3, quote_id);
+            dvAuction.Columns.Insert(4, quote_detail_id);
+            dvAuction.Columns.Insert(5, quote_price);
+            dvAuction.Columns.Insert(6, car_name);
+            dvAuction.Columns.Insert(7, grade);
+            dvAuction.Columns.Insert(8, model);
+            dvAuction.Columns.Insert(9, model_year);
+            dvAuction.Columns.Insert(10, remarks);
+            dvAuction.Columns.Insert(11, sales_id);
+            dvAuction.Columns.Insert(12, purchase_order_id);
+            dvAuction.Columns.Insert(13, listing_slip_id);
+            dvAuction.Columns.Insert(14, buy_progress_flg);
             auctionCom.HeaderText = "オークション会場";
             auctionCom.DataPropertyName = "auction";
             auctionCom.Name = "auction";

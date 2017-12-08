@@ -45,19 +45,15 @@ namespace IH31_CP_Projects
                         CultureInfo ci = new CultureInfo("ja-JP");
                         ci.DateTimeFormat.Calendar = new JapaneseCalendar();
                         DateTime datetime = DateTime.ParseExact(date, "ggyy年M月d日", ci);
-                        int price = int.Parse(line.Substring(25, 12));
+                        int price = Convert.ToInt32(line.Substring(20, 10));
                         string name = line.Substring(49, 48);
                         culum[0] = datetime.Year + "-" + datetime.Month + "-" + datetime.Day;
                         culum[1] = price.ToString();
                         culum[2] = name.Trim();
                         zen.Add(culum);
-                        sql += " or (kana_name='" + name + "')";
+                        sql += " or (kana_name='" + culum[2] + "')";
                     }
                 }
-                DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
-                col.HeaderText = "振り込み金額";
-                col.DataPropertyName = "price";
-                dvCustomer.Columns.Insert(0,col);
                 Received received = new Received();
                 MySqlDataAdapter da = received.customer(sql);
                 DataTable dt = new DataTable();
