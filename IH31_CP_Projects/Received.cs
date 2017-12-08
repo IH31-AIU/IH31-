@@ -172,7 +172,7 @@ namespace IH31_CP_Projects
                     {
                         crearing_price = Convert.ToInt32(selectDt.Rows[i]["clearing_price"]);
                         salesId = selectDt.Rows[i]["sales_id"].ToString();
-                        update.Add("update sales set clearing_price=" + price + crearing_price + "' where sales_id=" + salesId);
+                        update.Add("update sales set clearing_price=" + price + crearing_price + " where sales_id=" + salesId);
                         price -= nokori;
                         break;
                     }

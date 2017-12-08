@@ -47,10 +47,10 @@ namespace IH31_CP_Projects
             String id = "";
             if (pflg.Checked)
             {
-                flg="U";
+                flg="K";
             }
             else{
-                flg = "K";
+                flg = "U";
             }
 
            
