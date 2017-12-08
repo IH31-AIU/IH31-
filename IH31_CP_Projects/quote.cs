@@ -155,7 +155,7 @@ namespace IH31_CP_Projects
         {
             MySqlConnection conn = DBManager.getConection();
             conn.Open();
-            String sql = "select quote_id,quote_detail_id,model_year,car_name,model,grade,quote_price from quote_item where quote_id='" + memoid + "'";
+            String sql = "select quote_id,quote_detail_id,model_year,car_name,model,grade,abs(quote_price) from quote_item where quote_id='" + memoid + "'";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
             conn.Close();
             return da;

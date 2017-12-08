@@ -18,6 +18,7 @@ namespace IH31_CP_Projects
         Quote quote = new Quote();
         DataTable dt2= new DataTable();
         
+        
 
         public EstimateInput()
         {
@@ -83,6 +84,9 @@ namespace IH31_CP_Projects
 
         private void BtSubmit_Click(object sender, EventArgs e)
         {
+            
+            
+           
             int cnt = 0;
             int sum=0;
             Dictionary<string, string> replaceKeywordDic = new Dictionary<string, string>();
@@ -98,6 +102,7 @@ namespace IH31_CP_Projects
 
             for (int i = 1; i <= dt2.Rows.Count; i++)
             {
+                
                 replaceKeywordDic.Add("carname"+i, dt2.Rows[i-1][3].ToString());
                 replaceKeywordDic.Add("year" + i, dt2.Rows[i - 1][2].ToString());
                 replaceKeywordDic.Add("model" + i, dt2.Rows[i - 1][4].ToString());
@@ -114,6 +119,7 @@ namespace IH31_CP_Projects
 
             for (int i = cnt+1; i <= 18; i++)
             {
+               
                 replaceKeywordDic.Add("carname"+i," ");
                 replaceKeywordDic.Add("year"+i," ");
                 replaceKeywordDic.Add("model"+i," ");
@@ -136,6 +142,7 @@ namespace IH31_CP_Projects
 
 
             quote.quoteInsert(TbMemo.Text);
+            
             DialogResult Res;
             Res = MessageBox.Show("処理が完了しました", "確認", MessageBoxButtons.OK);
             if (Res == DialogResult.OK)

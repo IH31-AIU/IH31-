@@ -87,7 +87,7 @@ namespace IH31_CP_Projects
                 replaceKeywordDic.Add("auctionNo"+i, dt.Rows[i]["auction_no"].ToString());
                 replaceKeywordDic.Add("carName" + i, dt.Rows[i]["car_name"].ToString());
                 replaceKeywordDic.Add("model_year" + i, dt.Rows[i]["model_year"].ToString());
-                replaceKeywordDic.Add("quote_price" + i, String.Format("{0:#,0}", Convert.ToInt32(dt. Rows[i]["quote_price"])) +"円");
+                replaceKeywordDic.Add("quote_price" + i, String.Format("{0:#,0}",  Convert.ToInt32(dt. Rows[i]["quote_price"])) +"円");
                 lastI = i + 1;
             }
             for(;lastI < 27; lastI++)

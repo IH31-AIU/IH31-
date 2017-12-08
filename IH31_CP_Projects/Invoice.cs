@@ -36,6 +36,20 @@ namespace IH31_CP_Projects
 
         }
 
+        //支払消込
+        public void paymentClear(String date,String id)
+        {
+            MySqlConnection conn = DBManager.getConection();
+            conn.Open();
+            String sql = "update sales join rce_order_detail on sales.sales_id=rce_order_detail.sales_id set clearing_price=`sales_stocking_price`+`fee`+`expenses_charge` where `sales_stocking_days` <='" + date + "' and substr(rce_order_id,1,3)='" + id + "'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
+
+
+
 
     }
 }

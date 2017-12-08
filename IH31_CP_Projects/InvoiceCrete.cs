@@ -69,6 +69,7 @@ namespace IH31_CP_Projects
                     }
                     else
                     {
+                        invoice.paymentClear(date,dt.Rows[i][0].ToString());
                         this.pdfCreate2(dt2, dt.Rows[i][1].ToString());
                     }
                    
@@ -145,10 +146,10 @@ namespace IH31_CP_Projects
             for (int l = 1; l <= dt2.Rows.Count; l++)
             {
                 replaceKeywordDic.Add("carName" + l, dt2.Rows[l - 1][0].ToString());
-                replaceKeywordDic.Add("ss_price" + l, String.Format("{0:#,0}",Convert.ToString(Convert.ToInt32(dt2.Rows[l - 1][1])*-1))+ "円");
-                replaceKeywordDic.Add("fee" + l, String.Format("{0:#,0}",dt2.Rows[l - 1][2].ToString()) + "円");
-                replaceKeywordDic.Add("ec" + l, String.Format("{0:#,0}",dt2.Rows[l - 1][3].ToString()) + "円");
-                replaceKeywordDic.Add("subtotal" + l, String.Format("{0:#,0}",Convert.ToString(Convert.ToInt32(dt2.Rows[l - 1][4]) * -1)) + "円");
+                replaceKeywordDic.Add("ss_price" + l, String.Format("{0:#,0}",Convert.ToInt32(dt2.Rows[l - 1][1])*-1)+ "円");
+                replaceKeywordDic.Add("fee" + l, String.Format("{0:#,0}",Convert.ToInt32(dt2.Rows[l - 1][2]) + "円"));
+                replaceKeywordDic.Add("ec" + l, String.Format("{0:#,0}",Convert.ToInt32(dt2.Rows[l - 1][3])+ "円"));
+                replaceKeywordDic.Add("subtotal" + l, String.Format("{0:#,0}",Convert.ToInt32(dt2.Rows[l - 1][4]) * -1) + "円");
                 cnt = l;
             }
             for (int j = cnt + 1; j < 12; j++)
@@ -159,7 +160,7 @@ namespace IH31_CP_Projects
                 replaceKeywordDic.Add("ec" + j, " ");
                 replaceKeywordDic.Add("subtotal" + j, " ");
             }
-            replaceKeywordDic.Add("total", String.Format("{0:#,0}",Convert.ToString(Convert.ToInt32(num) * -1)) + "円");
+            replaceKeywordDic.Add("total", String.Format("{0:#,0}",Convert.ToInt32(num) * -1) + "円");
             EditWord editWord = new EditWord();
             editWord.DocFile = Path.path + "\\word\\支払書\\支払書" + Datetime.Text + customername + ".doc";
             String pdfPath = Path.path + "\\pdf\\支払書\\支払書" + Datetime.Text + customername + ".pdf";

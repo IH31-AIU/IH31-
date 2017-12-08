@@ -40,7 +40,7 @@ namespace IH31_CP_Projects
             replaceKeywordDic.Add("carName", row["car_name"].ToString());
             replaceKeywordDic.Add("grade", row["grade"].ToString());
             replaceKeywordDic.Add("model", row["model"].ToString());
-            replaceKeywordDic.Add("quatePrice", String.Format("{0:#,0}", Convert.ToInt32(row["quote_price"])) + "円");
+            replaceKeywordDic.Add("quatePrice", String.Format("{0:#,0}", System.Math.Abs(Convert.ToInt32(row["quote_price"]))) + "円");
             areacutKeywordDic.Add("USE_X86", true);
             areacutKeywordDic.Add("USE_SPARC", false);
             EditWord editWord = new EditWord();
