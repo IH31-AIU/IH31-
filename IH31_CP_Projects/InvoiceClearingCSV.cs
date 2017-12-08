@@ -45,7 +45,7 @@ namespace IH31_CP_Projects
                         CultureInfo ci = new CultureInfo("ja-JP");
                         ci.DateTimeFormat.Calendar = new JapaneseCalendar();
                         DateTime datetime = DateTime.ParseExact(date, "ggyy年M月d日", ci);
-                        int price = int.Parse(line.Substring(20, 10));
+                        int price = int.Parse(line.Substring(25, 12));
                         string name = line.Substring(49, 48);
                         culum[0] = datetime.Year + "-" + datetime.Month + "-" + datetime.Day;
                         culum[1] = price.ToString();

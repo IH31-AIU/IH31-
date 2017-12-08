@@ -75,7 +75,7 @@ namespace IH31_CP_Projects
                         int month = now.Month;
                         int day = now.Day;
                         int year = now.Year;
-                        replaceKeywordDic.Add("total", "\\"+price);
+                        replaceKeywordDic.Add("total", String.Format("{0:#,0}", int.Parse(price)) + "円");
                         replaceKeywordDic.Add("COMPANY_NAME", companyName);
                         replaceKeywordDic.Add("MONTH", month.ToString());
                         replaceKeywordDic.Add("YEAR", year.ToString());
@@ -85,6 +85,10 @@ namespace IH31_CP_Projects
                         {
                             for (; i < DvItem.Rows.Count; i++)
                             {
+                                if (DvItem.Rows[i].Cells[0] == null)
+                                {
+                                    continue;
+                                }
                                 if ((bool)DvItem.Rows[i].Cells[0].Value)
                                 {
                                     string[] rce = new string[7];
@@ -100,7 +104,14 @@ namespace IH31_CP_Projects
                                     replaceKeywordDic.Add("year" + i, DvItem.Rows[i].Cells[3].Value.ToString());
                                     replaceKeywordDic.Add("medel" + i, DvItem.Rows[i].Cells[5].Value.ToString());
                                     replaceKeywordDic.Add("grade" + i, DvItem.Rows[i].Cells[6].Value.ToString());
-                                    replaceKeywordDic.Add("price" + i, DvItem.Rows[i].Cells[8].Value.ToString());
+                                    replaceKeywordDic.Add("price" + i, String.Format("{0:#,0}", Convert.ToInt32(DvItem.Rows[i].Cells[8].Value.ToString())) + "円");
+                                }else
+                                {
+                                    replaceKeywordDic.Add("CAR" + i, "");
+                                    replaceKeywordDic.Add("year" + i, "");
+                                    replaceKeywordDic.Add("medel" + i, "");
+                                    replaceKeywordDic.Add("grade" + i, "");
+                                    replaceKeywordDic.Add("price" + i, "");
                                 }
                             }
                             replaceKeywordDic.Add("CAR" + i,"");
