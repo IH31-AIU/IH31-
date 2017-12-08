@@ -110,7 +110,7 @@ namespace IH31_CP_Projects
                 
 
             }
-            replaceKeywordDic.Add("sum",sum.ToString()+"円");
+            replaceKeywordDic.Add("sum", String.Format("{0:#,0}",sum)+ "円");
 
             for (int i = cnt+1; i <= 18; i++)
             {
