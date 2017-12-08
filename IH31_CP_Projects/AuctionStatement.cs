@@ -54,7 +54,15 @@ namespace IH31_CP_Projects
             {
                 if (!DvAuction.Rows[i].Cells[8].Value.Equals(" "))
                 {
-                    auction.saleInsert(CbAuctionName.Text, Convert.ToInt32(DvAuction.Rows[i].Cells[8].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[9].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[10].Value));
+                    if (DvAuction.Rows[i].Cells[7].Value.ToString() == "買")
+                    {
+                        auction.saleInsert(CbAuctionName.Text, Convert.ToInt32(DvAuction.Rows[i].Cells[8].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[9].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[10].Value));
+                    }
+                    else
+                    {
+                        auction.saleInsert(CbAuctionName.Text, Convert.ToInt32(DvAuction.Rows[i].Cells[8].Value)*-1, Convert.ToInt32(DvAuction.Rows[i].Cells[9].Value), Convert.ToInt32(DvAuction.Rows[i].Cells[10].Value));
+                    }
+                   
                     auction.rcedetailSaleIdUpdate(dt.Rows[i][0].ToString(),  Convert.ToInt32(dt.Rows[i][1]), dt.Rows[i][7].ToString());
                 }
             }
