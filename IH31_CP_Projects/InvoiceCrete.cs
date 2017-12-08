@@ -126,9 +126,9 @@ namespace IH31_CP_Projects
                 replaceKeywordDic.Add("total", num.ToString() + "円");
 
             EditWord editWord = new EditWord();
-            editWord.DocFile = Path.araki + "\\word\\" + Datetime.Text + customername + ".doc";
-            String pdfPath = Path.araki + "\\pdf\\" + Datetime.Text + customername + ".pdf";
-            editWord.TmpFile = Path.araki+"\\tmp\\請求書.doc";//テンプレファイル
+            editWord.DocFile = Path.path + "\\word\\" + Datetime.Text + customername + ".doc";
+            String pdfPath = Path.path + "\\pdf\\" + Datetime.Text + customername + ".pdf";
+            editWord.TmpFile = Path.path+"\\tmp\\請求書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
             editWord.pdf(editWord.DocFile, pdfPath);
 
@@ -161,9 +161,9 @@ namespace IH31_CP_Projects
             }
             replaceKeywordDic.Add("total", Convert.ToString(Convert.ToInt32(num) * -1) + "円");
             EditWord editWord = new EditWord();
-            editWord.DocFile = Path.araki + "\\word\\支払書\\支払書" + Datetime.Text + customername + ".doc";
-            String pdfPath = Path.araki + "\\pdf\\支払書\\支払書" + Datetime.Text + customername + ".pdf";
-            editWord.TmpFile = Path.araki + "\\tmp\\支払書.doc";//テンプレファイル
+            editWord.DocFile = Path.path + "\\word\\支払書\\支払書" + Datetime.Text + customername + ".doc";
+            String pdfPath = Path.path + "\\pdf\\支払書\\支払書" + Datetime.Text + customername + ".pdf";
+            editWord.TmpFile = Path.path + "\\tmp\\支払書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
             editWord.pdf(editWord.DocFile, pdfPath);
         }

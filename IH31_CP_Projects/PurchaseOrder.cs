@@ -100,9 +100,9 @@ namespace IH31_CP_Projects
             areacutKeywordDic.Add("USE_X86", true);
             areacutKeywordDic.Add("USE_SPARC", false);
             EditWord editWord = new EditWord();
-            editWord.DocFile = Path.araki + "\\word\\発注票\\"+ dt.Rows[0]["auction"].ToString() +id+ "発注書.doc";
-            String pdfPath =  Path.araki + "\\pdf\\発注票\\" + dt.Rows[0]["auction"].ToString() + id + "発注書.pdf";
-            editWord.TmpFile = Path.araki + "\\tmp\\発注書.doc";//テンプレファイル
+            editWord.DocFile = Path.path + "\\word\\発注票\\"+ dt.Rows[0]["auction"].ToString() +id+ "発注書.doc";
+            String pdfPath =  Path.path + "\\pdf\\発注票\\" + dt.Rows[0]["auction"].ToString() + id + "発注書.pdf";
+            editWord.TmpFile = Path.path + "\\tmp\\発注書.doc";//テンプレファイル
             editWord.Edit(replaceKeywordDic, areacutKeywordDic);
 
             editWord.pdf(editWord.DocFile, pdfPath);
