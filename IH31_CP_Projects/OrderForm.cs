@@ -30,6 +30,8 @@ namespace IH31_CP_Projects
             if (item != null)
             {
                 DvItem.Columns.Clear();
+                LbPrice.Text = "合計0円";
+
                 DataGridViewCheckBoxColumn check = new DataGridViewCheckBoxColumn();
                 check.DataPropertyName = "select";
                 check.HeaderText = "選択";
@@ -46,8 +48,6 @@ namespace IH31_CP_Projects
         {
             try
             {
-                if (DvItem.Rows[0].Cells[0].Value != null)
-                {
                     List<string[]> rceDetail = new List<string[]>();
                     string id = DvItem.Rows[0].Cells[1].Value.ToString();
                     id = id.Substring(0, 3);
@@ -81,11 +81,12 @@ namespace IH31_CP_Projects
                         replaceKeywordDic.Add("YEAR", year.ToString());
                         replaceKeywordDic.Add("DAY", day.ToString());
                         replaceKeywordDic.Add("ODERID", (DvItem.Rows[0].Cells[1]).Value.ToString());
-                        for (int i = 0; i < 10; i++)
+                        int j = 0;
+                        for (int i = 0; j < 10; j++)
                         {
                             for (; i < DvItem.Rows.Count; i++)
                             {
-                                if (DvItem.Rows[i].Cells[0] == null)
+                                if (DvItem.Rows[i].Cells[0].Value == null)
                                 {
                                     continue;
                                 }
@@ -100,25 +101,19 @@ namespace IH31_CP_Projects
                                     rce[5] = DvItem.Rows[i].Cells[7].Value.ToString();
                                     rce[6] = DvItem.Rows[i].Cells[8].Value.ToString();
                                     rceDetail.Add(rce);
-                                    replaceKeywordDic.Add("CAR" + i, DvItem.Rows[i].Cells[4].Value.ToString());
-                                    replaceKeywordDic.Add("year" + i, DvItem.Rows[i].Cells[3].Value.ToString());
-                                    replaceKeywordDic.Add("medel" + i, DvItem.Rows[i].Cells[5].Value.ToString());
-                                    replaceKeywordDic.Add("grade" + i, DvItem.Rows[i].Cells[6].Value.ToString());
-                                    replaceKeywordDic.Add("price" + i, String.Format("{0:#,0}", Convert.ToInt32(DvItem.Rows[i].Cells[8].Value.ToString())) + "円");
-                                }else
-                                {
-                                    replaceKeywordDic.Add("CAR" + i, "");
-                                    replaceKeywordDic.Add("year" + i, "");
-                                    replaceKeywordDic.Add("medel" + i, "");
-                                    replaceKeywordDic.Add("grade" + i, "");
-                                    replaceKeywordDic.Add("price" + i, "");
+                                    replaceKeywordDic.Add("CAR"   + j, DvItem.Rows[i].Cells[4].Value.ToString());
+                                    replaceKeywordDic.Add("year"  + j, DvItem.Rows[i].Cells[3].Value.ToString());
+                                    replaceKeywordDic.Add("medel" + j, DvItem.Rows[i].Cells[5].Value.ToString());
+                                    replaceKeywordDic.Add("grade" + j, DvItem.Rows[i].Cells[6].Value.ToString());
+                                    replaceKeywordDic.Add("price" + j, String.Format("{0:#,0}", Convert.ToInt32(DvItem.Rows[i].Cells[8].Value.ToString())) + "円");
+                                    j++;
                                 }
                             }
-                            replaceKeywordDic.Add("CAR" + i,"");
-                            replaceKeywordDic.Add("year" + i, "");
-                            replaceKeywordDic.Add("medel" + i, "");
-                            replaceKeywordDic.Add("grade" + i, "");
-                            replaceKeywordDic.Add("price" + i, "");
+                            replaceKeywordDic.Add("CAR" + j,"");
+                            replaceKeywordDic.Add("year" + j, "");
+                            replaceKeywordDic.Add("medel" + j, "");
+                            replaceKeywordDic.Add("grade" + j, "");
+                            replaceKeywordDic.Add("price" + j, "");
                         }
 
                         areacutKeywordDic.Add("USE_X86", true);
@@ -143,7 +138,6 @@ namespace IH31_CP_Projects
                     {
                         MessageBox.Show("売掛金が不足しています。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
             }
             catch(Exception ex)
             {
@@ -157,29 +151,6 @@ namespace IH31_CP_Projects
 
         }
 
-        private void DvItem_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (DvItem[0, 0] != null)
-            {
-                int price = 0;
-                for (int i = 0; i < DvItem.RowCount; i++)
-                {
-                    if (DvItem[0, i].Value == null)
-                    {
-                        continue;
-                    }
-                    bool select = (bool)DvItem[0, i].EditedFormattedValue;
-
-                    if (select)
-                    {
-                        price += (int)DvItem["quote_price", i].Value;
-                    }
-                }
-                LbPrice.Text = price.ToString();
-                Application.DoEvents();
-            }
-
-        }
 
         private void DvItem_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
