@@ -48,7 +48,8 @@ namespace IH31_CP_Projects
                 model.DataPropertyName = "model";
                 grade.DataPropertyName = "grade";
                 remarks.DataPropertyName = "remarks";
-                quote_price.DataPropertyName = "quote_price";
+                quote_price.DataPropertyName = "abs(`quote_price`)";
+                quote_price.Name = "abs(`quote_price`)";
 
                 quote_price.HeaderText = "見積もり金額";
                 remarks.HeaderText = "メモ";
@@ -207,7 +208,7 @@ namespace IH31_CP_Projects
 
                     if (select)
                     {
-                        price += (int)DvItem["quote_price", i].Value;
+                        price += int.Parse(DvItem["abs(`quote_price`)", i].Value.ToString());
                     }
                 }
                 LbPrice.Text = "合計"+price.ToString()+"円";
