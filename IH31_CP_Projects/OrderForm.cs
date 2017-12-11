@@ -169,6 +169,7 @@ namespace IH31_CP_Projects
                         DataTable tb = new DataTable();
                         DvItem.DataSource = tb;
                         DvItem.Columns.Clear();
+                        LbPrice.Text = "合計0円";
                     }
                     else
                     {
