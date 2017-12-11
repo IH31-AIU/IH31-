@@ -57,7 +57,6 @@ namespace IH31_CP_Projects
                     this.pdfCreate(dt , id);
                 }
             }
-            MessageBox.Show("発注書が作成されました", "確認", MessageBoxButtons.OK);
             da = pk.purchaseSearch();
             dt = new DataTable();
             da.Fill(dt);
@@ -71,6 +70,13 @@ namespace IH31_CP_Projects
                 auctionList.Rows[i].Cells[2].Value = dt.Rows[i]["number"];
 
             }
+            DialogResult Res;
+            Res = MessageBox.Show("発注書が作成されました", "確認", MessageBoxButtons.OK);
+            if (Res == DialogResult.OK)
+            {
+                this.Close();
+            }
+
         }
 
         private void pdfCreate(DataTable dt,int id)
@@ -110,13 +116,7 @@ namespace IH31_CP_Projects
 
         private void closeBt_Click(object sender, EventArgs e)
         {
-            DialogResult Res;
-            Res = MessageBox.Show("発注書作成を終了してもよろしいですか", "確認", MessageBoxButtons.OKCancel);
-            if (Res == DialogResult.OK)
-            {
-                this.Close();
-            }
-
+           
         }
     }
 }
