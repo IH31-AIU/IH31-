@@ -47,18 +47,20 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 46);
+            this.groupBox1.Location = new System.Drawing.Point(15, 58);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(507, 52);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(676, 65);
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             // 
             // search
             // 
-            this.search.Location = new System.Drawing.Point(149, 17);
-            this.search.Margin = new System.Windows.Forms.Padding(2);
+            this.search.Location = new System.Drawing.Point(199, 21);
+            this.search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(70, 20);
+            this.search.Size = new System.Drawing.Size(93, 25);
             this.search.TabIndex = 52;
             this.search.Text = "検索画面へ";
             this.search.UseVisualStyleBackColor = true;
@@ -67,48 +69,45 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 24);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(11, 30);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(67, 15);
             this.label6.TabIndex = 49;
             this.label6.Text = "見積番号";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 40);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(67, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 12);
+            this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 50;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 19);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(101, 24);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 19);
+            this.textBox1.Size = new System.Drawing.Size(81, 22);
             this.textBox1.TabIndex = 51;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(5, 10);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(7, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 33);
+            this.label5.Size = new System.Drawing.Size(217, 40);
             this.label5.TabIndex = 64;
             this.label5.Text = "受注書作成";
             // 
             // btCreate
             // 
             this.btCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btCreate.Location = new System.Drawing.Point(448, 358);
-            this.btCreate.Margin = new System.Windows.Forms.Padding(2);
+            this.btCreate.Location = new System.Drawing.Point(597, 448);
+            this.btCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCreate.Name = "btCreate";
-            this.btCreate.Size = new System.Drawing.Size(70, 20);
+            this.btCreate.Size = new System.Drawing.Size(93, 25);
             this.btCreate.TabIndex = 57;
             this.btCreate.Text = "作成";
             this.btCreate.UseVisualStyleBackColor = true;
@@ -122,10 +121,11 @@
             this.DvItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DvItem.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DvItem.Location = new System.Drawing.Point(11, 104);
+            this.DvItem.Location = new System.Drawing.Point(15, 130);
+            this.DvItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DvItem.Name = "DvItem";
             this.DvItem.RowTemplate.Height = 21;
-            this.DvItem.Size = new System.Drawing.Size(507, 224);
+            this.DvItem.Size = new System.Drawing.Size(676, 280);
             this.DvItem.TabIndex = 65;
             this.DvItem.CellStateChanged += new System.Windows.Forms.DataGridViewCellStateChangedEventHandler(this.DvItem_CellStateChanged);
             this.DvItem.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DvItem_CellValueChanged);
@@ -136,24 +136,26 @@
             this.LbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LbPrice.AutoSize = true;
             this.LbPrice.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LbPrice.Location = new System.Drawing.Point(227, 349);
+            this.LbPrice.Location = new System.Drawing.Point(303, 436);
+            this.LbPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LbPrice.Name = "LbPrice";
-            this.LbPrice.Size = new System.Drawing.Size(107, 27);
+            this.LbPrice.Size = new System.Drawing.Size(134, 34);
             this.LbPrice.TabIndex = 66;
             this.LbPrice.Text = "合計0円";
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 390);
+            this.ClientSize = new System.Drawing.Size(716, 488);
             this.Controls.Add(this.LbPrice);
             this.Controls.Add(this.DvItem);
             this.Controls.Add(this.btCreate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OrderForm";
-            this.Text = "OrderForm";
+            this.Text = "受注書作成画面";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DvItem)).EndInit();

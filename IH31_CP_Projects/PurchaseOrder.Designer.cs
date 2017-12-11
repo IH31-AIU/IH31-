@@ -115,7 +115,7 @@
             this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PurchaseOrder";
-            this.Text = "PurchaseOrder";
+            this.Text = "発注書作成画面";
             ((System.ComponentModel.ISupportInitialize)(this.auctionList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

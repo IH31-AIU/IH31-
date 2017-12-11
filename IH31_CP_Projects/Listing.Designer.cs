@@ -51,7 +51,7 @@
             // ListingCreateBt
             // 
             this.ListingCreateBt.Location = new System.Drawing.Point(721, 488);
-            this.ListingCreateBt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ListingCreateBt.Margin = new System.Windows.Forms.Padding(4);
             this.ListingCreateBt.Name = "ListingCreateBt";
             this.ListingCreateBt.Size = new System.Drawing.Size(100, 29);
             this.ListingCreateBt.TabIndex = 7;
@@ -101,9 +101,9 @@
             this.Controls.Add(this.auctionList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ListingCreateBt);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Listing";
-            this.Text = "AuctionSeep";
+            this.Text = "出品票作成画面";
             ((System.ComponentModel.ISupportInitialize)(this.auctionList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

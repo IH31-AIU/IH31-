@@ -43,7 +43,7 @@
             this.label1.Location = new System.Drawing.Point(18, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(485, 72);
+            this.label1.Size = new System.Drawing.Size(405, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "スグクルシステム";
             // 
@@ -53,7 +53,7 @@
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(316, 230);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 20);
+            this.label2.Size = new System.Drawing.Size(23, 17);
             this.label2.TabIndex = 44;
             this.label2.Text = "ID";
             // 
@@ -63,7 +63,7 @@
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(230, 314);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 20);
+            this.label3.Size = new System.Drawing.Size(96, 17);
             this.label3.TabIndex = 45;
             this.label3.Text = "PASSWORD";
             // 
@@ -72,7 +72,7 @@
             this.Tbid.Font = new System.Drawing.Font("MS UI Gothic", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Tbid.Location = new System.Drawing.Point(386, 230);
             this.Tbid.Name = "Tbid";
-            this.Tbid.Size = new System.Drawing.Size(240, 47);
+            this.Tbid.Size = new System.Drawing.Size(240, 41);
             this.Tbid.TabIndex = 46;
             // 
             // Tbpass
@@ -80,7 +80,7 @@
             this.Tbpass.Font = new System.Drawing.Font("MS UI Gothic", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Tbpass.Location = new System.Drawing.Point(386, 314);
             this.Tbpass.Name = "Tbpass";
-            this.Tbpass.Size = new System.Drawing.Size(240, 47);
+            this.Tbpass.Size = new System.Drawing.Size(240, 41);
             this.Tbpass.TabIndex = 47;
             // 
             // BtSubmit
@@ -95,7 +95,7 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(31F, 56F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(26F, 47F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1912, 1038);
             this.Controls.Add(this.BtSubmit);
@@ -105,9 +105,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("MS UI Gothic", 28F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.Margin = new System.Windows.Forms.Padding(9);
             this.Name = "Login";
-            this.Text = "Login";
+            this.Text = "ログイン画面";
             this.ResumeLayout(false);
             this.PerformLayout();
 

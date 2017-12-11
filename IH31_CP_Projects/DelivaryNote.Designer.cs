@@ -31,6 +31,11 @@
             this.deliveryCreateBt = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.carList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,11 +43,6 @@
             this.TbCustomerCode = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TbCustomerName = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.carList)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             // deliveryCreateBt
             // 
             this.deliveryCreateBt.Location = new System.Drawing.Point(721, 540);
-            this.deliveryCreateBt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deliveryCreateBt.Margin = new System.Windows.Forms.Padding(4);
             this.deliveryCreateBt.Name = "deliveryCreateBt";
             this.deliveryCreateBt.Size = new System.Drawing.Size(100, 29);
             this.deliveryCreateBt.TabIndex = 17;
@@ -79,11 +79,40 @@
             this.Column3,
             this.Column2});
             this.carList.Location = new System.Drawing.Point(16, 183);
-            this.carList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.carList.Margin = new System.Windows.Forms.Padding(4);
             this.carList.Name = "carList";
             this.carList.RowTemplate.Height = 21;
             this.carList.Size = new System.Drawing.Size(805, 349);
             this.carList.TabIndex = 15;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "車名";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 80;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "落札価格";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "手数料";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 80;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "諸費用料金";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 80;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "小計";
+            this.Column2.Name = "Column2";
             // 
             // groupBox2
             // 
@@ -159,35 +188,6 @@
             this.TbCustomerName.Size = new System.Drawing.Size(82, 22);
             this.TbCustomerName.TabIndex = 6;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "車名";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "落札価格";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "手数料";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "諸費用料金";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 80;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "小計";
-            this.Column2.Name = "Column2";
-            // 
             // DelivaryNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -197,9 +197,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.deliveryCreateBt);
             this.Controls.Add(this.carList);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DelivaryNote";
-            this.Text = "DelivaryNote";
+            this.Text = "納品書作成";
             ((System.ComponentModel.ISupportInitialize)(this.carList)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

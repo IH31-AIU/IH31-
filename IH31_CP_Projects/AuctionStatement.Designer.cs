@@ -56,10 +56,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(12, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(10, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(472, 40);
+            this.label2.Size = new System.Drawing.Size(401, 34);
             this.label2.TabIndex = 6;
             this.label2.Text = "オークション計算書入力画面";
             // 
@@ -79,11 +79,11 @@
             this.Column9,
             this.Column10,
             this.Column11});
-            this.DvAuction.Location = new System.Drawing.Point(20, 230);
-            this.DvAuction.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.DvAuction.Location = new System.Drawing.Point(16, 192);
+            this.DvAuction.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DvAuction.Name = "DvAuction";
             this.DvAuction.RowTemplate.Height = 21;
-            this.DvAuction.Size = new System.Drawing.Size(1482, 418);
+            this.DvAuction.Size = new System.Drawing.Size(1186, 348);
             this.DvAuction.TabIndex = 5;
             // 
             // Column1
@@ -148,29 +148,30 @@
             this.groupBox1.Controls.Add(this.CbAuctionName);
             this.groupBox1.Controls.Add(this.BtSearch);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(20, 94);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Location = new System.Drawing.Point(16, 78);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox1.Size = new System.Drawing.Size(672, 114);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(538, 95);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // Datetime
             // 
             this.Datetime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Datetime.Location = new System.Drawing.Point(190, 80);
+            this.Datetime.Location = new System.Drawing.Point(152, 67);
+            this.Datetime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Datetime.Name = "Datetime";
-            this.Datetime.Size = new System.Drawing.Size(200, 25);
+            this.Datetime.Size = new System.Drawing.Size(161, 22);
             this.Datetime.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 80);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(91, 67);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 18);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "日付";
             // 
@@ -181,18 +182,18 @@
             "オークション会場A",
             "オークション会場B",
             "オークション会場C"});
-            this.CbAuctionName.Location = new System.Drawing.Point(190, 32);
-            this.CbAuctionName.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.CbAuctionName.Location = new System.Drawing.Point(152, 27);
+            this.CbAuctionName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CbAuctionName.Name = "CbAuctionName";
-            this.CbAuctionName.Size = new System.Drawing.Size(199, 26);
+            this.CbAuctionName.Size = new System.Drawing.Size(160, 23);
             this.CbAuctionName.TabIndex = 3;
             // 
             // BtSearch
             // 
-            this.BtSearch.Location = new System.Drawing.Point(446, 72);
-            this.BtSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.BtSearch.Location = new System.Drawing.Point(357, 60);
+            this.BtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtSearch.Name = "BtSearch";
-            this.BtSearch.Size = new System.Drawing.Size(125, 34);
+            this.BtSearch.Size = new System.Drawing.Size(100, 28);
             this.BtSearch.TabIndex = 2;
             this.BtSearch.Text = "検索";
             this.BtSearch.UseVisualStyleBackColor = true;
@@ -201,18 +202,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(36, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 18);
+            this.label1.Size = new System.Drawing.Size(101, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "オークション会場";
             // 
             // BtSubmit
             // 
-            this.BtSubmit.Location = new System.Drawing.Point(1338, 664);
+            this.BtSubmit.Location = new System.Drawing.Point(1070, 553);
+            this.BtSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtSubmit.Name = "BtSubmit";
-            this.BtSubmit.Size = new System.Drawing.Size(164, 58);
+            this.BtSubmit.Size = new System.Drawing.Size(131, 48);
             this.BtSubmit.TabIndex = 7;
             this.BtSubmit.Text = "登録";
             this.BtSubmit.UseVisualStyleBackColor = true;
@@ -220,16 +222,16 @@
             // 
             // AuctionStatement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1538, 734);
+            this.ClientSize = new System.Drawing.Size(1230, 612);
             this.Controls.Add(this.BtSubmit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DvAuction);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AuctionStatement";
-            this.Text = "AuctionStatement";
+            this.Text = "オークション計算書入力画面";
             ((System.ComponentModel.ISupportInitialize)(this.DvAuction)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
