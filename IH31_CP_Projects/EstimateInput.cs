@@ -17,7 +17,7 @@ namespace IH31_CP_Projects
         Memo memo = new Memo();
         Quote quote = new Quote();
         DataTable dt2= new DataTable();
-        Waiting wait = new Waiting();
+        
         
 
         public EstimateInput()
@@ -86,7 +86,7 @@ namespace IH31_CP_Projects
         {
 
 
-            wait.Show();
+            
             Application.DoEvents();
             int cnt = 0;
             int sum=0;
@@ -143,7 +143,7 @@ namespace IH31_CP_Projects
 
 
             quote.quoteInsert(TbMemo.Text);
-            wait.Close();
+            
             DialogResult Res;
             Res = MessageBox.Show("処理が完了しました", "確認", MessageBoxButtons.OK);
             if (Res == DialogResult.OK)
