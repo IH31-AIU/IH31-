@@ -33,8 +33,14 @@ namespace IH31_CP_Projects
             DataGridViewTextBoxColumn buy_progress_flg = new DataGridViewTextBoxColumn();
 
             quote_id.DataPropertyName = "rce_order_id";
+            quote_id.Name = "rce_order_id";
+
             quote_detail_id.DataPropertyName = "rce_order_detail_id";
+            quote_detail_id.Name = "rce_order_detail_id";
+
             model_year.DataPropertyName = "model_year";
+            model_year.Name = "model_year";
+
             car_name.DataPropertyName = "car_name";
             model.DataPropertyName = "model";
             grade.DataPropertyName = "grade";
