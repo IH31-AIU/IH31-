@@ -19,6 +19,7 @@ namespace IH31_CP_Projects
             String sql = "select customer_id,formal_company_name,sum(sales_stocking_price + fee + expenses_charge - clearing_price) from sales join rce_order_detail as rod using(sales_id) join customer as c on(left(rce_order_id,3) = customer_id) where sales_stocking_price + fee + expenses_charge - clearing_price <> 0 and sales.sales_stocking_days<= '"+date+"' group by left(rce_order_id,3)";
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
             conn.Close();
+            Console.WriteLine(sql);
             return da;
 
         }

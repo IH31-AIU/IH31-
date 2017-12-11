@@ -27,6 +27,7 @@ namespace IH31_CP_Projects
         {
             InitializeComponent();
             Datetime.CustomFormat = "yyyy-MM";
+
         }
 
 
@@ -38,12 +39,18 @@ namespace IH31_CP_Projects
             MySqlDataAdapter da = invoice.invoiceSelect(date);
            
             da.Fill(dt);
+            Dv.Rows.Clear();
+            Dv.AllowUserToAddRows = false;
+           
             CreateNum.Text = dt.Rows.Count.ToString();
             for(int i=0;i<dt.Rows.Count;i++)
             {
+                Dv.Rows.Add();
+                Dv.Rows[i].Cells[0].Value = dt.Rows[i][1];
+                Dv.Rows[i].Cells[1].Value = dt.Rows[i][2];
                 sum=sum+Convert.ToInt32(dt.Rows[i][2]);
             }
-            price.Text = sum.ToString()+"円";
+            
 
         }
 
@@ -58,6 +65,7 @@ namespace IH31_CP_Projects
                     MySqlDataAdapter da = invoice.invoiceSelectOne(date, dt.Rows[i][0].ToString());
                     DataTable dt2 = new DataTable();
                     da.Fill(dt2);
+                   
                     num = 0;
                     for(int k=0;k<dt2.Rows.Count;k++)
                     {
