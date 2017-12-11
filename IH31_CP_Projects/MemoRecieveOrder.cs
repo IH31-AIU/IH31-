@@ -19,6 +19,7 @@ namespace IH31_CP_Projects
         public MemoRecieveOrder()
         {
             InitializeComponent();
+            DvMemo.AllowUserToAddRows = false;
             MySqlDataAdapter da = quote.memoSlect();
             DataTable dt = new DataTable();
             da.Fill(dt);
