@@ -43,6 +43,8 @@ namespace IH31_CP_Projects
                 this.Hide();
                 top.ShowDialog();
                 top.Dispose();
+               
+               
                 
                 
             }

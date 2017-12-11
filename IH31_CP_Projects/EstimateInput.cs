@@ -17,7 +17,7 @@ namespace IH31_CP_Projects
         Memo memo = new Memo();
         Quote quote = new Quote();
         DataTable dt2= new DataTable();
-        
+        Waiting wait = new Waiting();
         
 
         public EstimateInput()
@@ -84,9 +84,10 @@ namespace IH31_CP_Projects
 
         private void BtSubmit_Click(object sender, EventArgs e)
         {
-            
-            
-           
+
+
+            wait.Show();
+            Application.DoEvents();
             int cnt = 0;
             int sum=0;
             Dictionary<string, string> replaceKeywordDic = new Dictionary<string, string>();
@@ -126,11 +127,11 @@ namespace IH31_CP_Projects
                 replaceKeywordDic.Add("grade"+i," ");
                 replaceKeywordDic.Add("price"+i," ");
             }
-                
-
-            
 
 
+
+
+           
 
             EditWord editWord = new EditWord();
             editWord.DocFile =Path.path+ "\\word\\見積書\\見積書"+TbMemo.Text+TbCusName.Text+".doc";
@@ -142,7 +143,7 @@ namespace IH31_CP_Projects
 
 
             quote.quoteInsert(TbMemo.Text);
-            
+            wait.Close();
             DialogResult Res;
             Res = MessageBox.Show("処理が完了しました", "確認", MessageBoxButtons.OK);
             if (Res == DialogResult.OK)

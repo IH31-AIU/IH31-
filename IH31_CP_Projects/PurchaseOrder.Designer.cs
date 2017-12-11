@@ -40,10 +40,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(596, 425);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(745, 510);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 32);
+            this.button2.Size = new System.Drawing.Size(125, 38);
             this.button2.TabIndex = 65;
             this.button2.Text = "作成";
             this.button2.UseVisualStyleBackColor = true;
@@ -53,9 +53,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(7, 1);
+            this.label5.Location = new System.Drawing.Point(9, 1);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(217, 40);
+            this.label5.Size = new System.Drawing.Size(260, 48);
             this.label5.TabIndex = 68;
             this.label5.Text = "発注書作成";
             // 
@@ -66,11 +67,11 @@
             this.Column3,
             this.Column1,
             this.Column2});
-            this.auctionList.Location = new System.Drawing.Point(15, 46);
-            this.auctionList.Margin = new System.Windows.Forms.Padding(4);
+            this.auctionList.Location = new System.Drawing.Point(19, 55);
+            this.auctionList.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.auctionList.Name = "auctionList";
             this.auctionList.RowTemplate.Height = 21;
-            this.auctionList.Size = new System.Drawing.Size(681, 372);
+            this.auctionList.Size = new System.Drawing.Size(851, 446);
             this.auctionList.TabIndex = 69;
             // 
             // Column3
@@ -95,10 +96,10 @@
             // 
             // closeBt
             // 
-            this.closeBt.Location = new System.Drawing.Point(15, 424);
-            this.closeBt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeBt.Location = new System.Drawing.Point(19, 509);
+            this.closeBt.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.closeBt.Name = "closeBt";
-            this.closeBt.Size = new System.Drawing.Size(100, 32);
+            this.closeBt.Size = new System.Drawing.Size(125, 38);
             this.closeBt.TabIndex = 70;
             this.closeBt.Text = "閉じる";
             this.closeBt.UseVisualStyleBackColor = true;
@@ -106,14 +107,14 @@
             // 
             // PurchaseOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 471);
+            this.ClientSize = new System.Drawing.Size(878, 544);
             this.Controls.Add(this.closeBt);
             this.Controls.Add(this.auctionList);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "PurchaseOrder";
             this.Text = "発注書作成画面";
             ((System.ComponentModel.ISupportInitialize)(this.auctionList)).EndInit();

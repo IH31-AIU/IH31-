@@ -54,10 +54,9 @@
             // 
             // btFileDialog
             // 
-            this.btFileDialog.Location = new System.Drawing.Point(257, 66);
-            this.btFileDialog.Margin = new System.Windows.Forms.Padding(2);
+            this.btFileDialog.Location = new System.Drawing.Point(428, 99);
             this.btFileDialog.Name = "btFileDialog";
-            this.btFileDialog.Size = new System.Drawing.Size(70, 20);
+            this.btFileDialog.Size = new System.Drawing.Size(117, 30);
             this.btFileDialog.TabIndex = 59;
             this.btFileDialog.Text = "ファイルパス";
             this.btFileDialog.UseVisualStyleBackColor = true;
@@ -85,10 +84,11 @@
             this.deposit_type,
             this.bank_account_number,
             this.account_holder});
-            this.dvCustomer.Location = new System.Drawing.Point(10, 91);
+            this.dvCustomer.Location = new System.Drawing.Point(17, 136);
+            this.dvCustomer.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dvCustomer.Name = "dvCustomer";
             this.dvCustomer.RowTemplate.Height = 21;
-            this.dvCustomer.Size = new System.Drawing.Size(572, 208);
+            this.dvCustomer.Size = new System.Drawing.Size(841, 319);
             this.dvCustomer.TabIndex = 65;
             // 
             // price
@@ -186,10 +186,9 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(387, 306);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(533, 466);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 41);
+            this.button1.Size = new System.Drawing.Size(327, 62);
             this.button1.TabIndex = 66;
             this.button1.Text = "消込完了";
             this.button1.UseVisualStyleBackColor = true;
@@ -199,32 +198,29 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(8, 16);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(13, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 33);
+            this.label5.Size = new System.Drawing.Size(308, 48);
             this.label5.TabIndex = 67;
             this.label5.Text = "請求消込画面";
             // 
             // tbFilePass
             // 
-            this.tbFilePass.Location = new System.Drawing.Point(14, 67);
-            this.tbFilePass.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFilePass.Location = new System.Drawing.Point(23, 100);
             this.tbFilePass.Name = "tbFilePass";
-            this.tbFilePass.Size = new System.Drawing.Size(239, 19);
+            this.tbFilePass.Size = new System.Drawing.Size(396, 25);
             this.tbFilePass.TabIndex = 58;
             // 
             // InvoiceClearingCSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 358);
+            this.ClientSize = new System.Drawing.Size(878, 544);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dvCustomer);
             this.Controls.Add(this.btFileDialog);
             this.Controls.Add(this.tbFilePass);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InvoiceClearingCSV";
             this.Text = "請求消込画面";
             ((System.ComponentModel.ISupportInitialize)(this.dvCustomer)).EndInit();

@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1199, 629);
+            this.ClientSize = new System.Drawing.Size(878, 544);
             this.Controls.Add(this.price);
             this.Controls.Add(this.CreateNum);
             this.Controls.Add(this.label6);
@@ -152,7 +152,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BtSubmit);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InvoiceCrete";
             this.Text = "請求書部分作成";
             this.groupBox1.ResumeLayout(false);

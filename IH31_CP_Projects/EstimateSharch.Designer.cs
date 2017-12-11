@@ -38,10 +38,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(16, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 30);
+            this.label1.Size = new System.Drawing.Size(159, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "見積検索";
             // 
@@ -52,21 +52,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DvEstimate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.DvEstimate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DvEstimate.Location = new System.Drawing.Point(0, 45);
-            this.DvEstimate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DvEstimate.Location = new System.Drawing.Point(0, 54);
+            this.DvEstimate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.DvEstimate.Name = "DvEstimate";
             this.DvEstimate.RowTemplate.Height = 21;
-            this.DvEstimate.Size = new System.Drawing.Size(760, 356);
+            this.DvEstimate.Size = new System.Drawing.Size(878, 425);
             this.DvEstimate.TabIndex = 2;
             this.DvEstimate.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DvEstimate_CellDoubleClick);
             // 
             // btSelect
             // 
             this.btSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSelect.Location = new System.Drawing.Point(644, 411);
-            this.btSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSelect.Location = new System.Drawing.Point(733, 491);
+            this.btSelect.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btSelect.Name = "btSelect";
-            this.btSelect.Size = new System.Drawing.Size(100, 29);
+            this.btSelect.Size = new System.Drawing.Size(125, 35);
             this.btSelect.TabIndex = 3;
             this.btSelect.Text = "決定";
             this.btSelect.UseVisualStyleBackColor = true;
@@ -74,14 +74,14 @@
             // 
             // EstimateSharch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(760, 455);
+            this.ClientSize = new System.Drawing.Size(878, 544);
             this.Controls.Add(this.btSelect);
             this.Controls.Add(this.DvEstimate);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "EstimateSharch";
             this.Text = "見積検索画面";
             ((System.ComponentModel.ISupportInitialize)(this.DvEstimate)).EndInit();
