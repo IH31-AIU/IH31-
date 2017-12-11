@@ -48,8 +48,8 @@ namespace IH31_CP_Projects
                 model.DataPropertyName = "model";
                 grade.DataPropertyName = "grade";
                 remarks.DataPropertyName = "remarks";
-                quote_price.DataPropertyName = "abs(`quote_price`)";
-                quote_price.Name = "abs(`quote_price`)";
+                quote_price.DataPropertyName = "quote_price";
+                quote_price.Name = "quote_price";
 
                 quote_price.HeaderText = "見積もり金額";
                 remarks.HeaderText = "メモ";
@@ -141,7 +141,7 @@ namespace IH31_CP_Projects
                                     replaceKeywordDic.Add("year"  + j, DvItem.Rows[i].Cells[3].Value.ToString());
                                     replaceKeywordDic.Add("medel" + j, DvItem.Rows[i].Cells[5].Value.ToString());
                                     replaceKeywordDic.Add("grade" + j, DvItem.Rows[i].Cells[6].Value.ToString());
-                                    replaceKeywordDic.Add("price" + j, String.Format("{0:#,0}", Convert.ToInt32(DvItem.Rows[i].Cells[8].Value.ToString())) + "円");
+                                    replaceKeywordDic.Add("price" + j, String.Format("{0:#,0}", System.Math.Abs(Convert.ToInt32(DvItem.Rows[i].Cells[8].Value.ToString()))) + "円");
                                     j++;
                                 }
                             }
@@ -208,7 +208,7 @@ namespace IH31_CP_Projects
 
                     if (select)
                     {
-                        price += int.Parse(DvItem["abs(`quote_price`)", i].Value.ToString());
+                        price += int.Parse(DvItem["quote_price", i].Value.ToString());
                     }
                 }
                 LbPrice.Text = "合計"+price.ToString()+"円";
