@@ -165,14 +165,14 @@ namespace IH31_CP_Projects
                     {
                         crearing_price = Convert.ToInt32(selectDt.Rows[i]["total"]);
                         salesId = selectDt.Rows[i]["sales_id"].ToString();
-                        update.Add("update sales set clearing_price=" + crearing_price + " where sales_id=" + salesId);
+                        update.Add("update sales set clearing_price=" + Convert.ToInt32(crearing_price) + " where sales_id=" + salesId);
                         price -= crearing_price;
                     }
                     else if (price <= nokori)
                     {
                         crearing_price = Convert.ToInt32(selectDt.Rows[i]["clearing_price"]);
                         salesId = selectDt.Rows[i]["sales_id"].ToString();
-                        update.Add("update sales set clearing_price=" + price + crearing_price + " where sales_id=" + salesId);
+                        update.Add("update sales set clearing_price=" + Convert.ToInt32(price) + Convert.ToInt32(crearing_price) + " where sales_id=" + salesId);
                         price -= nokori;
                         break;
                     }
@@ -180,7 +180,7 @@ namespace IH31_CP_Projects
                 }
                 if (0 < price)
                 {
-                    update.Add("update sales set clearing_price=" + price + crearing_price + " where sales_id=" + salesId);
+                    update.Add("update sales set clearing_price=" + Convert.ToInt32(price) + Convert.ToInt32(crearing_price) + " where sales_id=" + salesId);
                 }
             }
             return update;
