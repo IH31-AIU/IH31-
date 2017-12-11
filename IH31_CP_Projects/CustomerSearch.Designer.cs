@@ -42,20 +42,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(20, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 36);
+            this.label1.Size = new System.Drawing.Size(106, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "顧客検索";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 39);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(28, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 1;
             this.label2.Text = "顧客名";
             // 
@@ -64,20 +62,17 @@
             this.groupBox1.Controls.Add(this.BtSearch);
             this.groupBox1.Controls.Add(this.TbCustomerName);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(27, 54);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Location = new System.Drawing.Point(16, 36);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox1.Size = new System.Drawing.Size(990, 87);
+            this.groupBox1.Size = new System.Drawing.Size(594, 58);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // BtSearch
             // 
-            this.BtSearch.Location = new System.Drawing.Point(743, 32);
-            this.BtSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.BtSearch.Location = new System.Drawing.Point(446, 21);
             this.BtSearch.Name = "BtSearch";
-            this.BtSearch.Size = new System.Drawing.Size(125, 34);
+            this.BtSearch.Size = new System.Drawing.Size(75, 23);
             this.BtSearch.TabIndex = 6;
             this.BtSearch.Text = "検索";
             this.BtSearch.UseVisualStyleBackColor = true;
@@ -85,34 +80,34 @@
             // 
             // TbCustomerName
             // 
-            this.TbCustomerName.Location = new System.Drawing.Point(140, 34);
-            this.TbCustomerName.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TbCustomerName.Location = new System.Drawing.Point(84, 23);
             this.TbCustomerName.Name = "TbCustomerName";
-            this.TbCustomerName.Size = new System.Drawing.Size(517, 25);
+            this.TbCustomerName.Size = new System.Drawing.Size(312, 19);
             this.TbCustomerName.TabIndex = 4;
             // 
             // DvCustomer
             // 
+            this.DvCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DvCustomer.Location = new System.Drawing.Point(27, 168);
-            this.DvCustomer.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.DvCustomer.Location = new System.Drawing.Point(16, 112);
             this.DvCustomer.Name = "DvCustomer";
             this.DvCustomer.ReadOnly = true;
             this.DvCustomer.RowTemplate.Height = 21;
             this.DvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DvCustomer.Size = new System.Drawing.Size(1468, 303);
+            this.DvCustomer.Size = new System.Drawing.Size(856, 438);
             this.DvCustomer.TabIndex = 4;
             this.DvCustomer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DvCustomer_CellDoubleClick);
             // 
             // CustomerSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 544);
+            this.ClientSize = new System.Drawing.Size(884, 562);
             this.Controls.Add(this.DvCustomer);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "CustomerSearch";
             this.Text = "顧客検索ページ";
             this.groupBox1.ResumeLayout(false);

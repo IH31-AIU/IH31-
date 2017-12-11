@@ -41,19 +41,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(11, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(7, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 40);
+            this.label2.Size = new System.Drawing.Size(147, 27);
             this.label2.TabIndex = 6;
             this.label2.Text = "出品票作成";
             // 
             // ListingCreateBt
             // 
-            this.ListingCreateBt.Location = new System.Drawing.Point(901, 586);
-            this.ListingCreateBt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ListingCreateBt.Location = new System.Drawing.Point(797, 527);
             this.ListingCreateBt.Name = "ListingCreateBt";
-            this.ListingCreateBt.Size = new System.Drawing.Size(125, 35);
+            this.ListingCreateBt.Size = new System.Drawing.Size(75, 23);
             this.ListingCreateBt.TabIndex = 7;
             this.ListingCreateBt.Text = "作成";
             this.ListingCreateBt.UseVisualStyleBackColor = true;
@@ -66,11 +64,10 @@
             this.Column3,
             this.Column1,
             this.Column2});
-            this.auctionList.Location = new System.Drawing.Point(16, 60);
-            this.auctionList.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.auctionList.Location = new System.Drawing.Point(10, 40);
             this.auctionList.Name = "auctionList";
             this.auctionList.RowTemplate.Height = 21;
-            this.auctionList.Size = new System.Drawing.Size(1009, 504);
+            this.auctionList.Size = new System.Drawing.Size(862, 481);
             this.auctionList.TabIndex = 70;
             // 
             // Column3
@@ -95,13 +92,12 @@
             // 
             // Listing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 544);
+            this.ClientSize = new System.Drawing.Size(884, 562);
             this.Controls.Add(this.auctionList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ListingCreateBt);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Listing";
             this.Text = "出品票作成画面";
             ((System.ComponentModel.ISupportInitialize)(this.auctionList)).EndInit();

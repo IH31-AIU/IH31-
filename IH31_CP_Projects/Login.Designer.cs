@@ -43,49 +43,62 @@
             this.label1.Location = new System.Drawing.Point(18, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(485, 72);
+            this.label1.Size = new System.Drawing.Size(326, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "スグクルシステム";
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.Location = new System.Drawing.Point(316, 230);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 20);
+            this.label2.Size = new System.Drawing.Size(19, 14);
             this.label2.TabIndex = 44;
             this.label2.Text = "ID";
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.Location = new System.Drawing.Point(230, 314);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 20);
+            this.label3.Size = new System.Drawing.Size(79, 14);
             this.label3.TabIndex = 45;
             this.label3.Text = "PASSWORD";
             // 
             // Tbid
             // 
+            this.Tbid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Tbid.Font = new System.Drawing.Font("MS UI Gothic", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Tbid.Location = new System.Drawing.Point(386, 230);
             this.Tbid.Name = "Tbid";
-            this.Tbid.Size = new System.Drawing.Size(240, 47);
+            this.Tbid.Size = new System.Drawing.Size(240, 34);
             this.Tbid.TabIndex = 46;
             // 
             // Tbpass
             // 
+            this.Tbpass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Tbpass.Font = new System.Drawing.Font("MS UI Gothic", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Tbpass.Location = new System.Drawing.Point(386, 314);
             this.Tbpass.Name = "Tbpass";
-            this.Tbpass.Size = new System.Drawing.Size(240, 47);
+            this.Tbpass.Size = new System.Drawing.Size(240, 34);
             this.Tbpass.TabIndex = 47;
             // 
             // BtSubmit
             // 
-            this.BtSubmit.Location = new System.Drawing.Point(724, 441);
+            this.BtSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtSubmit.Location = new System.Drawing.Point(602, 472);
             this.BtSubmit.Name = "BtSubmit";
             this.BtSubmit.Size = new System.Drawing.Size(270, 78);
             this.BtSubmit.TabIndex = 48;
@@ -95,9 +108,9 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(31F, 56F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(21F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 544);
+            this.ClientSize = new System.Drawing.Size(884, 562);
             this.Controls.Add(this.BtSubmit);
             this.Controls.Add(this.Tbpass);
             this.Controls.Add(this.Tbid);
