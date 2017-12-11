@@ -41,6 +41,9 @@ namespace IH31_CP_Projects
                 DataGridViewTextBoxColumn grade = new DataGridViewTextBoxColumn();
                 DataGridViewTextBoxColumn remarks = new DataGridViewTextBoxColumn();
                 DataGridViewTextBoxColumn quote_price = new DataGridViewTextBoxColumn();
+                DataGridViewTextBoxColumn trade_flg = new DataGridViewTextBoxColumn();
+                trade_flg.DataPropertyName = "trade_flg";
+                trade_flg.Name = "trade_flg";
                 quote_id.DataPropertyName = "quote_id";
                 quote_detail_id.DataPropertyName = "quote_detail_id";
                 model_year.DataPropertyName = "model_year";
@@ -48,8 +51,8 @@ namespace IH31_CP_Projects
                 model.DataPropertyName = "model";
                 grade.DataPropertyName = "grade";
                 remarks.DataPropertyName = "remarks";
-                quote_price.DataPropertyName = "quote_price";
-                quote_price.Name = "quote_price";
+                quote_price.DataPropertyName = "abs(`quote_price`)";
+                quote_price.Name = "abs(`quote_price`)";
 
                 quote_price.HeaderText = "見積もり金額";
                 remarks.HeaderText = "メモ";
@@ -59,6 +62,7 @@ namespace IH31_CP_Projects
                 model_year.HeaderText = "型年";
                 quote_detail_id.HeaderText = "見積詳細ID";
                 quote_id.HeaderText = "見積ID";
+                trade_flg.HeaderText = "売買フラグ";
 
                 check.DataPropertyName = "select";
                 check.HeaderText = "選択";
@@ -71,6 +75,7 @@ namespace IH31_CP_Projects
                 DvItem.Columns.Insert(6, model);
                 DvItem.Columns.Insert(7, model_year);
                 DvItem.Columns.Insert(8, remarks);
+                DvItem.Columns.Insert(9, trade_flg);
 
                 DataTable dt = new DataTable();
                 item.Fill(dt);
@@ -129,13 +134,18 @@ namespace IH31_CP_Projects
                                 if ((bool)DvItem.Rows[i].Cells[0].Value)
                                 {
                                     string[] rce = new string[7];
+                                    string work = DvItem.Rows[i].Cells[8].Value.ToString();
+                                    if(DvItem.Rows[i].Cells["trade_flg"].Value.ToString() == "U")
+                                    {
+                                        work = "-" + work;
+                                    }
                                     rce[0] = DvItem.Rows[i].Cells[2].Value.ToString();
                                     rce[1] = DvItem.Rows[i].Cells[3].Value.ToString();
                                     rce[2] = DvItem.Rows[i].Cells[4].Value.ToString();
                                     rce[3] = DvItem.Rows[i].Cells[5].Value.ToString();
                                     rce[4] = DvItem.Rows[i].Cells[6].Value.ToString();
                                     rce[5] = DvItem.Rows[i].Cells[7].Value.ToString();
-                                    rce[6] = DvItem.Rows[i].Cells[8].Value.ToString();
+                                    rce[6] = work;
                                     rceDetail.Add(rce);
                                     replaceKeywordDic.Add("CAR"   + j, DvItem.Rows[i].Cells[4].Value.ToString());
                                     replaceKeywordDic.Add("year"  + j, DvItem.Rows[i].Cells[3].Value.ToString());
@@ -209,7 +219,7 @@ namespace IH31_CP_Projects
 
                     if (select)
                     {
-                        price += int.Parse(DvItem["quote_price", i].Value.ToString());
+                        price += int.Parse(DvItem["abs(`quote_price`)", i].Value.ToString());
                     }
                 }
                 LbPrice.Text = "合計"+price.ToString()+"円";
