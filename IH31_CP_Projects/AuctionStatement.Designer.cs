@@ -65,6 +65,7 @@
             // DvAuction
             // 
             this.DvAuction.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
+            this.DvAuction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DvAuction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DvAuction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,

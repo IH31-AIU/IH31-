@@ -50,10 +50,11 @@
             // 
             // DvMemo
             // 
+            this.DvMemo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DvMemo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DvMemo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DvMemo.Location = new System.Drawing.Point(12, 149);
-            this.DvMemo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.DvMemo.Margin = new System.Windows.Forms.Padding(1);
             this.DvMemo.Name = "DvMemo";
             this.DvMemo.ReadOnly = true;
             this.DvMemo.RowTemplate.Height = 27;
@@ -76,7 +77,7 @@
             // BtSubmit
             // 
             this.BtSubmit.Location = new System.Drawing.Point(184, 27);
-            this.BtSubmit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtSubmit.Margin = new System.Windows.Forms.Padding(1);
             this.BtSubmit.Name = "BtSubmit";
             this.BtSubmit.Size = new System.Drawing.Size(71, 20);
             this.BtSubmit.TabIndex = 58;
@@ -96,7 +97,7 @@
             // TbCustomerName
             // 
             this.TbCustomerName.Location = new System.Drawing.Point(78, 29);
-            this.TbCustomerName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TbCustomerName.Margin = new System.Windows.Forms.Padding(1);
             this.TbCustomerName.Name = "TbCustomerName";
             this.TbCustomerName.ReadOnly = true;
             this.TbCustomerName.Size = new System.Drawing.Size(63, 19);
@@ -110,7 +111,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DvMemo);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "MemoAll";
             this.Text = "メモ一覧検索画面";
             ((System.ComponentModel.ISupportInitialize)(this.DvMemo)).EndInit();

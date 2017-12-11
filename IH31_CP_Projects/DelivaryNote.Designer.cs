@@ -73,6 +73,7 @@
             this.carList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.carList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.carList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.carList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -90,25 +91,21 @@
             // 
             this.Column1.HeaderText = "車名";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "落札価格";
             this.Column5.Name = "Column5";
-            this.Column5.Width = 80;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "手数料";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 80;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "諸費用料金";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 80;
             // 
             // Column2
             // 
@@ -153,7 +150,7 @@
             // BtCustomerSeach
             // 
             this.BtCustomerSeach.Location = new System.Drawing.Point(151, 13);
-            this.BtCustomerSeach.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtCustomerSeach.Margin = new System.Windows.Forms.Padding(1);
             this.BtCustomerSeach.Name = "BtCustomerSeach";
             this.BtCustomerSeach.Size = new System.Drawing.Size(47, 20);
             this.BtCustomerSeach.TabIndex = 8;
@@ -164,7 +161,7 @@
             // TbCustomerCode
             // 
             this.TbCustomerCode.Location = new System.Drawing.Point(77, 17);
-            this.TbCustomerCode.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TbCustomerCode.Margin = new System.Windows.Forms.Padding(1);
             this.TbCustomerCode.Name = "TbCustomerCode";
             this.TbCustomerCode.ReadOnly = true;
             this.TbCustomerCode.Size = new System.Drawing.Size(63, 19);
@@ -183,7 +180,7 @@
             // TbCustomerName
             // 
             this.TbCustomerName.Location = new System.Drawing.Point(77, 43);
-            this.TbCustomerName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.TbCustomerName.Margin = new System.Windows.Forms.Padding(1);
             this.TbCustomerName.Name = "TbCustomerName";
             this.TbCustomerName.ReadOnly = true;
             this.TbCustomerName.Size = new System.Drawing.Size(63, 19);

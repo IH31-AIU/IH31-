@@ -59,6 +59,7 @@
             // 
             // auctionList
             // 
+            this.auctionList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.auctionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.auctionList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
@@ -76,19 +77,16 @@
             this.Column3.Name = "Column3";
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column3.Width = 80;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "オークション会場";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 200;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "件数";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
             // 
             // Listing
             // 
