@@ -23,6 +23,7 @@ namespace IH31_CP_Projects
         public EstimateInput()
         {
             InitializeComponent();
+            DvEst.AllowUserToAddRows = false;
 
         }
 
